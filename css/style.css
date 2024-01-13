@@ -678,7 +678,19 @@ section {
 .about .content ul li+li {
   margin-top: 10px;
 }
-
+.about-sec{
+  display: flex;
+  margin-bottom: 20px;
+}
+.txt{
+  margin-top: 10px;
+  font-size: 24px;
+}
+.about-img{
+  width: 40%;
+  border-radius: 10px;
+  border: 2px solid black ;
+}
 .about .content ul i {
   position: absolute;
   left: 0;

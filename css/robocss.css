@@ -111,12 +111,12 @@ body {
     transition: all 0.5s;
     z-index: 997;
     padding: 15px 0;
-    background: #37517e
+    /* background: #5A426D   */
   }
   
   #header.header-scrolled,
   #header.header-inner-pages {
-    background: #37517e
+    background: #5A426D
   }
   
   #header .logo {
@@ -323,7 +323,9 @@ body {
     margin-right: 300px;
     /* margin-top: 10px; */
   }
-
+#header .container{
+  margin: 0px 0;
+}
   /*
   information of robonari 
    */
@@ -358,6 +360,7 @@ body {
     display: inline-block;
     /* margin-left: 600px; */
     /* margin-top: 10px; */
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -502,14 +505,22 @@ body {
   #hero {
     width: 100%;
     height: 80vh;
-    background: #37517e;
-    /* background-image: url(img\Home_pg004-transformed.jpeg); */
+    /* background: #37517e; */
+    background-image: url(../img/RoboNari_BG.png);
     /* background-image: url("photographer.jpg"); The image used */
     /* background-color: #cccccc; Used if the image is unavailable */
     /* height: 00px; You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
+  }
+  .mlogo{
+    margin-left: 40%;
+    border-radius: 10px ;
+  }
+  .hero-robo-row{
+    width: 100%;
+    margin-left: 40%;
   }
   #hero-g{
     height: 80px; 
@@ -552,7 +563,7 @@ body {
   }
   .Robonari .btn-get-started {
   font-size: 14px;
-  border: 2px solid #47b2e4;
+  border: 2px solid #5A426D;
   font-weight: 600;
     font-family: "Jost", sans-serif;
     font-weight: 500;
@@ -567,7 +578,7 @@ body {
   }
   
   .Robonari .btn-get-started:hover {
-    background: #209dd8;
+    background: #5A426D;
   }
   
   #hero .btn-watch-video {
@@ -1949,7 +1960,7 @@ body {
   --------------------------------------------------------------*/
   #footer {
     font-size: 14px;
-    background: #37517e;
+    background: #5A426D;
   }
   
   #footer .footer-newsletter {
@@ -2078,7 +2089,13 @@ body {
     text-decoration: none;
     color: #47b2e4;
   }
-  
+  .f-l{
+    background: #5A426D;
+    color: #fff;
+  }
+  .f-l:hover{
+    color: #2c1d39;
+  }
   #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
