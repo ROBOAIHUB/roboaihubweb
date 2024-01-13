@@ -196,8 +196,16 @@ h6 {
   font-weight: 600;
 }
 .mlogo{
-  margin-left: 40%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left:25%;
   border-radius: 10px ;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-around  ;
+  margin-top: 20px;
 }
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
@@ -389,7 +397,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
    /* background: #37517e; */
   background-image: url(../img/home.jpg);
   /* background-image: url("photographer.jpg"); The image used */
@@ -494,7 +502,7 @@ h6 {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   #hero .hero-img img {
