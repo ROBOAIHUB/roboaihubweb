@@ -390,8 +390,8 @@ h6 {
 #hero {
   width: 100%;
   height: 80vh;
-   background: #37517e;
-/*   background-image: url(img/Home_pg004-transformed.jpeg); */
+   /* background: #37517e; */
+  background-image: url(../img/home.jpg);
   /* background-image: url("photographer.jpg"); The image used */
   /*background-color: #cccccc;  Used if the image is unavailable */
   /* height: 00px; You must set a specified height */
