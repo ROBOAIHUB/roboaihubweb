@@ -597,7 +597,12 @@ section {
   filter: none;
   transform: scale(1.1);
 }
-
+.me-tag{
+  width: 25%;
+}
+.ing-tech{
+  width: 30%;
+}
 @media (max-width: 768px) {
   .clients img {
     max-width: 40%;
