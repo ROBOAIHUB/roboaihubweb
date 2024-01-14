@@ -196,8 +196,16 @@ h6 {
   font-weight: 600;
 }
 .mlogo{
-  margin-left: 40%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left:25%;
   border-radius: 10px ;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-around  ;
+  margin-top: 20px;
 }
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
@@ -389,9 +397,9 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
-   background: #37517e;
-/*   background-image: url(img/Home_pg004-transformed.jpeg); */
+  height: 90vh;
+   /* background: #37517e; */
+  background-image: url(../img/home.jpg);
   /* background-image: url("photographer.jpg"); The image used */
   /*background-color: #cccccc;  Used if the image is unavailable */
   /* height: 00px; You must set a specified height */
@@ -494,7 +502,7 @@ h6 {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   #hero .hero-img img {
@@ -597,7 +605,12 @@ section {
   filter: none;
   transform: scale(1.1);
 }
-
+.me-tag{
+  width: 25%;
+}
+.ing-tech{
+  width: 30%;
+}
 @media (max-width: 768px) {
   .clients img {
     max-width: 40%;
@@ -673,7 +686,19 @@ section {
 .about .content ul li+li {
   margin-top: 10px;
 }
-
+.about-sec{
+  display: flex;
+  margin-bottom: 20px;
+}
+.txt{
+  margin-top: 10px;
+  font-size: 24px;
+}
+.about-img{
+  width: 40%;
+  border-radius: 10px;
+  border: 2px solid black ;
+}
 .about .content ul i {
   position: absolute;
   left: 0;
