@@ -434,10 +434,6 @@ h6 {
 
   /* height: 100vh; */
 }
-#hero_left_section,
-#hero_right_section {
-  flex: 1;
-}
 
 /* hero left section  */
 #hero_left_section {
@@ -492,6 +488,11 @@ h6 {
 }
 #hero_left_btn > a {
   color: white;
+}
+
+/* ----  hero center ------ */
+#hero_center_robot_image {
+  display: none;
 }
 
 /* hero right section  */
@@ -595,6 +596,12 @@ h6 {
   display: none;
 }
 
+@media only screen and (320px < width < 1540px) {
+  #hero_left_section,
+  #hero_right_section {
+    flex: 1;
+  }
+}
 @media only screen and (min-width: 320px) {
   #hero {
     padding-top: 89px;
@@ -813,6 +820,35 @@ h6 {
     transform: scale(0.7);
   }
 }
+
+@media only screen and (min-width: 1540px) {
+  #hero_robot_image_large {
+    display: none;
+  }
+
+  #hero_left_section > div {
+    margin-top: 244px;
+    width: 487px;
+  }
+
+  #hero_center_robot_image {
+    display: block;
+    /* transform: scale(0.7); */
+    position: relative;
+    bottom: 204px;
+    left: -299px;
+    height: 570px;
+    object-fit: fill;
+    width: 300px;
+  }
+  #hero_center_robot_image > img {
+    transform: scale(0.7);
+  }
+  #hero_right_section > div {
+    margin-top: 190px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
