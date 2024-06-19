@@ -586,6 +586,7 @@ h6 {
 #hero_robot_image_small {
   position: absolute;
   left: -234px;
+  z-index: -1;
   bottom: 0;
   height: 348px;
 }
