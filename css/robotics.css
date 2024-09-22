@@ -1,0 +1,62 @@
+#wrapper {
+    /* height: 100vh; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+
+.learning{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+
+}
+
+.box{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+a{
+    cursor: pointer;
+}
+.btn-roadmap{
+    background-color: #37517e;
+    color: white;
+
+}
+.btn-roadmap:hover{
+    border: 1px solid #37517e;
+}
+.text-color{
+    color: #37517e;
+    
+}
+
+.learn-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 1px 1px black;
+}
+
+
+
+@media (min-width:768px){
+    .learning{
+        flex-direction: row;
+        
+    }
+    .box{
+       
+    }
+}

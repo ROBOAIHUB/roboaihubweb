@@ -1,0 +1,39 @@
+.study-card{
+    width: 100%;
+    
+}
+
+.study-card div.card-body h6{
+    color: #47b2e4;
+}
+.study-card div.card-body h5{
+    color: #37517e;
+}
+.card-text{
+    font-size: 1.2rem;
+}
+.quote{
+    
+    color: #37517e;
+    font-weight: bold;
+}
+.quote1{
+    color: #47b2e4;
+}
+
+
+
+
+/* imgage container css */
+
+
+.images{
+    /* background-color: black; */
+    
+    width: 100%;
+   
+    box-shadow: 1px 1px 5px black;
+}
+.elc-img{
+    width: 100%
+}
