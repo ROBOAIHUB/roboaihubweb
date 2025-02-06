@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STL Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .model-box {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        canvas {
+            display: block;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>STL Viewer</h1>
+    <div class="container" id="models-container"></div>
+
+    <!-- Load Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script>
+        // List of STL files (Modify the paths as per your files)
+        const stlFiles = [
+           
+           
+            { file: "../robotics/CAD Files/CasterWheel v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/ESP-32_CAM v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/ESP8266+v7 v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/HalfBreadboard v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/IRsensors v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/l298n+ v2.stl", name: "Download" },
+            { file: "../robotics/CAD Files/L7805 v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/Light sensor LDR v1 v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/PCB_ESP32-38Pines v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/Piezo+Buzzer+PS1240.d4887dee-15f1-4613-8de1-4472e130944d v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/Power Jack v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/PR2007 9 Volt Battery v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/Real Bo Motor With Wheel v2.stl", name: "Download" },
+            { file: "../robotics/CAD Files/Servo+MG+996R+v2 v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/small_MA_switch_b v1.stl", name: "Download" },
+            { file: "../robotics/CAD Files/SWITCH_DPDT_R5DBLKBLKHF0 v1.stl", name: "Download" },
+        ];
+
+        const container = document.getElementById('models-container');
+
+        stlFiles.forEach((stl, index) => {
+            // Create model box
+            const modelBox = document.createElement('div');
+            modelBox.classList.add('model-box');
+
+            // Create canvas container
+            const canvasContainer = document.createElement('div');
+            canvasContainer.style.width = "500px";
+            canvasContainer.style.height = "500px";
+            modelBox.appendChild(canvasContainer);
+
+            // Create download button
+            const downloadBtn = document.createElement('button');
+            downloadBtn.innerText = `Download ${stl.name}`;
+            downloadBtn.onclick = () => window.location.href = stl.file;  // Direct download
+            modelBox.appendChild(downloadBtn);
+
+            // Append to main container
+            container.appendChild(modelBox);
+
+            // Render 3D model
+            renderSTL(stl.file, canvasContainer);
+        });
+
+        function renderSTL(file, container) {
+            
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            // Lighting
+            const lights = [
+                { x: 5, y: 5, z: 5 },   // Front-Right
+                { x: -5, y: 5, z: 5 },  // Front-Left
+                { x: 5, y: 5, z: -5 },  // Back-Right
+                { x: -5, y: 5, z: -5 }, // Back-Left
+                { x: 2, y: 10, z: 0 } ,  // Top Light
+                { x: 0, y: -10, z: 0 }  // ✅ Bottom Light
+            ];
+            lights.forEach(pos => {
+                const light = new THREE.DirectionalLight(0xffffff, 1);
+                light.position.set(pos.x, pos.y, pos.z);
+                scene.add(light);
+            });
+            // ✅ Optional: Point Light for Extra Glow
+            const pointLight = new THREE.PointLight(0xffffff, 0.7);
+            pointLight.position.set(0, 5, 0);
+            scene.add(pointLight);
+            // Load STL
+            const loader = new THREE.STLLoader();
+            loader.load(file, function (geometry) {
+                const material = new THREE.MeshStandardMaterial({ color: 0x0077ff, metalness: 0.5, roughness: 0.5 });
+                const mesh = new THREE.Mesh(geometry, material);
+                mesh.rotation.x = -Math.PI / 2;
+                scene.add(mesh);
+            });
+
+            // Camera Position
+            camera.position.z = 100;
+
+            // Controls
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableRotate = true;
+            controls.enableZoom = true;
+            controls.minDistance = 50;  // Minimum zoom-in distance
+            controls.maxDistance = 200;
+            controls.target.set(0, 0, 0); // Center the controls
+            controls.update();
+            // Animation
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+    </script>
+
+</body>
+
+</html>
