@@ -8,11 +8,12 @@
 .learning{
     width: 100%;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     padding: 20px;
+    flex-shrink: 0;
 
 }
 
@@ -28,6 +29,13 @@
 }
 a{
     cursor: pointer;
+}
+.btn-group {
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+    justify-content: center; /* Centers buttons */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    
 }
 .btn-roadmap{
     background-color: #37517e;
@@ -54,8 +62,11 @@ a{
 @media (min-width:768px){
     .learning{
         flex-direction: row;
+        flex-wrap: wrap; /* Ensures new cards don't hide but go to a new row */
+        justify-content: center; /* Keeps them centered */
         
     }
+
     .box{
        
     }
