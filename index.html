@@ -1,583 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="keywords"
+      content="roboaihub , roboai hub, robo ai hub , Robotics and AI courses, AI and robotics training, Robotics internship opportunities, AI internship programs,  Advanced robotics classes, Robotics certification programs, AI workshop for beginners,  Robotics and AI summer programs, Professional robotics training, Practical robotics training, AI and robotics education, Robotics and AI for kids, Robotics project-based learning, AI and robotics career training"
+    />
+    <meta
+      name="title"
+      content="Roboaihub: Transforming the Future with Robotics & AI Education and Training"
+    />
+    <meta
+      name="description"
+      content="learn, innovate, and succeed in the world of robotics and AI with Roboaihub. Explore cutting-edge advancements through our courses, workshops, and internships. Join us today and transform your future!"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="keywords"
-    content="roboaihub , roboai hub, robo ai hub , Robotics and AI courses, AI and robotics training, Robotics internship opportunities, AI internship programs,  Advanced robotics classes, Robotics certification programs, AI workshop for beginners,  Robotics and AI summer programs, Professional robotics training, Practical robotics training, AI and robotics education, Robotics and AI for kids, Robotics project-based learning, AI and robotics career training">
-  <meta name="title" content="Roboaihub: Transforming the Future with Robotics & AI Education and Training">
-  <meta name="description"
-    content="learn, innovate, and succeed in the world of robotics and AI with Roboaihub. Explore cutting-edge advancements through our courses, workshops, and internships. Join us today and transform your future!">
+    <title>RoboAi Hub</title>
 
+    <!-- Favicons -->
+    <link href="img/fev.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
 
-  <title>RoboAi Hub</title>
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/484d1ff7e0.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Favicons -->
-  <link href="img/fev.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/484d1ff7e0.js" crossorigin="anonymous"></script>
-
-
-  <!-- Template Main CSS File -->
-  <link href="css/style.css" rel="stylesheet">
-
-</head>
-
-<body>
-  <button id="chatButton">
-    <img src="https://i.pinimg.com/originals/a0/ad/47/a0ad47c58aced98e0712b7b648d39987.gif" alt="Button" />
-  </button>
-  <div id="chatWindow" class="chat-window" style="display: none;">
-    <div class="chat-header">
-      <span>Eve</span>
-      <button id="closeChat">&times;</button>
-    </div>
-    <div class="chat-content">
-      <p>
-        Hello 👋 Welcome to Robo AI Hub! I'm Eve, your AI assistant. How can I help you explore AI solutions today?
-      </p>
-      <div class="chat-options">
-        <button>Explore Our AI Solutions</button>
-        <button>Request a Demo</button>
-        <button>Ask an AI Expert</button>
-        <button>AI-Powered Innovations</button>
-        <button>Talk to a Specialist</button>
+  <body>
+    <button id="chatButton">
+      <img
+        src="https://i.pinimg.com/originals/a0/ad/47/a0ad47c58aced98e0712b7b648d39987.gif"
+        alt="Button"
+      />
+    </button>
+    <div id="chatWindow" class="chat-window" style="display: none">
+      <div class="chat-header">
+        <span>Eve</span>
+        <button id="closeChat">&times;</button>
       </div>
-    </div>
-    <div class="chat-footer">
-      <input type="text" placeholder="Type your message..." />
-      <label for="fileUpload" class="attach-button">
-        <img src="https://tse4.mm.bing.net/th?id=OIP.TuXLZNuZgFOg67cr-LwB5QHaHa&pid=Api&P=0&h=220" alt="Attach Pin" />
-      </label>
-      <input type="file" id="fileUpload" style="display: none" />
-      <button id="voiceButton">
-        <img src="https://cdn-icons-png.flaticon.com/512/709/709682.png" alt="Voice" />
-      </button>
-      <button id="sendButton">
-        <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAZlBMVEX///8AAAD29vb8/Pzz8/O5ubns7Ozm5ubT09Pb29uVlZWcnJwgICAdHR3X19dZWVkrKyuDg4NxcXFRUVHJyckICAhJSUlAQEB5eXk3NzdpaWmysrImJiampqbBwcGMjIwUFBRhYWGdHWLpAAAEx0lEQVR4nO2di5aqMAxFpyIPQR4FRAER/f+fvGFmzdvxCrRNOYvzBdkL2qRNmry8rFq1atWqVRolfW4LFErETcJtgzIJUu1uuM1QI/Gqc+Qj8Ih3ycTjtmW2xKfyy87hNmeexFelXbDov018V9W7W26Tpkv8VJZ3i108v2CEuKb9jtusaboDI8Shzktuw6boLszweSqX27Tx+gtmULi0nfoRDHnS3aK26scwQjQXbznf538wQhTtYj7P/2GEOIblMjzpMzAUVct2CYe452CEiG+R/Z70WRjypJW03ZM+D0Oqby23vQ81CoYCg3Nk8U49EmbQydq9YAKMELdya+X3mQRDh7jWxhuQiTDDhU5gnSedDEObgXQtWz0zYAin6ay6Dp0FQyps8qRzYSgMbVxbtrb5MLQXpJEdFzoqYGjxZNIGHDUwg9KAm0UhDMWh7YZ39aiEoVNPtOP0pGph6NQjS77VoxqGcPKWKzWiHoaUhiULjhYY8qSSIzWiCUaIrOmMh6HaYGhrq6ThCx2NMLQXnG9GPalWmEFng6kR7TD0fSLf0N5mAGbwpIERT2oERgypEQOfxxQMnUn1FxmYgyFP2l/0elKTMORJT1pTI2ZhyJPqLDIwDUNb21FbkYF5GNK50ONJWWBIWaRhL+CCIZ2UZ7EZYYYLHbVFBqwwQ2pE5edhhhGiDtXdgHCzCJVFBtwkrzo0oRJPys3xrkIquNDhhvhU3bRz9wJuhK+KjzOLDLgBfmpWkQG38b+VTl883Kbf09GdGBhwG35fWZRMiUO5zf5Le3kZv3q4jX6gvB3rSSN5Ks7cZv+lsakRZ+vtgtJto7youW2/o+NpQmrE2Xi+n5RueEpjboDvyqYXGTibreft3EhWB26KD13r+eV6m13Z5VXGjfKqg6IiA8cL2j4/7vfXK+vHqluFd+/boA3zojrW2ZUJJ1b+/tIPLpHMb2lV7xmgtKRGNt7u0pGLaoqj4UWlr8jA8Wg376I+vxV7YzhppLXIwCG/e2m7cNgnTOCYKDLYbP0kKNuubwrd/17WmHl/6VCA5PsE1eeFRpy4MPn+kmIJCiYSCvo0xXyHrDFf6+rQt0rKKK80rCfG95cbL6AFVcexyliiZ36W4NGCulVVXZ+V+F3JWn34JsdP3FDmKfnd/cwvZaTI4Blt/cDtwtMQTMw48RooMhiht2Cim36Oqi2q48eAwfjNQDYAiK0ZwGkihDMQgSbIEQDjcIZxbMa40AC5asK4BIS4nsW4OF9+SgMi2YSRBoRK0EKlzrntfaDxRQ3cFv8loHIToEIgoBItoOI5mLJGoIJToFJgnCJtoPJ5oIcNQE9OgB4DAT3TwnlAh/O0EefRKdBzYKCH2kBP6IGaGwC1ncBpCALUqgWoiQ5MeyOgxlNALcGAmrUBtdHDaXAI1HoSqClo3MG0awVqpAvT4hio+TRQW3Cghu04rfSBhhwAjZ8AGgwCNLIFaJgOzJgjoAFUOKPBgIa2xQ3MOD2gQYdAIyiBhoMCjW0FGqgLM+oYZwg10HhwoMHtWW6mpYsO/UCpeo5UhCp9Q0mtat4wXl9Q8gtXKkKVPlBkstil8qE3krPypm4sGlBqF4GERKcuqy4lZ0ku4dC1atWqVatWWaB/eXl7Cqj6oZMAAAAASUVORK5CYII="
-          alt="Send" />
-      </button>
-    </div>
-    <div class="chat-powered">Chat powered by Robo Ai Hub</div>
-  </div>
-  <!-- Include Fuse.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js"></script>
-  <script type="module" src="script.js"></script>
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html">Robo<span style="color: #5271ff;">Ai</span> Hub</a></h1>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link" href="services.html">Services</a></li>
-          <li><a class="nav-link" href="courses.html">Courses</a></li>
-          <li><a class="nav-link" href="blogPage.html">Blog</a></li>
-          <li><a class="nav-link" href="newsPage.html">News</a></li>
-          <li><a class="nav-link " href="galleryPage.html">Gallery</a></li>
-          <li><a class="nav-link " href="learning.html">Learning Section</a></li>
-          <li><a class="nav-link scrollto" href="#clients">Contact</a></li>
-          <li><a class="getstarted" href="robonari.html">RoboNari</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-
-    </div>
-  </header>
-  <!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center ">
-    <div class="container ">
-      <!-- left section -->
-      <div id="hero_left_section">
-        <div>
-          <h1 id="hero_left_heading">Transforming the Future with <span>Robotics</span> & <span>AI</span></h1>
-          <button id="hero_left_btn">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <i class="fa-solid fa-arrow-right-long"></i>
-          </button>
+      <div class="chat-content">
+        <p>
+          Hello 👋 Welcome to Robo AI Hub! I'm Eve, your AI assistant. How can I
+          help you explore AI solutions today?
+        </p>
+        <div class="chat-options">
+          <button>Explore Our AI Solutions</button>
+          <button>Request a Demo</button>
+          <button>Ask an AI Expert</button>
+          <button>AI-Powered Innovations</button>
+          <button>Talk to a Specialist</button>
         </div>
       </div>
-      <!-- Center section | for screen above 1540px -->
-      <div id="hero_center_robot_image">
-        <!-- <div id="hero_robot_image_large"> -->
-        <img src="./img/ROBOT2.png" alt="ROBOT">
-        <!-- </div> -->
+      <div class="chat-footer">
+        <input type="text" placeholder="Type your message..." />
+        <label for="fileUpload" class="attach-button">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.TuXLZNuZgFOg67cr-LwB5QHaHa&pid=Api&P=0&h=220"
+            alt="Attach Pin"
+          />
+        </label>
+        <input type="file" id="fileUpload" style="display: none" />
+        <button id="voiceButton">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/709/709682.png"
+            alt="Voice"
+          />
+        </button>
+        <button id="sendButton">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAZlBMVEX///8AAAD29vb8/Pzz8/O5ubns7Ozm5ubT09Pb29uVlZWcnJwgICAdHR3X19dZWVkrKyuDg4NxcXFRUVHJyckICAhJSUlAQEB5eXk3NzdpaWmysrImJiampqbBwcGMjIwUFBRhYWGdHWLpAAAEx0lEQVR4nO2di5aqMAxFpyIPQR4FRAER/f+fvGFmzdvxCrRNOYvzBdkL2qRNmry8rFq1atWqVRolfW4LFErETcJtgzIJUu1uuM1QI/Gqc+Qj8Ih3ycTjtmW2xKfyy87hNmeexFelXbDov018V9W7W26Tpkv8VJZ3i108v2CEuKb9jtusaboDI8Shzktuw6boLszweSqX27Tx+gtmULi0nfoRDHnS3aK26scwQjQXbznf538wQhTtYj7P/2GEOIblMjzpMzAUVct2CYe452CEiG+R/Z70WRjypJW03ZM+D0Oqby23vQ81CoYCg3Nk8U49EmbQydq9YAKMELdya+X3mQRDh7jWxhuQiTDDhU5gnSedDEObgXQtWz0zYAin6ay6Dp0FQyps8qRzYSgMbVxbtrb5MLQXpJEdFzoqYGjxZNIGHDUwg9KAm0UhDMWh7YZ39aiEoVNPtOP0pGph6NQjS77VoxqGcPKWKzWiHoaUhiULjhYY8qSSIzWiCUaIrOmMh6HaYGhrq6ThCx2NMLQXnG9GPalWmEFng6kR7TD0fSLf0N5mAGbwpIERT2oERgypEQOfxxQMnUn1FxmYgyFP2l/0elKTMORJT1pTI2ZhyJPqLDIwDUNb21FbkYF5GNK50ONJWWBIWaRhL+CCIZ2UZ7EZYYYLHbVFBqwwQ2pE5edhhhGiDtXdgHCzCJVFBtwkrzo0oRJPys3xrkIquNDhhvhU3bRz9wJuhK+KjzOLDLgBfmpWkQG38b+VTl883Kbf09GdGBhwG35fWZRMiUO5zf5Le3kZv3q4jX6gvB3rSSN5Ks7cZv+lsakRZ+vtgtJto7youW2/o+NpQmrE2Xi+n5RueEpjboDvyqYXGTibreft3EhWB26KD13r+eV6m13Z5VXGjfKqg6IiA8cL2j4/7vfXK+vHqluFd+/boA3zojrW2ZUJJ1b+/tIPLpHMb2lV7xmgtKRGNt7u0pGLaoqj4UWlr8jA8Wg376I+vxV7YzhppLXIwCG/e2m7cNgnTOCYKDLYbP0kKNuubwrd/17WmHl/6VCA5PsE1eeFRpy4MPn+kmIJCiYSCvo0xXyHrDFf6+rQt0rKKK80rCfG95cbL6AFVcexyliiZ36W4NGCulVVXZ+V+F3JWn34JsdP3FDmKfnd/cwvZaTI4Blt/cDtwtMQTMw48RooMhiht2Cim36Oqi2q48eAwfjNQDYAiK0ZwGkihDMQgSbIEQDjcIZxbMa40AC5asK4BIS4nsW4OF9+SgMi2YSRBoRK0EKlzrntfaDxRQ3cFv8loHIToEIgoBItoOI5mLJGoIJToFJgnCJtoPJ5oIcNQE9OgB4DAT3TwnlAh/O0EefRKdBzYKCH2kBP6IGaGwC1ncBpCALUqgWoiQ5MeyOgxlNALcGAmrUBtdHDaXAI1HoSqClo3MG0awVqpAvT4hio+TRQW3Cghu04rfSBhhwAjZ8AGgwCNLIFaJgOzJgjoAFUOKPBgIa2xQ3MOD2gQYdAIyiBhoMCjW0FGqgLM+oYZwg10HhwoMHtWW6mpYsO/UCpeo5UhCp9Q0mtat4wXl9Q8gtXKkKVPlBkstil8qE3krPypm4sGlBqF4GERKcuqy4lZ0ku4dC1atWqVatWWaB/eXl7Cqj6oZMAAAAASUVORK5CYII="
+            alt="Send"
+          />
+        </button>
       </div>
-      <!-- Right section -->
-      <div id="hero_right_section">
-        <div>
-          <!-- Watch video button -->
-          <div id="hero_right_pulse_wrapper">
-            <div id="hero_right_pulse">
-              <div>
-                <i class="fa-solid fa-play"></i>
-              </div>
-            </div>
-            <!-- Anchor tag -->
-            <a href="https://www.youtube.com/channel/UCJwU4mEVuN3h2u5AEtdfOjw" target="_blank">Watch Video</a>
-          </div>
-          <!-- subheading  -->
-          <p>
-            <span>Learn</span> , <span>Innovate</span> , and <span>Succeed</span> in the World of Robotics
-          </p>
-        </div>
+      <div class="chat-powered">Chat powered by Robo Ai Hub</div>
+    </div>
+    <!-- Include Fuse.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js"></script>
+    <script type="module" src="script.js"></script>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+          <a href="index.html"
+            >Robo<span style="color: #5271ff">Ai</span> Hub</a
+          >
+        </h1>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link" href="services.html">Services</a></li>
+            <li><a class="nav-link" href="courses.html">Courses</a></li>
+            <li><a class="nav-link" href="blogPage.html">Blog</a></li>
+            <li><a class="nav-link" href="newsPage.html">News</a></li>
+            <li><a class="nav-link" href="galleryPage.html">Gallery</a></li>
+            <li>
+              <a class="nav-link" href="learning.html">Learning Section</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#clients">Contact</a></li>
+            <li><a class="getstarted" href="robonari.html">RoboNari</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
       </div>
-    </div>
-    <!-- ROBOT Image -->
-    <div id="hero_robot_image_small">
-      <img src="./img/ROBO2FLIP.png" alt="">
-    </div>
+    </header>
+    <!-- End Header -->
 
-    <!-- for large screen  -->
-    <div id="hero_robot_image_large">
-      <img src="./img/ROBOT2.png" alt="ROBOT">
-    </div>
-  </section>
-  <!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= Clients Section ======= -->
-    <section id="" class="clients section-bg newUpdates">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
       <div class="container">
-
-        <div class="row" data-aos="zoom-in">
-          <div class="mm scroll-left">
-            <!-- <p>New Updates Here !!</p> -->
-            <p>Robotics and Ai Expo on 22nd-23rd June</p>
+        <!-- left section -->
+        <div id="hero_left_section">
+          <div>
+            <h1 id="hero_left_heading">
+              Transforming the Future with <span>Robotics</span> &
+              <span>AI</span>
+            </h1>
+            <button id="hero_left_btn">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
           </div>
         </div>
-
-      </div>
-    </section>
-    <!-- End Cliens Section -->
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About Us</h2>
-          <h3>Welcome at RoboAi Hub Where We Elevate Your Learnings through Robotics</h3>
+        <!-- Center section | for screen above 1540px -->
+        <div id="hero_center_robot_image">
+          <!-- <div id="hero_robot_image_large"> -->
+          <img src="./img/ROBOT2.png" alt="ROBOT" />
+          <!-- </div> -->
         </div>
-
-        <div class="row1 content">
-          <div class="about-txt">
+        <!-- Right section -->
+        <div id="hero_right_section">
+          <div>
+            <!-- Watch video button -->
+            <div id="hero_right_pulse_wrapper">
+              <div id="hero_right_pulse">
+                <div>
+                  <i class="fa-solid fa-play"></i>
+                </div>
+              </div>
+              <!-- Anchor tag -->
+              <a
+                href="https://www.youtube.com/channel/UCJwU4mEVuN3h2u5AEtdfOjw"
+                target="_blank"
+                >Watch Video</a
+              >
+            </div>
+            <!-- subheading  -->
             <p>
-              Igniting dreams, building the future. RoboAi Hub is not just a training center, it's
-              a vibrant community where aspiring roboticists of all ages and skill levels
-              come together to learn, create, and push the boundaries of what's possible.
+              <span>Learn</span> , <span>Innovate</span> , and
+              <span>Succeed</span> in the World of Robotics
             </p>
-            <div class="about-sec">
-              <div>
-                <p class="txt"><i class="fa-solid fa-check fa-beat-fade" style="color: #0A66C2;"></i> Comprehensive
-                  training programs for various education levels.</p>
-                <p class="txt"><i class="fa-solid fa-check fa-beat-fade" style="color: #0A66C2;"></i> Open-source labs
-                  equipped for hands-on projects and research.</p>
-                <p class="txt"><i class="fa-solid fa-check fa-beat-fade" style="color: #0A66C2;"></i> A vibrant
-                  community fostering collaboration and innovation.</p>
-                <p class="txt"><i class="fa-solid fa-check fa-beat-fade" style="color: #0A66C2;"></i> Expert-led courses
-                  covering electronics, programming, AI, and more.</p>
-                <p>Plus, Enjoy Our Amenities:</p>
-                <p class="txt"><i class="fa-solid fa-check fa-beat-fade" style="color: #0A66C2;"></i> Induction
-                  facilities for tea and meal preparation, ensuring a comfortable and welcoming environment for all.</p>
-              </div>
-              <img src="img/AboutUs01.jpg" class="about-img" alt="">
-            </div>
-            <a href="https://drive.google.com/file/d/1XuQoO6IydSAauQ3vCN5Wqpwg60sjp7oq/view"
-              class="btn-learn-more">Learn More</a>
           </div>
         </div>
+      </div>
+      <!-- ROBOT Image -->
+      <div id="hero_robot_image_small">
+        <img src="./img/ROBO2FLIP.png" alt="" />
+      </div>
 
+      <!-- for large screen  -->
+      <div id="hero_robot_image_large">
+        <img src="./img/ROBOT2.png" alt="ROBOT" />
       </div>
     </section>
-    <!-- End About Us Section -->
+    <!-- End Hero -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-      </div>
-      <div id="aboutt">
-
-        <div class="roww">
-          <div class="aboutt-col-1 poll">
-            <img src="img/business.png" class="img-bs" alt="">
-          </div>
-          <div class="aboutt-col-2 roll">
-            <div class="bu">
-              <h1 class="subtitle">Business Verticals</h1>
-            </div>
-            <div class="tab-titles">
-              <p class="tab-links " onclick="opentab('skills')">Skill Centre</p>
-              <p class="tab-links active-link" onclick="opentab('education')">R&amp;D Innovation</p>
-              <p class="tab-links" onclick="opentab('experience')">Product Developement</p>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-              <p>Offering robotics classes, robotic lab installations, workshops,
-                and seminars is an excellent way to provide valuable skills to individuals interested in robotics.
-                Targeting various age groups and skill levels,
-                from school students to professionals looking to upskill.
-                Collaborate with educational institutions to provide certification or credits for courses,
-                which can add credibility to your offerings.
-                Stay updated with the latest trends and technologies in robotics to ensure your
-                curriculum remains relevant.
-              </p>
-            </div>
-            <div class="tab-contents" id="education">
-              <p>Having a dedicated R&D focus is crucial for innovation.
-                Ensuring robotics lab is well-equipped with the latest technology and tools.
-                Encourage collaboration between mentors and students to foster creativity and problem-solving.
-                Establish clear processes for documenting and patenting any
-                new innovations that arise from R&D efforts.
-                Partnering with universities or research institutions to expand R&D capabilities.
-
-              </p>
-            </div>
-            <div class="tab-contents" id="experience">
-              <p>When transitioning from R&D to product we Develop a robust product development strategy,
-                including manufacturing, quality control, and distribution.
-                Creating prototypes and testing them extensively before launching them in the market.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Services Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Core Team</h2>
-        </div>
-
-        <div class="yo-team">
-          <div class="l1">
-            <div class="" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member d-flex align-items-start">
-                <div class="member-info">
-                  <div class="pic"><img src="team/Sir.jpg" class="img-fluid" alt=""></div>
-                  <h4>Narayan</h4>
-                </div>
-              </div>
-            </div>
-            <div class="" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member d-flex align-items-start">
-                <div class="member-info">
-                  <div class="pic"><img src="team/Nikhil Sharma.jpg" class="img-fluid" alt=""></div>
-                  <h4>Nikhil</h4>
-                </div>
-              </div>
-            </div>
-            <div class="" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member d-flex align-items-start">
-                <div class="member-info">
-                  <div class="pic"><img src="team/anand.jpeg" class="img-fluid" alt=""></div>
-                  <h4>Anand</h4>
-                </div>
-              </div>
-            </div>
-            <div class="" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member d-flex align-items-start">
-                <div class="member-info">
-                  <div class="pic"><img src="team/Divya.jpg" class="img-fluid" alt=""></div>
-                  <h4>Divya</h4>
-                </div>
-              </div>
-            </div>
-            <div class="" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member d-flex align-items-start">
-                <div class="member-info">
-                  <div class="pic"><img src="team/Mayank.jpg" class="img-fluid" alt=""></div>
-                  <h4>Mayank</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    <!-- End Team Section -->
-
-    <div id="clients" class="joined">
+    <main id="main">
       <!-- ======= Clients Section ======= -->
-      <section id="" class="clients section-bg">
+      <section id="" class="clients section-bg newUpdates">
         <div class="container">
-
           <div class="row" data-aos="zoom-in">
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="companies/ITK_Logo.png" class="img-fluid" alt="">
+            <div class="mm scroll-left">
+              <!-- <p>New Updates Here !!</p> -->
+              <p>Robotics and Ai Expo on 22nd-23rd June</p>
             </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="companies/RoboNari_Logo.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="companies/Basttl.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="companies/Manash.png" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="companies/MeTag.png" class="img-fluid me-tag" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="companies/IngeniousTechnology.png" class="img-fluid ing-tech" alt="">
-            </div>
-
           </div>
-
         </div>
       </section>
       <!-- End Cliens Section -->
 
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact section-bg">
+      <!-- ======= About Us Section ======= -->
+      <section id="about" class="about">
         <div class="container" data-aos="fade-up">
-
           <div class="section-title">
-            <h2>Contact Us</h2>
+            <h2>About Us</h2>
+            <h3>
+              Welcome at RoboAi Hub Where We Elevate Your Learnings through
+              Robotics
+            </h3>
           </div>
 
-          <div class="row">
-
-            <div class="col-lg-5 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>
-                    Vaishnavi Tower, Ratanada, Jodhpur, Rajasthan 342001</p>
+          <div class="row1 content">
+            <div class="about-txt">
+              <p>
+                Igniting dreams, building the future. RoboAi Hub is not just a
+                training center, it's a vibrant community where aspiring
+                roboticists of all ages and skill levels come together to learn,
+                create, and push the boundaries of what's possible.
+              </p>
+              <div class="about-sec">
+                <div>
+                  <p class="txt">
+                    <i
+                      class="fa-solid fa-check fa-beat-fade"
+                      style="color: #0a66c2"
+                    ></i>
+                    Comprehensive training programs for various education
+                    levels.
+                  </p>
+                  <p class="txt">
+                    <i
+                      class="fa-solid fa-check fa-beat-fade"
+                      style="color: #0a66c2"
+                    ></i>
+                    Open-source labs equipped for hands-on projects and
+                    research.
+                  </p>
+                  <p class="txt">
+                    <i
+                      class="fa-solid fa-check fa-beat-fade"
+                      style="color: #0a66c2"
+                    ></i>
+                    A vibrant community fostering collaboration and innovation.
+                  </p>
+                  <p class="txt">
+                    <i
+                      class="fa-solid fa-check fa-beat-fade"
+                      style="color: #0a66c2"
+                    ></i>
+                    Expert-led courses covering electronics, programming, AI,
+                    and more.
+                  </p>
+                  <p>Plus, Enjoy Our Amenities:</p>
+                  <p class="txt">
+                    <i
+                      class="fa-solid fa-check fa-beat-fade"
+                      style="color: #0a66c2"
+                    ></i>
+                    Induction facilities for tea and meal preparation, ensuring
+                    a comfortable and welcoming environment for all.
+                  </p>
                 </div>
-
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>contactus@robonari.co.in</p>
-                </div>
-
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+91 9828014877</p>
-                </div>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d223.60193970635427!2d73.031585!3d26.2736357!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c5baa00088d%3A0xe3f8b4734b43ab1!2sVaishnavi%20Tower!5e0!3m2!1sen!2sin!4v1705146344353!5m2!1sen!2sin"
-                  frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                <img src="img/AboutUs01.jpg" class="about-img" alt="" />
               </div>
-
+              <a
+                href="https://drive.google.com/file/d/1XuQoO6IydSAauQ3vCN5Wqpwg60sjp7oq/view"
+                class="btn-learn-more"
+                >Learn More</a
+              >
             </div>
-
-            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" required>
-                </div>
-                <div class="form-group">
-                  <label for="name">Message</label>
-                  <textarea class="form-control" name="message" rows="10" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-
           </div>
-
         </div>
       </section>
-      <!-- End Contact Section -->
-    </div>
+      <!-- End About Us Section -->
 
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>RoboAi Hub</h3>
-            <p>
-              Vikramaditya Nagar, Surya Colony<br>
-              Jodhpur, Rajasthan<br>
-              342001 <br><br>
-              <strong>Phone:</strong> +91 9828014877<br>
-              <strong>Email:</strong> contactus@robonari.co.in<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Robotics</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">3D Printing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">PCB Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Tech Tools Handling</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <div class="social-links mt-3">
-              <a href="https://roboaihub.com/_link/?link=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61552123589020%26mibextid%3DZbWKwL&target=B0VVmO%2BwJnP7cesgDkjsXbqL22qwM%2FXpwuzILvbdUrpy8XWmY%2B2BlVPsQifx%2BMPORQMx%2FacWzayr90xDfeBp12Q9oIWUP7Ch4DhH0w3Lm0mVQRWHT5QHb%2Bw%2Fpl%2FZI0neLpnbPnew5Nj1AHY7VYJ51wE8NP5w&iv=iuhqU8C76GK4FrmM"
-                class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/roboaihub/?igshid=MWZjMTM2ODFkZg%3D%3D" class="instagram"><i
-                  class="bx bxl-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/roboaihub/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCJwU4mEVuN3h2u5AEtdfOjw" class="youtube"><i
-                  class="bx bxl-youtube"></i></a>
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up"></div>
+        <div id="aboutt">
+          <div class="roww">
+            <div class="aboutt-col-1 poll">
+              <img src="img/business.png" class="img-bs" alt="" />
+            </div>
+            <div class="aboutt-col-2 roll">
+              <div class="bu">
+                <h1 class="subtitle">Business Verticals</h1>
+              </div>
+              <div class="tab-titles">
+                <p class="tab-links" onclick="opentab('skills')">
+                  Skill Centre
+                </p>
+                <p class="tab-links active-link" onclick="opentab('education')">
+                  R&amp;D Innovation
+                </p>
+                <p class="tab-links" onclick="opentab('experience')">
+                  Product Developement
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <p>
+                  Offering robotics classes, robotic lab installations,
+                  workshops, and seminars is an excellent way to provide
+                  valuable skills to individuals interested in robotics.
+                  Targeting various age groups and skill levels, from school
+                  students to professionals looking to upskill. Collaborate with
+                  educational institutions to provide certification or credits
+                  for courses, which can add credibility to your offerings. Stay
+                  updated with the latest trends and technologies in robotics to
+                  ensure your curriculum remains relevant.
+                </p>
+              </div>
+              <div class="tab-contents" id="education">
+                <p>
+                  Having a dedicated R&D focus is crucial for innovation.
+                  Ensuring robotics lab is well-equipped with the latest
+                  technology and tools. Encourage collaboration between mentors
+                  and students to foster creativity and problem-solving.
+                  Establish clear processes for documenting and patenting any
+                  new innovations that arise from R&D efforts. Partnering with
+                  universities or research institutions to expand R&D
+                  capabilities.
+                </p>
+              </div>
+              <div class="tab-contents" id="experience">
+                <p>
+                  When transitioning from R&D to product we Develop a robust
+                  product development strategy, including manufacturing, quality
+                  control, and distribution. Creating prototypes and testing
+                  them extensively before launching them in the market.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
 
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Core Team</h2>
+          </div>
+
+          <div class="yo-team">
+            <div class="l1">
+              <div class="" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="member-info">
+                    <div class="pic">
+                      <img src="team/Sir.jpg" class="img-fluid" alt="" />
+                    </div>
+                    <h4>Narayan</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="member-info">
+                    <div class="pic">
+                      <img
+                        src="team/Nikhil Sharma.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <h4>Nikhil</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="member-info">
+                    <div class="pic">
+                      <img src="team/anand.jpeg" class="img-fluid" alt="" />
+                    </div>
+                    <h4>Anand</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="member-info">
+                    <div class="pic">
+                      <img src="team/Divya.jpg" class="img-fluid" alt="" />
+                    </div>
+                    <h4>Divya</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="" data-aos="zoom-in" data-aos-delay="100">
+                <div class="member d-flex align-items-start">
+                  <div class="member-info">
+                    <div class="pic">
+                      <img src="team/Mayank.jpg" class="img-fluid" alt="" />
+                    </div>
+                    <h4>Mayank</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+
+      <div id="clients" class="joined">
+        <!-- ======= Clients Section ======= -->
+        <section id="" class="clients section-bg">
+          <div class="container">
+            <div class="row" data-aos="zoom-in">
+              <div
+                class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+              >
+                <img src="companies/ITK_Logo.png" class="img-fluid" alt="" />
+              </div>
+
+              <div
+                class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="companies/RoboNari_Logo.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+              >
+                <img src="companies/Basttl.png" class="img-fluid" alt="" />
+              </div>
+
+              <div
+                class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+              >
+                <img src="companies/Manash.png" class="img-fluid" alt="" />
+              </div>
+
+              <div
+                class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="companies/MeTag.png"
+                  class="img-fluid me-tag"
+                  alt=""
+                />
+              </div>
+
+              <div
+                class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="companies/IngeniousTechnology.png"
+                  class="img-fluid ing-tech"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Cliens Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact section-bg">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Contact Us</h2>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-5 d-flex align-items-stretch">
+                <div class="info">
+                  <div class="address">
+                    <i class="bi bi-geo-alt"></i>
+                    <h4>Location:</h4>
+                    <p>Vaishnavi Tower, Ratanada, Jodhpur, Rajasthan 342001</p>
+                  </div>
+
+                  <div class="email">
+                    <i class="bi bi-envelope"></i>
+                    <h4>Email:</h4>
+                    <p>contactus@robonari.co.in</p>
+                  </div>
+
+                  <div class="phone">
+                    <i class="bi bi-phone"></i>
+                    <h4>Call:</h4>
+                    <p>+91 9828014877</p>
+                  </div>
+                 
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3578.193150339944!2d72.99936307541697!3d26.255393977045028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDE1JzE5LjQiTiA3M8KwMDAnMDcuMCJF!5e0!3m2!1sen!2sin!4v1756437858845!5m2!1sen!2sin"
+                    frameborder="0"
+                    style="border: 0; width: 100%; height: 290px"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form
+                  action="forms/contact.php"
+                  method="post"
+                  role="form"
+                  class="php-email-form"
+                >
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label for="name">Your Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="name">Your Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Subject</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="10"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Contact Section -->
+      </div>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>RoboAi Hub</h3>
+              <p>
+                Vikramaditya Nagar, Surya Colony<br />
+                Jodhpur, Rajasthan<br />
+                342001 <br /><br />
+                <strong>Phone:</strong> +91 9828014877<br />
+                <strong>Email:</strong> contactus@robonari.co.in<br />
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#about">About us</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="services.html">Services</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="courses.html">Robotics</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="courses.html">3D Printing</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="courses.html">PCB Design</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="courses.html">Tech Tools Handling</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <div class="social-links mt-3">
+                <a
+                  href="https://roboaihub.com/_link/?link=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61552123589020%26mibextid%3DZbWKwL&target=B0VVmO%2BwJnP7cesgDkjsXbqL22qwM%2FXpwuzILvbdUrpy8XWmY%2B2BlVPsQifx%2BMPORQMx%2FacWzayr90xDfeBp12Q9oIWUP7Ch4DhH0w3Lm0mVQRWHT5QHb%2Bw%2Fpl%2FZI0neLpnbPnew5Nj1AHY7VYJ51wE8NP5w&iv=iuhqU8C76GK4FrmM"
+                  class="facebook"
+                  ><i class="bx bxl-facebook"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/roboaihub/?igshid=MWZjMTM2ODFkZg%3D%3D"
+                  class="instagram"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/roboaihub/"
+                  class="linkedin"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCJwU4mEVuN3h2u5AEtdfOjw"
+                  class="youtube"
+                  ><i class="bx bxl-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>RoboAi Hub</span></strong>. All Rights Reserved
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>RoboAi Hub</span></strong
+          >. All Rights Reserved
+        </div>
       </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+    </footer>
+    <!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-  <!-- javascipt for Business Verticals  -->
-  <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    <!-- javascipt for Business Verticals  -->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
-      for (tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-
-  </script>
-
-  <script>
-    window.addEventListener('scroll', roll);
-
-    function roll() {
-      var rolls = document.querySelectorAll('.roll');
-
-      for (var i = 0; i < rolls.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = rolls[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if (revealtop < windowheight - revealpoint) {
-          rolls[i].classList.add('active');
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
-        else {
-          rolls[i].classList.remove('active');
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
         }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
       }
-    }
-  </script>
+    </script>
 
-  <script>
-    window.addEventListener('scroll', poll);
+    <script>
+      window.addEventListener("scroll", roll);
 
-    function poll() {
-      var polls = document.querySelectorAll('.poll');
+      function roll() {
+        var rolls = document.querySelectorAll(".roll");
 
-      for (var i = 0; i < polls.length; i++) {
-        var windowheight = window.innerHeight;
-        var revealtop = polls[i].getBoundingClientRect().top;
-        var revealpoint = 150;
+        for (var i = 0; i < rolls.length; i++) {
+          var windowheight = window.innerHeight;
+          var revealtop = rolls[i].getBoundingClientRect().top;
+          var revealpoint = 150;
 
-        if (revealtop < windowheight - revealpoint) {
-          polls[i].classList.add('active');
-        }
-        else {
-          polls[i].classList.remove('active');
+          if (revealtop < windowheight - revealpoint) {
+            rolls[i].classList.add("active");
+          } else {
+            rolls[i].classList.remove("active");
+          }
         }
       }
-    }
-  </script>
+    </script>
 
-</body>
+    <script>
+      window.addEventListener("scroll", poll);
 
+      function poll() {
+        var polls = document.querySelectorAll(".poll");
+
+        for (var i = 0; i < polls.length; i++) {
+          var windowheight = window.innerHeight;
+          var revealtop = polls[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+
+          if (revealtop < windowheight - revealpoint) {
+            polls[i].classList.add("active");
+          } else {
+            polls[i].classList.remove("active");
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
