@@ -1,0 +1,73 @@
+#wrapper {
+    /* height: 100vh; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+
+.learning{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    flex-shrink: 0;
+
+}
+
+.box{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+a{
+    cursor: pointer;
+}
+.btn-group {
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+    justify-content: center; /* Centers buttons */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    
+}
+.btn-roadmap{
+    background-color: #37517e;
+    color: white;
+
+}
+.btn-roadmap:hover{
+    border: 1px solid #37517e;
+}
+.text-color{
+    color: #37517e;
+    
+}
+
+.learn-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 1px 1px black;
+}
+
+
+
+@media (min-width:768px){
+    .learning{
+        flex-direction: row;
+        flex-wrap: wrap; /* Ensures new cards don't hide but go to a new row */
+        justify-content: center; /* Keeps them centered */
+        
+    }
+
+    .box{
+       
+    }
+}
