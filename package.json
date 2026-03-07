@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "robo-ai-hub",
   "version": "0.1.0",
   "private": true,
@@ -41,16 +40,4 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
-=======
-  "name": "roboaihubweb-main",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
->>>>>>> 45d6c95eab55ab09509fb5150fe55b928d763ae1
 }
