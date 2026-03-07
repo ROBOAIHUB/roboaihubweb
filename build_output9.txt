@@ -1,0 +1,15 @@
+
+> robo-ai-hub@0.1.0 build
+> next build
+
+▲ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.7s
+  Running TypeScript ...
+  Collecting page data using 15 workers ...
+
+> Build error occurred
+Error: Page "/ecosystem/[slug]" is missing "generateStaticParams()" so it cannot be used with "output: export" config.
+    at ignore-listed frames

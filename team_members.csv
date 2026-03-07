@@ -1,0 +1,4 @@
+name,role,specialty,bio,image,linkedin,github,email
+"Marcus Wright","AI Systems Architect","NEURAL NETS","Expert in autonomous decision-making algorithms.","/images/team/member1.jpg","https://linkedin.com/in/marcus","https://github.com/marcus","marcus@roboai.com"
+"Dr. Evelyn Chen","Lead Roboticist","SOFT ROBOTICS","Pioneering soft robotics and human-robot interaction.","/images/team/member2.jpg","https://linkedin.com/in/evelyn","https://github.com/evelyn","evelyn@roboai.com"
+"REQUIRED","REQUIRED","OPTIONAL","OPTIONAL","REQUIRED (Path)","OPTIONAL (URL)","OPTIONAL (URL)","OPTIONAL (Email)"
