@@ -9,18 +9,18 @@ const voiceButton = document.getElementById('voiceButton'); // Ensure you have t
 
 // Predefined responses as an array of objects
 const responses = [
-  { question: "what is robo ai hub", answer: "Igniting dreams, building the future. RoboAi Hub is not just a training center, it's a vibrant community where aspiring roboticists of all ages and skill levels come together to learn, create, and push the boundaries of what's possible." },
-  { question: "who are you", answer: "I am Eve, your AI assistant. I'm here to help you explore AI solutions at Robo AI Hub!" },
+  { question: "what is roboai hub", answer: "Igniting dreams, building the future. RoboAI Hub is not just a training center, it's a vibrant community where aspiring roboticists of all ages and skill levels come together to learn, create, and push the boundaries of what's possible." },
+  { question: "who are you", answer: "I am Eve, your AI assistant. I'm here to help you explore AI solutions at RoboAI Hub!" },
   { question: "hello", answer: "Hello! How can I assist you today?" },
-  { question: "how can i join robo ai hub", answer: "You can join Robo AI Hub by visiting our website and signing up for our programs!" },
+  { question: "how can i join roboai hub", answer: "You can join RoboAI Hub by visiting our website and signing up for our programs!" },
   { question: "what are the courses you provide", answer: "Here is the link to explore all the courses we offer: <a href='courses.html' target='_blank'>Explore Courses</a>" },
   { question: "what services do you provide", answer: "Here is the link to explore all the services we offer: <a href='services.html' target='_blank'>Explore Services</a>" },
   { question: "do you have a blog", answer: "Yes, we have a blog! You can read it here: <a href='blogPage.html' target='_blank'>Visit Our Blog</a>" },
   { question: "what's the latest news", answer: "Stay updated with the latest news by visiting our news page: <a href='newsPage.html' target='_blank'>Latest News</a>" },
   { question: "what is in your gallery", answer: "You can check out our gallery here: <a href='galleryPage.html' target='_blank'>Explore Gallery</a>" },
-  { question: "what is learning at robo ai hub", answer: "Check out our learning page to explore the exciting learning opportunities we offer: <a href='learning.html' target='_blank'>Explore Learning</a>" }
+  { question: "what is learning at roboai hub", answer: "Check out our learning page to explore the exciting learning opportunities we offer: <a href='learning.html' target='_blank'>Explore Learning</a>" }
 ];
- 
+
 // Initialize Fuse.js correctly
 const fuse = new Fuse(responses, {
   keys: ['question'], // Search based on the question field
