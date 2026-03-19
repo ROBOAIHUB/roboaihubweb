@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ImageCarousel } from '@/components/ui/ImageCarousel';
 import { MotionContainer, MotionItem, MotionImage } from '@/components/ui/MotionContainer';
 
 import { ReactNode } from 'react';
@@ -23,35 +24,6 @@ interface ServiceData {
 }
 
 const servicesData: Record<string, ServiceData> = {
-    'foundation-programs': {
-        title: "Foundation Programs",
-        desc: (<>Hands-on <span className="font-bold text-white">Robotics & AI</span> learning designed for real-world skills — not theory. Students don't just study technology. They build it.</>),
-        fullDesc: "",
-        image: "/images/services/foundation_main_new.png",
-        detailImage: "/images/services/foundation_detail_new.png",
-        features: [
-            {
-                title: "Industry-Aligned Curriculum",
-                desc: "Our courses are meticulously designed to match current market demands.",
-                icon: BookOpen
-            },
-            {
-                title: "Hands-On Projects",
-                desc: "Move beyond theory by building real robots and AI models.",
-                icon: Cpu
-            },
-            {
-                title: "Expert Mentorship",
-                desc: "Learn directly from industry veterans and researchers.",
-                icon: UserCheck
-            },
-            {
-                title: "Real-World Skills",
-                desc: "We focus on practical applications and immediate project implementation.",
-                icon: Globe
-            }
-        ]
-    },
     'lab-ecosystem-solutions': {
         title: "Lab Ecosystem Solutions",
         desc: (<>End-to-end <span className="font-bold text-white">Robotics & AI labs</span> for institutions — infrastructure, curriculum, and mentors included. Everything needed to start innovation from day one.</>),
@@ -109,35 +81,6 @@ const servicesData: Record<string, ServiceData> = {
                 icon: TrendingUp
             }
         ]
-    },
-    'innovation-studio': {
-        title: "Innovation Studio",
-        desc: (<>Where <span className="font-bold text-white">ideas</span> become reality. From prototypes to interactive installations, we engineer custom Robotics & AI experiences that don't exist yet.</>),
-        fullDesc: "",
-        image: "/images/services/innovation_main_new.png",
-        detailImage: "/images/services/innovation_detail_new.png",
-        features: [
-            {
-                title: "Concept Prototyping",
-                desc: "Rapidly transform abstract ideas into working physical prototypes.",
-                icon: Lightbulb
-            },
-            {
-                title: "Interactive Experiences",
-                desc: "Develop engaging, immersive tech installations for events or spaces.",
-                icon: Monitor
-            },
-            {
-                title: "Limitless Engineering",
-                desc: "If it involves code, circuits, and motion—we can build it.",
-                icon: Wrench
-            },
-            {
-                title: "Future Ready",
-                desc: "Leveraging the most unconventional setups to bring sci-fi concepts to life.",
-                icon: Rocket
-            }
-        ]
     }
 };
 
@@ -165,7 +108,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
             <div className="container mx-auto px-6 relative z-10">
                 <Link href="/ecosystem" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors group">
-                    <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Services
+                    <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Ecosystem
                 </Link>
 
                 <div className="max-w-6xl mx-auto">
@@ -244,10 +187,24 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             )}
 
                             {/* Insert Detail Image in Content Flow - HIDDEN ON LG TO AVOID REPETITION */}
-                            {service.detailImage && !service.features && (
-                                <MotionContainer delay={0.2} className="w-full h-64 rounded-2xl overflow-hidden border border-white/10 relative group lg:hidden">
-                                    <div className="absolute inset-0 bg-neon-cyan/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-500"></div>
-                                    <MotionImage src={service.detailImage} alt="Service Detail" className="w-full h-full object-cover" />
+                            {(service.detailImage || slug === 'lab-ecosystem-solutions') && !service.features && (
+                                <MotionContainer delay={0.2} className="w-full h-64 lg:h-96 rounded-2xl overflow-hidden border border-white/10 relative group lg:hidden">
+                                    <div className="absolute inset-0 bg-neon-cyan/10 mix-blend-overlay pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                    {slug === 'lab-ecosystem-solutions' ? (
+                                        <ImageCarousel
+                                            images={[
+                                                { src: "/images/ecosystem/lab/media__1772874163995.jpg", alt: "Lab Ecosystem 1" },
+                                                { src: "/images/ecosystem/lab/media__1772874164070.jpg", alt: "Lab Ecosystem 5" },
+                                                { src: "/images/ecosystem/lab/media__1772874164010.jpg", alt: "Lab Ecosystem 2" },
+                                                { src: "/images/ecosystem/lab/media__1772874164017.jpg", alt: "Lab Ecosystem 3" },
+                                                { src: "/images/ecosystem/lab/media__1772874164058.jpg", alt: "Lab Ecosystem 4" }
+                                            ]}
+                                            className="w-full h-full object-cover"
+                                            autoPlayInterval={3000}
+                                        />
+                                    ) : (
+                                        <MotionImage src={service.detailImage!} alt="Service Detail" className="w-full h-full object-cover" />
+                                    )}
                                 </MotionContainer>
                             )}
 
@@ -258,12 +215,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                         <div>
                                             <MotionContainer delay={0.3}>
                                                 <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                                                    <UserCheck className="text-yellow-400" /> Who Can Join?
+                                                    <UserCheck className="text-blue-400" /> Who Can Join?
                                                 </h3>
                                             </MotionContainer>
                                             <div className="space-y-4">
                                                 {service.targetAudience.map((audience, idx) => (
-                                                    <MotionItem key={idx} delay={0.4 + (idx * 0.05)} className="bg-white/5 p-4 rounded-xl border-l-2 border-yellow-400">
+                                                    <MotionItem key={idx} delay={0.4 + (idx * 0.05)} className="bg-white/5 p-4 rounded-xl border-l-2 border-blue-400">
                                                         <h4 className="font-bold text-white mb-1">{audience.title}</h4>
                                                         <p className="text-xs text-gray-400">{audience.desc}</p>
                                                     </MotionItem>
@@ -299,10 +256,25 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
                         {/* Sidebar / Additional Visuals */}
                         <div className="hidden lg:block space-y-8">
-                            {service.detailImage && (
+                            {(service.detailImage || slug === 'lab-ecosystem-solutions') && (
                                 <MotionContainer delay={0.3} className="sticky top-32">
-                                    <div className="rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_30px_rgba(0,243,255,0.1)] h-[500px]">
-                                        <MotionImage src={service.detailImage} alt="Detail View" className="w-full h-full object-cover" />
+                                    <div className="rounded-3xl overflow-hidden border border-white/20 shadow-[0_0_30px_rgba(0,243,255,0.1)] h-[500px] relative group">
+                                        <div className="absolute inset-0 bg-neon-cyan/10 mix-blend-overlay pointer-events-none z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                        {slug === 'lab-ecosystem-solutions' ? (
+                                            <ImageCarousel
+                                                images={[
+                                                    { src: "/images/ecosystem/lab/media__1772874163995.jpg", alt: "Lab Ecosystem 1" },
+                                                    { src: "/images/ecosystem/lab/media__1772874164070.jpg", alt: "Lab Ecosystem 5" },
+                                                    { src: "/images/ecosystem/lab/media__1772874164010.jpg", alt: "Lab Ecosystem 2" },
+                                                    { src: "/images/ecosystem/lab/media__1772874164017.jpg", alt: "Lab Ecosystem 3" },
+                                                    { src: "/images/ecosystem/lab/media__1772874164058.jpg", alt: "Lab Ecosystem 4" }
+                                                ]}
+                                                className="w-full h-full object-cover"
+                                                autoPlayInterval={3000}
+                                            />
+                                        ) : (
+                                            <MotionImage src={service.detailImage!} alt="Detail View" className="w-full h-full object-cover" />
+                                        )}
                                     </div>
                                 </MotionContainer>
                             )}

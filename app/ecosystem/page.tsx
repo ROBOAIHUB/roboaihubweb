@@ -29,14 +29,6 @@ const allServices = [
         image: "/images/services/industry_main_new.png",
         icon: Cpu,
         color: "text-cyan-400"
-    },
-    {
-        id: 'innovation-studio',
-        title: "Innovation Studio",
-        desc: "Where ideas become reality. From prototypes to interactive installations, we engineer custom Robotics & AI experiences that don't exist yet.",
-        image: "/images/services/innovation_main_new.png",
-        icon: Lightbulb,
-        color: "text-cyan-400"
     }
 ];
 
@@ -54,25 +46,25 @@ function TriangleDiagram() {
                 </defs>
 
                 {/* Background tracks with arrows */}
-                <line x1="50%" y1="15%" x2="80%" y2="80%" stroke="#00f3ff" strokeWidth="1.5" opacity="0.3" strokeDasharray="6,6" markerEnd="url(#arrow)" />
-                <line x1="80%" y1="80%" x2="20%" y2="80%" stroke="#00f3ff" strokeWidth="1.5" opacity="0.3" strokeDasharray="6,6" markerEnd="url(#arrow)" />
-                <line x1="20%" y1="80%" x2="50%" y2="15%" stroke="#00f3ff" strokeWidth="1.5" opacity="0.3" strokeDasharray="6,6" markerEnd="url(#arrow)" />
+                <line x1="50%" y1="15%" x2="80%" y2="80%" stroke="#ff0000" strokeWidth="2" opacity="0.6" strokeDasharray="6,6" style={{ filter: "drop-shadow(0 0 5px #ff0000)" }} />
+                <line x1="80%" y1="80%" x2="20%" y2="80%" stroke="#ff0000" strokeWidth="2" opacity="0.6" strokeDasharray="6,6" style={{ filter: "drop-shadow(0 0 5px #ff0000)" }} />
+                <line x1="20%" y1="80%" x2="50%" y2="15%" stroke="#ff0000" strokeWidth="2" opacity="0.6" strokeDasharray="6,6" style={{ filter: "drop-shadow(0 0 5px #ff0000)" }} />
 
                 {/* Animated sequential beams */}
                 <motion.line
                     animate={{ pathLength: [0, 1, 1, 1, 0, 0], opacity: [1, 1, 1, 1, 0, 1] }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: "linear", times: [0, 0.33, 0.66, 0.95, 0.96, 1] }}
-                    x1="50%" y1="15%" x2="80%" y2="80%" stroke="#00f3ff" strokeWidth="3" style={{ filter: "drop-shadow(0 0 6px #00f3ff)" }}
+                    x1="50%" y1="15%" x2="80%" y2="80%" stroke="#00f3ff" strokeWidth="8" strokeDasharray="20,15" style={{ filter: "drop-shadow(0 0 10px #00f3ff)" }}
                 />
                 <motion.line
                     animate={{ pathLength: [0, 0, 1, 1, 0, 0], opacity: [1, 1, 1, 1, 0, 1] }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: "linear", times: [0, 0.33, 0.66, 0.95, 0.96, 1] }}
-                    x1="80%" y1="80%" x2="20%" y2="80%" stroke="#00f3ff" strokeWidth="3" style={{ filter: "drop-shadow(0 0 6px #00f3ff)" }}
+                    x1="80%" y1="80%" x2="20%" y2="80%" stroke="#00f3ff" strokeWidth="8" strokeDasharray="20,15" style={{ filter: "drop-shadow(0 0 10px #00f3ff)" }}
                 />
                 <motion.line
                     animate={{ pathLength: [0, 0, 0, 1, 0, 0], opacity: [1, 1, 1, 1, 0, 1] }}
                     transition={{ duration: 4.5, repeat: Infinity, ease: "linear", times: [0, 0.33, 0.66, 0.95, 0.96, 1] }}
-                    x1="20%" y1="80%" x2="50%" y2="15%" stroke="#00f3ff" strokeWidth="3" style={{ filter: "drop-shadow(0 0 6px #00f3ff)" }}
+                    x1="20%" y1="80%" x2="50%" y2="15%" stroke="#00f3ff" strokeWidth="8" strokeDasharray="20,15" style={{ filter: "drop-shadow(0 0 10px #00f3ff)" }}
                 />
             </svg>
 
@@ -83,8 +75,9 @@ function TriangleDiagram() {
                 transition={{ duration: 0.5 }}
                 className="absolute top-[5%] sm:top-[8%] left-1/2 -translate-x-1/2 flex flex-col items-center group cursor-default z-10"
             >
-                <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-cyan-950/80 border-2 border-cyan-400 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.5)] backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
-                    <span className="font-black text-white text-center text-sm md:text-base leading-tight">Training<br /><span className="text-cyan-400">& Skill</span></span>
+                <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full bg-red-950/80 border-2 border-red-500 flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.5)] backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+                    <div className="absolute inset-0 rounded-full border-2 border-red-500 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75"></div>
+                    <span className="font-black text-white text-center text-sm md:text-base leading-tight relative z-10">Training<br /><span className="text-red-400">& Skill</span></span>
                 </div>
             </motion.div>
 
@@ -95,8 +88,9 @@ function TriangleDiagram() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="absolute bottom-[8%] sm:bottom-[10%] left-[20%] -translate-x-1/2 flex flex-col items-center group cursor-default z-10"
             >
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-950/80 border-2 border-blue-500 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.5)] backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
-                    <span className="font-bold text-white text-center text-xs md:text-sm leading-tight p-2">Product<br />Development</span>
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-red-950/80 border-2 border-red-500 flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.5)] backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+                    <div className="absolute inset-0 rounded-full border-2 border-red-500 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75" style={{ animationDelay: '1s' }}></div>
+                    <span className="font-bold text-white text-center text-xs md:text-sm leading-tight p-2 relative z-10">Product<br />Development</span>
                 </div>
             </motion.div>
 
@@ -107,8 +101,9 @@ function TriangleDiagram() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="absolute bottom-[8%] sm:bottom-[10%] right-[20%] translate-x-1/2 flex flex-col items-center group cursor-default z-10"
             >
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-purple-950/80 border-2 border-purple-500 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.5)] backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
-                    <span className="font-bold text-white text-center text-xs md:text-sm leading-tight p-2">Research &<br />Development</span>
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full bg-red-950/80 border-2 border-red-500 flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.5)] backdrop-blur-md group-hover:scale-110 transition-transform duration-500">
+                    <div className="absolute inset-0 rounded-full border-2 border-red-500 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75" style={{ animationDelay: '2s' }}></div>
+                    <span className="font-bold text-white text-center text-xs md:text-sm leading-tight p-2 relative z-10">Research &<br />Development</span>
                 </div>
             </motion.div>
         </div>
@@ -165,7 +160,7 @@ export default function ServicesPage() {
             <TriangleDiagram />
 
             {/* All Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 w-full">
                 {allServices.map((service, index) => (
                     <ServiceCard key={service.id} service={service} index={index} />
                 ))}

@@ -66,7 +66,7 @@ export function NotificationSection({ fullPage = false }: { fullPage?: boolean }
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-white/10 rounded-full animate-pulse">
-                        <Bell className="text-yellow-400" size={20} />
+                        <Bell className="text-blue-400" size={20} />
                     </div>
                     <h2 className="text-xl font-bold text-white tracking-wide">NOTIFICATIONS & NEWS</h2>
                 </div>

@@ -43,13 +43,13 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
         <main className="min-h-screen bg-deep-space text-white pt-24 px-6 relative overflow-hidden flex items-center justify-center">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-cyan/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neon-purple/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-cover pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-neon-emerald/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute inset-0 opacity-10 bg-cover pointer-events-none" />
 
             <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center z-10">
                 {/* Left Column: Image & Status */}
                 <div className="relative group perspective-1000">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-neon-cyan to-neon-purple rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000" />
+                    <div className="absolute -inset-1 bg-gradient-to-r from-neon-cyan to-neon-emerald rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000" />
                     <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-gray-900 border border-white/10 group-hover:scale-[1.02] transition-transform duration-500 ease-out shadow-2xl shadow-neon-cyan/10">
                         {member.image ? (
                             <>
@@ -99,7 +99,7 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
                     </div>
 
                     <div className="relative mb-10">
-                        <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-neon-purple to-transparent" />
+                        <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-neon-emerald to-transparent" />
                         <p className="text-lg text-gray-300 leading-relaxed pl-6 font-light">
                             {member.bio || "No biography available for this operative."}
                         </p>

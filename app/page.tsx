@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Blocks, Settings, Lightbulb } from 'lucide-react';
+import { ArrowRight, BookOpen, Blocks, Settings, Lightbulb, GraduationCap, Bot, Cpu } from 'lucide-react';
 import { NeonButton } from '@/components/ui/NeonButton';
-
+import { DecodingText } from '@/components/ui/DecodingText';
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden bg-transparent text-white">
@@ -12,9 +12,10 @@ export default function Home() {
             Building the Future with <br className="hidden lg:block" /><span className="text-cyan-400">Robotics & AI</span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl leading-relaxed">
-            From classrooms to factories. We design, build, and deploy real-world Robotics & AI systems.
-          </p>
+          <div className="text-xl text-gray-400 max-w-2xl leading-relaxed">
+            <DecodingText text="From classrooms to factories." className="text-red-500 inline-block mt-2 [text-shadow:0_0_10px_#ef4444,0_0_20px_#ef4444,0_0_30px_#ef4444]" speed={80} /> <br />
+            <DecodingText text="We design, build, and deploy real-world Robotics & AI systems." className="text-red-500 inline-block mt-2 [text-shadow:0_0_10px_#ef4444,0_0_20px_#ef4444,0_0_30px_#ef4444]" speed={80} />
+          </div>
 
           <div className="flex flex-wrap gap-4 mt-8 justify-center">
             <Link href="/ecosystem">
@@ -31,25 +32,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4 Big Blocks */}
-      <section className="pb-32 px-6 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 max-w-7xl mx-auto">
-        {[
-          { icon: BookOpen, title: "Learn", desc: "Foundation programs for students and professionals.", link: "/ecosystem/foundation-programs", color: "text-cyan-400" },
-          { icon: Blocks, title: "Build", desc: "End-to-end lab infrastructure for institutions.", link: "/ecosystem/lab-ecosystem-solutions", color: "text-cyan-400" },
-          { icon: Settings, title: "Automate", desc: "Smart AI & robotic execution for industries.", link: "/ecosystem/industry-automation", color: "text-cyan-400" },
-          { icon: Lightbulb, title: "Innovate", desc: "Custom prototypes and interactive experiences.", link: "/ecosystem/innovation-studio", color: "text-cyan-400" }
-        ].map((item, idx) => (
-          <Link key={idx} href={item.link}>
-            <div className="group h-full p-8 rounded-2xl bg-black/40 hover:bg-white/5 transition-all duration-300 border border-white/10 hover:border-cyan-400/30 flex flex-col">
-              <item.icon size={48} className={`mb-6 ${item.color} group-hover:scale-110 transition-transform`} />
-              <h3 className="text-2xl font-bold mb-3 text-white">{item.title}</h3>
-              <p className="text-gray-400 text-base mb-6 flex-1">{item.desc}</p>
-              <div className="text-sm font-bold uppercase tracking-widest text-cyan-400 flex items-center gap-2 group-hover:gap-3 transition-all">
-                Explore <ArrowRight size={16} />
+      {/* SECTION 3 – OUR CORE VERTICALS */}
+      <section className="pb-32 px-6 lg:px-20 relative z-10 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-black mb-4 text-white uppercase tracking-wider">
+            Our Core Verticals
+          </h2>
+          <div className="h-1 w-24 mx-auto bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Academic & Institutional Development",
+              desc: "Driving structured Robotics & AI education across institutions and learners.",
+              link: "/academic-institutional-development",
+              cta: "Explore Academic Programs",
+              icon: GraduationCap,
+              colorScheme: {
+                textHover: "group-hover:text-cyan-400",
+                bgGlow: "group-hover:bg-cyan-400/10",
+                borderGlow: "hover:border-cyan-400/50",
+                iconBg: "bg-cyan-400/10",
+                iconColor: "text-cyan-400",
+                gradientFrom: "from-cyan-400/10",
+                ctaText: "text-cyan-400",
+                ctaBg: "bg-cyan-400/5",
+                ctaBorder: "border-cyan-400/20",
+                ctaBorderHover: "group-hover:border-cyan-400/50"
+              }
+            },
+            {
+              title: "Research & Innovation",
+              desc: "Applied research and rapid prototyping focused on practical Robotics & AI solutions.",
+              link: "/research-innovation",
+              cta: "Explore Innovation",
+              icon: Bot,
+              colorScheme: {
+                textHover: "group-hover:text-emerald-400",
+                bgGlow: "group-hover:bg-emerald-400/10",
+                borderGlow: "hover:border-emerald-400/50",
+                iconBg: "bg-emerald-400/10",
+                iconColor: "text-emerald-400",
+                gradientFrom: "from-emerald-400/10",
+                ctaText: "text-emerald-400",
+                ctaBg: "bg-emerald-400/5",
+                ctaBorder: "border-emerald-400/20",
+                ctaBorderHover: "group-hover:border-emerald-400/50"
+              }
+            },
+            {
+              title: "Industrial Automation & AI Systems",
+              desc: "Custom-built Robotics and AI systems engineered for real-world operational efficiency.",
+              link: "/industrial-automation-systems",
+              cta: "Explore Automation",
+              icon: Cpu,
+              colorScheme: {
+                textHover: "group-hover:text-red-400",
+                bgGlow: "group-hover:bg-red-400/10",
+                borderGlow: "hover:border-red-400/50",
+                iconBg: "bg-red-400/10",
+                iconColor: "text-red-400",
+                gradientFrom: "from-red-400/10",
+                ctaText: "text-red-400",
+                ctaBg: "bg-red-400/5",
+                ctaBorder: "border-red-400/20",
+                ctaBorderHover: "group-hover:border-red-400/50"
+              }
+            }
+          ].map((item, idx) => (
+            <Link key={idx} href={item.link}>
+              <div className={`group h-full p-8 lg:p-10 rounded-[2.5rem] bg-[#0A0A0F]/80 backdrop-blur-2xl border border-white/10 ${item.colorScheme.borderGlow} flex flex-col relative overflow-hidden transition-all duration-500 shadow-2xl hover:-translate-y-2`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.colorScheme.gradientFrom} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
+                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none group-hover:scale-110 transform origin-top-right">
+                  <item.icon size={120} />
+                </div>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className={`w-14 h-14 rounded-2xl ${item.colorScheme.iconBg} border border-white/5 flex items-center justify-center mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500 shrink-0`}>
+                    <item.icon className={`w-7 h-7 ${item.colorScheme.iconColor} drop-shadow-[0_0_8px_currentColor]`} />
+                  </div>
+                  <h3 className={`text-3xl font-bold mb-4 text-white ${item.colorScheme.textHover} transition-colors drop-shadow-sm leading-tight`}>{item.title}</h3>
+                  <p className="text-gray-400 text-lg mb-10 flex-1 leading-relaxed">{item.desc}</p>
+                  <div className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest ${item.colorScheme.ctaText} group-hover:gap-4 transition-all w-fit rounded-full ${item.colorScheme.ctaBg} px-6 py-3 border ${item.colorScheme.ctaBorder} ${item.colorScheme.ctaBorderHover}`}>
+                    {item.cta} <ArrowRight size={16} />
+                  </div>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </section>
     </main>
   );

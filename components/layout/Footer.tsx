@@ -27,7 +27,7 @@ export function Footer() {
                         <div className="space-y-4 text-sm text-zinc-400">
                             <div>
                                 <h4 className="text-white font-bold mb-1">Location:</h4>
-                                <p>Near saras dairy, Heavy Industrial Area Phase II, Basni, Jodhpur, Rajasthan 342008</p>
+                                <p>Near saras dairy, Heavy Industrial Area Phase II, Basni, Jodhpur, Rajasthan 342011</p>
                             </div>
                         </div>
                     </div>
@@ -43,14 +43,14 @@ export function Footer() {
                             </p>
                             <p>
                                 <a href="tel:+919828014877" className="hover:text-cyan-400 transition-colors">
-                                    (+91) 98280 14877
+                                    +91-98280 14877
                                 </a>
                             </p>
 
                             {/* Social Icons moved here */}
                             <div className="flex gap-4 pt-4">
                                 <Link
-                                    href="#"
+                                    href="https://x.com/roboaihub"
                                     className="w-10 h-10 rounded-full flex items-center justify-center border border-transparent transition-all duration-300 hover:border-sky-500 hover:shadow-[0_0_20px_rgba(14,165,233,0.6)] hover:bg-sky-500 hover:text-white text-zinc-400"
                                 >
                                     <Twitter size={20} fill="currentColor" />
@@ -77,7 +77,7 @@ export function Footer() {
                         <ul className="space-y-3 text-sm text-zinc-300">
                             <li><Link href="/about" className="hover:text-cyan-400 transition-colors">About Us</Link></li>
                             <li><Link href="/ecosystem" className="hover:text-cyan-400 transition-colors">Ecosystem</Link></li>
-                            <li><Link href="/projects" className="hover:text-cyan-400 transition-colors">Projects & Case Studies</Link></li>
+                            <li><Link href="/projects" className="hover:text-cyan-400 transition-colors">Lab</Link></li>
                             <li><Link href="/career" className="hover:text-cyan-400 transition-colors">Careers</Link></li>
                             <li><Link href="/contact" className="hover:text-cyan-400 transition-colors">Contact</Link></li>
                         </ul>

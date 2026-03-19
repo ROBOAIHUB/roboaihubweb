@@ -5,7 +5,7 @@
   --font-mono: var(--font-space-grotesk);
   --font-tech: var(--font-share-tech);
   --color-neon-cyan: var(--neon-cyan);
-  --color-neon-purple: var(--neon-purple);
+  --color-neon-emerald: var(--neon-emerald);
   /* Mapped to space grotesk */
 }
 
@@ -113,8 +113,8 @@
   --secondary: #0A0A0F;
   --secondary-foreground: #a1a1a1;
 
-  --accent: #bd00ff;
-  /* Neon Purple */
+  --accent: #10b981;
+  /* Neon Emerald */
   --accent-foreground: #ffffff;
 
   --card: rgba(10, 10, 15, 0.4);
@@ -127,7 +127,7 @@
   --radius: 1rem;
 
   --neon-cyan: #00f3ff;
-  --neon-purple: #bd00ff;
+  --neon-emerald: #10b981;
 }
 
 body {

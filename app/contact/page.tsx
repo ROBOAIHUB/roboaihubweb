@@ -4,10 +4,10 @@ import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
     // Static fallbacks for static site export
-    const address = "Jodhpur, Rajasthan, India";
-    const email = "contact@roboaihub.com";
-    const phone = "+91 00000 00000";
-    const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114456.90480980456!2d72.93761845112111!3d26.29656254701235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06cb69%3A0x890fa41e411cbb0b!2sJodhpur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1704604515!5m2!1sen!2sin";
+    const address = "Near saras dairy, Heavy Industrial Area Phase II, Basni, Jodhpur, Rajasthan 342011";
+    const email = "contactus@robonari.co.in";
+    const phone = "+91-98280 14877";
+    const mapUrl = "https://maps.google.com/maps?q=7242%2B3P%20Jodhpur%2C%20Rajasthan&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
 
     return (

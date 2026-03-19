@@ -1,0 +1,19 @@
+# RoboAI Hub
+
+[ROBOAI](http://localhost:3000/)
+[Solutions](http://localhost:3000/services)
+[About](http://localhost:3000/about)
+[Contact](http://localhost:3000/contact)
+
+# ROBOAI HUB
+Elite robotics automation and advanced AI solutions designed for the future of industry.
+[Get Started](http://localhost:3000/services)
+
+### AI Integration
+Seamlessly integrate advanced AI models into your workflow.
+
+### Robotics Core
+Precision control systems for next-gen robotics hardware.
+
+### Auto-Scaling
+Cloud-native architecture that grows with your demands.

@@ -76,7 +76,7 @@ export function Chatbot() {
     const getMockResponse = (text: string): string => {
         const lower = text.toLowerCase();
         if (lower.includes('event')) return "We have several upcoming events like the 'Tech Summit 2025' and 'Drone Racing League'. correct? Check out our Events page for more details!";
-        if (lower.includes('contact') || lower.includes('support')) return "You can reach us at contactus@robonari.co.in or +91 9828014877. Or visit our Contact page.";
+        if (lower.includes('contact') || lower.includes('support')) return "You can reach us at contactus@robonari.co.in or +91-98280 14877. Or visit our Contact page.";
         if (lower.includes('research') || lower.includes('lab')) return "Our R&D Labs are working on cutting-edge Neural Networks and Soft Robotics. Visit the Research section to see our papers.";
         if (lower.includes('hello') || lower.includes('hi')) return "Hi there! Welcome to RoboAI Hub.";
         if (lower.includes('team')) return "Our team consists of world-class roboticists and AI architects. You can view them on the About page.";

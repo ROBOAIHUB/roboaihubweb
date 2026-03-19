@@ -9,7 +9,7 @@ const projects = [
         desc: "Designed and built a full-scale competitive robotic soccer arena for advanced AI testing and student engagement.",
         image: "/images/bg.jpg",
         icon: Trophy,
-        color: "text-yellow-400"
+        color: "text-blue-400"
     },
     {
         id: 'lab-setups',
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
         <main className="min-h-screen bg-deep-space text-white pt-24 px-6 lg:px-20 pb-20 relative overflow-hidden">
             <div className="text-center mb-16">
                 <div className="inline-block mb-4">
-                    <h1 className="text-4xl lg:text-5xl font-bold font-mono text-white tracking-widest uppercase">PROJECTS & CASE STUDIES</h1>
+                    <h1 className="text-4xl lg:text-5xl font-bold font-mono text-white tracking-widest uppercase">LAB</h1>
                     <div className="h-1 w-1/3 mx-auto bg-cyan-400/50 mt-2 rounded-full"></div>
                 </div>
                 <p className="text-gray-400 max-w-2xl mx-auto mt-4 text-lg">

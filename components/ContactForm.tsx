@@ -4,20 +4,42 @@ import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+    const [formData, setFormData] = useState({ name: '', mobile: '', subject: '', message: '' });
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('submitting');
-        try {
-            // Simulate network request for static site presentation
-            await new Promise(resolve => setTimeout(resolve, 1500));
 
-            // For a fully static site, we can't send emails without a 3rd party service.
-            // We simulate success here. To actually receive emails, integrate with Formspree, EmailJS, etc.
+        try {
+            // Build the WhatsApp message content
+            const phoneNumber = "919828014877"; // The primary RoboAI Hub number
+
+            const messageText = `
+*New Contact Request from RoboAI Hub Website*
+---------------------------------------
+*Name:* ${formData.name}
+*Mobile:* ${formData.mobile}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}
+            `.trim();
+
+            const encodedMessage = encodeURIComponent(messageText);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            // Redirect user to WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+
             setStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' });
+
+            // Reset form after a small delay
+            setTimeout(() => {
+                setFormData({ name: '', mobile: '', subject: '', message: '' });
+                setStatus('idle');
+            }, 3000);
+
         } catch (error) {
             setStatus('error');
         }
@@ -37,13 +59,14 @@ export default function ContactForm() {
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-sm text-gray-400">Your Email</label>
+                    <label className="text-sm text-gray-400">Mobile Number</label>
                     <input
-                        type="email"
+                        type="tel"
                         required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        value={formData.mobile}
+                        onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
                         className="w-full bg-black/40 border border-white/10 rounded-lg p-3 text-white focus:border-neon-cyan focus:outline-none transition-colors"
+                        placeholder="+91 "
                     />
                 </div>
             </div>

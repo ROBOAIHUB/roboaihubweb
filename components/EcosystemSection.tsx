@@ -52,26 +52,11 @@ const slides: {
             title: "INDUSTRY AUTOMATION",
             description: (
                 <span>
-                    Smart automation built for <span className="text-yellow-400 font-bold">real industries</span>. From AI intelligence to robotic execution — we design, build, and deploy <span className="text-white font-bold">complete solutions</span>.
+                    Smart automation built for <span className="text-blue-500 font-bold">real industries</span>. From AI intelligence to robotic execution — we design, build, and deploy <span className="text-white font-bold">complete solutions</span>.
                 </span>
             ),
             image: "/images/services/industry_main_new.png",
             icon: Cpu,
-            color: "text-cyan-400",
-            borderColor: "border-cyan-400",
-            bgColor: "bg-cyan-400",
-            shadowColor: "shadow-cyan-400/50"
-        },
-        {
-            id: 4,
-            title: "INNOVATION STUDIO",
-            description: (
-                <span>
-                    Where <span className="text-purple-500 font-bold">ideas</span> become reality. From prototypes to interactive installations, we engineer custom <span className="text-white font-bold">Robotics & AI experiences</span> that don’t exist yet.
-                </span>
-            ),
-            image: "/images/services/innovation_main_new.png",
-            icon: Lightbulb,
             color: "text-cyan-400",
             borderColor: "border-cyan-400",
             bgColor: "bg-cyan-400",

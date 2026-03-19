@@ -1,21 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { NeonButton } from '@/components/ui/NeonButton';
 import { FloatingCard } from '@/components/ui/FloatingCard';
-import { Briefcase, Code, Cpu, Globe, Rocket, TrendingUp, ArrowRight } from 'lucide-react';
+import { Globe, Rocket, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-import { staticJobs } from '@/lib/data';
 
 export default function CareerPage() {
-    const [jobs, setJobs] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        setJobs(staticJobs);
-        setLoading(false);
-    }, []);
 
     return (
         <main className="min-h-screen relative bg-deep-space text-white pt-24 overflow-hidden">
@@ -41,11 +32,7 @@ export default function CareerPage() {
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                         We are looking for visionaries, engineers, and creators who are ready to push the boundaries of Robotics and AI.
                     </p>
-                    <div className="flex justify-center gap-4">
-                        <NeonButton variant="cyan" onClick={() => document.getElementById('positions')?.scrollIntoView({ behavior: 'smooth' })}>
-                            View Openings
-                        </NeonButton>
-                    </div>
+
                 </motion.div>
             </section>
 
@@ -66,63 +53,6 @@ export default function CareerPage() {
                 </div>
             </section>
 
-            {/* Open Positions */}
-            <section id="positions" className="relative z-10 container mx-auto px-6 py-20">
-                <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold">Open Positions</h2>
-                    <span className="text-gray-400">{jobs.length} Roles Available</span>
-                </div>
-
-                <div className="space-y-4">
-                    {loading ? (
-                        <div className="text-center text-gray-400 py-12">Loading positions...</div>
-                    ) : jobs.length === 0 ? (
-                        <div className="text-center py-12 bg-white/5 rounded-2xl border border-white/10">
-                            <p className="text-gray-400 mb-4">No open positions at the moment.</p>
-                            <Link href="mailto:hr@robonari.co.in">
-                                <span className="text-neon-cyan cursor-pointer hover:underline">Send us your resume anyway</span>
-                            </Link>
-                        </div>
-                    ) : (
-                        jobs.map((job, idx) => (
-                            <motion.div
-                                key={job.id}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-neon-cyan/50 transition-all cursor-pointer hover:bg-white/10"
-                            >
-                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                    <div className="flex items-center gap-4">
-                                        <div className="p-3 rounded-lg bg-black/50 border border-white/10 group-hover:border-neon-cyan/30 transition-colors">
-                                            <Briefcase className="text-neon-cyan" size={24} />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold group-hover:text-neon-cyan transition-colors">{job.title}</h3>
-                                            <div className="flex items-center gap-3 text-sm text-gray-400 mt-1">
-                                                <span>{job.department}</span>
-                                                <span className="w-1 h-1 rounded-full bg-gray-600" />
-                                                <span>{job.type}</span>
-                                                <span className="w-1 h-1 rounded-full bg-gray-600" />
-                                                <span>{job.location}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-4">
-                                        <Link href={`/career/${job.id}`}>
-                                            <button className="px-6 py-2 rounded-full border border-white/20 hover:bg-neon-cyan hover:text-black hover:border-neon-cyan transition-all font-bold text-sm">
-                                                Apply Now
-                                            </button>
-                                        </Link>
-                                        <ArrowRight className="text-gray-500 group-hover:text-neon-cyan transform group-hover:translate-x-1 transition-all" />
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))
-                    )}
-                </div>
-            </section>
 
             {/* General Application CTA */}
             <section className="relative z-10 container mx-auto px-6 py-20 mb-20">

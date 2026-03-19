@@ -11,11 +11,11 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 
 const navItems = [
     { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     { name: "Ecosystem", href: "/ecosystem" },
-    { name: "Programs", href: "/ecosystem/foundation-programs" },
-    { name: "Industry", href: "/ecosystem/industry-automation" },
-    { name: "Innovation", href: "/ecosystem/innovation-studio" },
-    { name: "Projects", href: "/projects" },
+    { name: "Academic", href: "/academic-institutional-development" },
+    { name: "Research", href: "/research-innovation" },
+    { name: "Automation", href: "/industrial-automation-systems" },
     { name: "Contact", href: "/contact" },
 ];
 

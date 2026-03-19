@@ -29,7 +29,7 @@ export default function TeamPage() {
         <main className="min-h-screen bg-deep-space text-white pt-24 px-6 lg:px-20 pb-20 relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-20 left-10 w-64 h-64 bg-neon-cyan/10 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-20 right-10 w-80 h-80 bg-neon-purple/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-20 right-10 w-80 h-80 bg-neon-emerald/10 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 flex items-center justify-between">
@@ -53,7 +53,7 @@ export default function TeamPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {teamMembers.map((member, i) => (
                             <Link key={member.id} href={`/team/${member.id}`} className="block h-full">
-                                <FloatingCard delay={i * 0.1} className="flex flex-col h-full bg-black/40 border-white/5 hover:border-neon-purple/50 transition-colors cursor-pointer group/card">
+                                <FloatingCard delay={i * 0.1} className="flex flex-col h-full bg-black/40 border-white/5 hover:border-neon-emerald/50 transition-colors cursor-pointer group/card">
                                     <div className="relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-gray-900 group">
                                         {member.image ? (
                                             <img
@@ -68,14 +68,14 @@ export default function TeamPage() {
                                         )}
 
                                         {/* Overlay */}
-                                        <div className="absolute inset-0 bg-neon-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                                        <div className="absolute inset-0 bg-neon-emerald/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                                             <NeonButton variant="cyan" className="px-4 py-2 text-xs pointer-events-none">View Profile</NeonButton>
                                         </div>
                                     </div>
 
                                     <h3 className="text-2xl font-bold text-white mb-1 group-hover/card:text-neon-cyan transition-colors">{member.name}</h3>
                                     <div className="flex flex-wrap gap-2 mb-4">
-                                        <span className="text-xs font-mono text-neon-purple px-2 py-1 bg-neon-purple/10 rounded-md w-fit">{member.role}</span>
+                                        <span className="text-xs font-mono text-neon-emerald px-2 py-1 bg-neon-emerald/10 rounded-md w-fit">{member.role}</span>
                                         {member.specialty && (
                                             <span className="text-xs font-mono text-cyan-400 px-2 py-1 bg-cyan-400/10 rounded-md w-fit">{member.specialty}</span>
                                         )}
