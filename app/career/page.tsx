@@ -54,6 +54,29 @@ export default function CareerPage() {
             </section>
 
 
+            {/* Open Roles */}
+            <section className="relative z-10 container mx-auto px-6 py-10">
+                <h2 className="text-3xl font-bold mb-10 text-center">Open Positions</h2>
+                <div className="max-w-4xl mx-auto">
+                    <FloatingCard className="p-8 border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div>
+                            <h3 className="text-2xl font-bold text-neon-cyan mb-2">Robotics Mentor</h3>
+                            <p className="text-white/80 mb-4">We are looking for a passionate Robotics Mentor to guide and inspire the next generation of engineers.</p>
+                            <div className="flex flex-wrap gap-3">
+                                <span className="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-sm font-mono">B.Tech / Diploma / Equivalent</span>
+                                <span className="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-sm font-mono">Full-time</span>
+                                <span className="bg-white/5 border border-white/10 px-3 py-1 rounded-full text-sm font-mono">Jodhpur</span>
+                            </div>
+                        </div>
+                        <div className="shrink-0">
+                            <Link href="https://wa.me/919828014877?text=Hi%20ROBOAI%20HUB!%20I%20am%20interested%20in%20applying%20for%20the%20Robotics%20Mentor%20position." target="_blank">
+                                <NeonButton variant="cyan">Apply via WhatsApp</NeonButton>
+                            </Link>
+                        </div>
+                    </FloatingCard>
+                </div>
+            </section>
+
             {/* General Application CTA */}
             <section className="relative z-10 container mx-auto px-6 py-20 mb-20">
                 <div className="rounded-3xl p-12 relative overflow-hidden bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-white/10 text-center">
