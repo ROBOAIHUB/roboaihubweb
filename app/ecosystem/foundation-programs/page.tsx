@@ -45,7 +45,13 @@ export default function FoundationProgramsPage() {
                             { src: "/images/foundation/media__1772872678960.jpg", alt: "Foundation Program Kids 2" },
                             { src: "/images/foundation/media__1772872678974.jpg", alt: "Foundation Program Kids 3" },
                             { src: "/images/foundation/media__1772872679039.jpg", alt: "Foundation Program Kids 4" },
-                            { src: "/images/foundation/media__1772872679052.jpg", alt: "Foundation Program Kids 5" }
+                            { src: "/images/foundation/media__1772872679052.jpg", alt: "Foundation Program Kids 5" },
+                            { src: "/images/foundation/IMG_20260528_094451.jpg", alt: "Foundation Program Activity 1" },
+                            { src: "/images/foundation/IMG_20260528_095747.jpg", alt: "Foundation Program Activity 2" },
+                            { src: "/images/foundation/IMG_20260528_103901.jpg", alt: "Foundation Program Activity 3" },
+                            { src: "/images/foundation/IMG_20260601_110436.jpg", alt: "Foundation Program Activity 4" },
+                            { src: "/images/foundation/IMG_20260601_110444.jpg", alt: "Foundation Program Activity 5" },
+                            { src: "/images/foundation/IMG_20260601_110826.jpg", alt: "Foundation Program Activity 6" }
                         ]}
                         className="w-full h-full"
                         autoPlayInterval={3500}
