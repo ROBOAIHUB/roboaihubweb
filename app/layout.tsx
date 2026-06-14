@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'ROBOAI HUB',
     images: [
       {
-        url: '/images/logo-final.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'ROBOAI HUB - Robotics & AI',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ROBOAI HUB - Elite AI & Robotics Automation',
     description: 'We design, build, and deploy real-world Robotics & AI systems.',
-    images: ['/images/logo-final.png'],
+    images: ['/images/og-image.png'],
     creator: '@roboaihub',
   },
 };
