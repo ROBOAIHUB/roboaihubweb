@@ -41,17 +41,17 @@ export default function FoundationProgramsPage() {
                 <MotionContainer delay={0.15} className="w-full max-w-5xl mx-auto relative aspect-[21/9] rounded-[2rem] overflow-hidden mb-24 border border-cyan-500/20 shadow-[0_0_40px_rgba(0,243,255,0.15)] group relative z-20">
                     <ImageCarousel
                         images={[
-                            { src: "/images/foundation/media__1772872678936.jpg", alt: "Foundation Program Kids 1" },
-                            { src: "/images/foundation/media__1772872678960.jpg", alt: "Foundation Program Kids 2" },
-                            { src: "/images/foundation/media__1772872678974.jpg", alt: "Foundation Program Kids 3" },
-                            { src: "/images/foundation/media__1772872679039.jpg", alt: "Foundation Program Kids 4" },
-                            { src: "/images/foundation/media__1772872679052.jpg", alt: "Foundation Program Kids 5" },
                             { src: "/images/foundation/IMG_20260528_094451.jpg", alt: "Foundation Program Activity 1" },
                             { src: "/images/foundation/IMG_20260528_095747.jpg", alt: "Foundation Program Activity 2" },
                             { src: "/images/foundation/IMG_20260528_103901.jpg", alt: "Foundation Program Activity 3" },
                             { src: "/images/foundation/IMG_20260601_110436.jpg", alt: "Foundation Program Activity 4" },
                             { src: "/images/foundation/IMG_20260601_110444.jpg", alt: "Foundation Program Activity 5" },
-                            { src: "/images/foundation/IMG_20260601_110826.jpg", alt: "Foundation Program Activity 6" }
+                            { src: "/images/foundation/IMG_20260601_110826.jpg", alt: "Foundation Program Activity 6" },
+                            { src: "/images/foundation/media__1772872678936.jpg", alt: "Foundation Program Kids 1" },
+                            { src: "/images/foundation/media__1772872678960.jpg", alt: "Foundation Program Kids 2" },
+                            { src: "/images/foundation/media__1772872678974.jpg", alt: "Foundation Program Kids 3" },
+                            { src: "/images/foundation/media__1772872679039.jpg", alt: "Foundation Program Kids 4" },
+                            { src: "/images/foundation/media__1772872679052.jpg", alt: "Foundation Program Kids 5" }
                         ]}
                         className="w-full h-full"
                         autoPlayInterval={3500}
