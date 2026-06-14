@@ -12,9 +12,9 @@ export default function Home() {
             Building the Future with <br className="hidden lg:block" /><span className="text-cyan-400">Robotics & AI</span>
           </h1>
 
-          <div className="text-xl text-gray-400 max-w-2xl leading-relaxed">
-            <DecodingText text="From classrooms to factories." className="text-red-500 inline-block mt-2 [text-shadow:0_0_10px_#ef4444,0_0_20px_#ef4444,0_0_30px_#ef4444]" speed={80} /> <br />
-            <DecodingText text="We design, build, and deploy real-world Robotics & AI systems." className="text-red-500 inline-block mt-2 [text-shadow:0_0_10px_#ef4444,0_0_20px_#ef4444,0_0_30px_#ef4444]" speed={80} />
+          <div className="text-xl text-white max-w-2xl leading-relaxed">
+            <DecodingText text="From classrooms to factories." className="text-cyan-400 inline-block mt-2" speed={80} /> <br />
+            <DecodingText text="We design, build, and deploy real-world Robotics & AI systems." className="text-cyan-400 inline-block mt-2" speed={80} />
           </div>
 
           <div className="flex flex-wrap gap-4 mt-8 justify-center">
@@ -112,7 +112,7 @@ export default function Home() {
                     <item.icon className={`w-7 h-7 ${item.colorScheme.iconColor} drop-shadow-[0_0_8px_currentColor]`} />
                   </div>
                   <h3 className={`text-3xl font-bold mb-4 text-white ${item.colorScheme.textHover} transition-colors drop-shadow-sm leading-tight`}>{item.title}</h3>
-                  <p className="text-gray-400 text-lg mb-10 flex-1 leading-relaxed">{item.desc}</p>
+                  <p className="text-white text-lg mb-10 flex-1 leading-relaxed">{item.desc}</p>
                   <div className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest ${item.colorScheme.ctaText} group-hover:gap-4 transition-all w-fit rounded-full ${item.colorScheme.ctaBg} px-6 py-3 border ${item.colorScheme.ctaBorder} ${item.colorScheme.ctaBorderHover}`}>
                     {item.cta} <ArrowRight size={16} />
                   </div>

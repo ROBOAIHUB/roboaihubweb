@@ -29,7 +29,7 @@ export default function AcademicDevelopmentPage() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-                <Link href="/" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-12 transition-colors group">
+                <Link href="/" className="inline-flex items-center text-sm text-white hover:text-white mb-12 transition-colors group">
                     <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Home
                 </Link>
 
@@ -50,7 +50,7 @@ export default function AcademicDevelopmentPage() {
                 <div className="max-w-4xl mx-auto mb-24 relative">
                     <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-[2rem] blur-xl opacity-50"></div>
                     <div className="relative bg-[#0A0A0F]/90 backdrop-blur-xl border border-white/10 rounded-[2rem] p-10 text-center shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                        <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed font-light">
+                        <p className="text-xl lg:text-2xl text-white leading-relaxed font-light">
                             RoboAI Hub delivers structured, hands-on Robotics & AI education designed to build <span className="font-bold text-white">practical engineering capability</span> — not just theoretical understanding.
                         </p>
                     </div>
@@ -80,7 +80,7 @@ export default function AcademicDevelopmentPage() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/5 rounded-full blur-[80px] group-hover:bg-cyan-400/20 transition-colors duration-500"></div>
                             <GraduationCap className="w-12 h-12 text-cyan-400 mb-6 relative z-10 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
                             <h4 className="text-2xl font-bold text-white mb-4 relative z-10 group-hover:text-cyan-400 transition-colors">Professional Mentorship Programs</h4>
-                            <p className="text-gray-400 mb-4 flex-1 relative z-10 leading-relaxed">
+                            <p className="text-white mb-4 flex-1 relative z-10 leading-relaxed">
                                 Advanced Robotics & AI mentorship designed to develop industry-ready engineers and certified mentors.
                             </p>
                             <p className="text-cyan-200/80 text-sm italic mb-8 relative z-10">
@@ -98,7 +98,7 @@ export default function AcademicDevelopmentPage() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/5 rounded-full blur-[80px] group-hover:bg-blue-400/20 transition-colors duration-500"></div>
                             <Building2 className="w-12 h-12 text-blue-400 mb-6 relative z-10 drop-shadow-[0_0_10px_rgba(96,165,250,0.5)]" />
                             <h4 className="text-2xl font-bold text-white mb-4 relative z-10 group-hover:text-blue-400 transition-colors">Institutional Lab Ecosystems</h4>
-                            <p className="text-gray-400 mb-4 flex-1 relative z-10 leading-relaxed">
+                            <p className="text-white mb-4 flex-1 relative z-10 leading-relaxed">
                                 End-to-end Robotics & AI lab design and deployment for schools and institutions — including infrastructure, curriculum, and mentor training.
                             </p>
                             <p className="text-blue-200/80 text-sm italic mb-8 relative z-10">
@@ -116,7 +116,7 @@ export default function AcademicDevelopmentPage() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-400/5 rounded-full blur-[80px] group-hover:bg-emerald-400/20 transition-colors duration-500"></div>
                             <BookOpen className="w-12 h-12 text-emerald-400 mb-6 relative z-10 drop-shadow-[0_0_10px_rgba(192,132,252,0.5)]" />
                             <h4 className="text-2xl font-bold text-white mb-4 relative z-10 group-hover:text-emerald-400 transition-colors">Foundation Learning Programs</h4>
-                            <p className="text-gray-400 mb-4 flex-1 relative z-10 leading-relaxed">
+                            <p className="text-white mb-4 flex-1 relative z-10 leading-relaxed">
                                 Hands-on Robotics & AI programs for school students focused on early innovation exposure and practical skill development.
                             </p>
                             <p className="text-emerald-200/80 text-sm italic mb-8 relative z-10">

@@ -107,7 +107,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <Link href="/ecosystem" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors group">
+                <Link href="/ecosystem" className="inline-flex items-center text-sm text-white hover:text-white mb-8 transition-colors group">
                     <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Ecosystem
                 </Link>
 
@@ -132,7 +132,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                             </div>
                                             <ul className="space-y-4">
                                                 {course.topics.map((topic, i) => (
-                                                    <li key={i} className="flex items-center gap-3 text-base font-medium text-white/90 transition-all duration-300 hover:text-neon-cyan hover:translate-x-1">
+                                                    <li key={i} className="flex items-center gap-3 text-base font-medium text-white transition-all duration-300 hover:text-neon-cyan hover:translate-x-1">
                                                         <div className="min-w-[16px]"><CheckCircle size={16} className="text-neon-cyan drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]" /></div>
                                                         <span className="drop-shadow-sm">{topic}</span>
                                                     </li>
@@ -147,18 +147,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                             <MotionContainer delay={0.1}>
                                 <div className="prose prose-invert prose-lg max-w-none mb-12">
                                     {/* Special Branding Image for Product Development */}
-                                    <div className="text-xl text-gray-300 leading-relaxed font-light border-l-4 border-neon-cyan pl-6 py-2 bg-white/5 rounded-r-lg">
+                                    <div className="text-xl text-white leading-relaxed font-light border-l-4 border-neon-cyan pl-6 py-2 bg-white/5 rounded-r-lg">
                                         {service.desc}
                                     </div>
                                     {service.fullDesc && (
-                                        <p className="text-gray-400 leading-loose mt-4">
+                                        <p className="text-white leading-loose mt-4">
                                             {service.fullDesc}
                                         </p>
                                     )}
                                 </div>
                             </MotionContainer>
                             {service.fullDesc && (
-                                <p className="text-gray-400 leading-loose mt-4">
+                                <p className="text-white leading-loose mt-4">
                                     {service.fullDesc}
                                 </p>
                             )}
@@ -177,7 +177,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                                     </div>
                                                     <div>
                                                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-neon-cyan transition-colors">{feature.title}</h3>
-                                                        <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+                                                        <p className="text-white text-sm leading-relaxed">{feature.desc}</p>
                                                     </div>
                                                 </div>
                                             </MotionContainer>
@@ -222,7 +222,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                                 {service.targetAudience.map((audience, idx) => (
                                                     <MotionItem key={idx} delay={0.4 + (idx * 0.05)} className="bg-white/5 p-4 rounded-xl border-l-2 border-blue-400">
                                                         <h4 className="font-bold text-white mb-1">{audience.title}</h4>
-                                                        <p className="text-xs text-gray-400">{audience.desc}</p>
+                                                        <p className="text-xs text-white">{audience.desc}</p>
                                                     </MotionItem>
                                                 ))}
                                             </div>
@@ -239,7 +239,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                                             <MotionContainer delay={0.4} className="bg-white/5 rounded-2xl p-6 border border-white/10">
                                                 <ul className="grid grid-cols-1 gap-3">
                                                     {service.careers.map((career, idx) => (
-                                                        <li key={idx} className="flex items-center gap-3 text-gray-300">
+                                                        <li key={idx} className="flex items-center gap-3 text-white">
                                                             <div className="w-2 h-2 bg-green-400 rounded-full" />
                                                             {career}
                                                         </li>

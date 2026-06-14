@@ -26,7 +26,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
             <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-neon-cyan/5 to-transparent pointer-events-none" />
 
             <div className="max-w-6xl mx-auto relative z-10">
-                <Link href="/events" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors">
+                <Link href="/events" className="inline-flex items-center text-sm text-white hover:text-white mb-8 transition-colors">
                     <ArrowLeft size={16} className="mr-2" /> Back to Events
                 </Link>
 
@@ -47,7 +47,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
                             {event.title}
                         </h1>
 
-                        <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-neon-cyan pl-6">
+                        <p className="text-xl text-white leading-relaxed border-l-4 border-neon-cyan pl-6">
                             {event.description}
                         </p>
                     </div>

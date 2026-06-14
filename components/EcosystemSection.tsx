@@ -170,13 +170,13 @@ export function EcosystemSection() {
                                                         <CheckCircle2 size={24} />
                                                     </motion.div>
                                                 ) : (
-                                                    <div className="p-2 rounded-full border-2 border-white/10 text-white/50">
+                                                    <div className="p-2 rounded-full border-2 border-white/10 text-white">
                                                         <Circle size={24} />
                                                     </div>
                                                 )}
                                             </div>
                                             <div>
-                                                <span className={`text-xs font-mono tracking-widest uppercase mb-1 block font-bold ${isActive ? item.color : 'text-white/80'
+                                                <span className={`text-xs font-mono tracking-widest uppercase mb-1 block font-bold ${isActive ? item.color : 'text-white'
                                                     }`}>
                                                     Step 0{item.id}
                                                 </span>

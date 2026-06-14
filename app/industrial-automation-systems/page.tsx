@@ -13,7 +13,7 @@ export default function IndustrialAutomationPage() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-                <Link href="/" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-12 transition-colors group">
+                <Link href="/" className="inline-flex items-center text-sm text-white hover:text-white mb-12 transition-colors group">
                     <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Home
                 </Link>
 
@@ -35,10 +35,10 @@ export default function IndustrialAutomationPage() {
                     <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-orange-600/20 rounded-[2rem] blur-xl opacity-50"></div>
                     <div className="relative bg-[#0A0A0F]/90 backdrop-blur-xl border border-white/10 rounded-[2rem] p-10 text-center shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col items-center">
                         <Cog className="w-16 h-16 text-red-500 mb-6 drop-shadow-[0_0_15px_rgba(239,68,68,0.6)] animate-[spin_10s_linear_infinite]" />
-                        <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed font-light mb-6">
+                        <p className="text-xl lg:text-2xl text-white leading-relaxed font-light mb-6">
                             We design and deploy custom Robotics & AI systems that <span className="font-bold text-white">enhance efficiency</span>, reduce operational errors, and enable intelligent decision-making.
                         </p>
-                        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                        <p className="text-lg text-white leading-relaxed max-w-2xl">
                             From concept to on-site deployment — we handle the entire lifecycle.
                         </p>
                     </div>

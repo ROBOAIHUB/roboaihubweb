@@ -133,7 +133,7 @@ function ServiceCard({ service, index }: { service: any, index: number }) {
                     <h3 className="text-xl font-bold mb-3 text-white group-hover:text-neon-cyan transition-colors font-mono">
                         {service.title}
                     </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                    <p className="text-white text-sm leading-relaxed mb-6 flex-grow">
                         {service.desc}
                     </p>
                     <span className="text-xs font-mono text-cyan-400 flex items-center gap-2 font-bold group-hover:tracking-wider transition-all">
@@ -151,7 +151,7 @@ export default function ServicesPage() {
             <div className="text-center">
                 <h1 className="text-4xl lg:text-5xl font-bold font-mono text-white tracking-widest uppercase mb-4">OUR ECOSYSTEM</h1>
                 <div className="h-1 w-24 mx-auto bg-cyan-400 mt-2 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
-                <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+                <p className="text-white mt-6 max-w-2xl mx-auto">
                     The interconnected nodes of learning, building, and automating.
                 </p>
             </div>

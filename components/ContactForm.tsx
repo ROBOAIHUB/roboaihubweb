@@ -49,7 +49,7 @@ ${formData.message}
         <form onSubmit={handleSubmit} className="flex flex-col gap-6 h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                    <label className="text-sm text-gray-400">Your Name</label>
+                    <label className="text-sm text-white">Your Name</label>
                     <input
                         type="text"
                         required
@@ -59,7 +59,7 @@ ${formData.message}
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-sm text-gray-400">Mobile Number</label>
+                    <label className="text-sm text-white">Mobile Number</label>
                     <input
                         type="tel"
                         required
@@ -72,7 +72,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2">
-                <label className="text-sm text-gray-400">Subject</label>
+                <label className="text-sm text-white">Subject</label>
                 <input
                     type="text"
                     required
@@ -83,7 +83,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2 grow">
-                <label className="text-sm text-gray-400">Message</label>
+                <label className="text-sm text-white">Message</label>
                 <textarea
                     required
                     value={formData.message}

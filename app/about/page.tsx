@@ -23,7 +23,7 @@ export default function AboutPage() {
                                 <Lightbulb size={16} /> Our Story
                             </div>
                             <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight">Why RoboAI Hub Started</h3>
-                            <p className="text-lg text-gray-300 leading-relaxed">
+                            <p className="text-lg text-white leading-relaxed">
                                 We saw a massive gap between academic theory and real-world industrial application. Students were learning formulas but couldn't build actual robots. Industries needed automation but struggled to find practical talent. We built ROBOAI HUB to bridge that gap—creating a space where innovation isn't just talked about, it is engineered from the ground up every single day.
                             </p>
                         </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                                     <h4 className="text-4xl lg:text-5xl font-black text-white group-hover:text-red-100 transition-colors drop-shadow-md">
                                         {stat.num}
                                     </h4>
-                                    <p className="text-xs sm:text-sm text-gray-300 font-bold tracking-widest uppercase mt-2 max-w-[140px] leading-snug group-hover:text-white transition-colors drop-shadow-md">
+                                    <p className="text-xs sm:text-sm text-white font-bold tracking-widest uppercase mt-2 max-w-[140px] leading-snug group-hover:text-white transition-colors drop-shadow-md">
                                         {stat.label}
                                     </p>
                                 </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
                         {/* Left Side: Quote */}
                         <div className="space-y-6 text-center md:text-left">
-                            <p className="text-2xl text-white leading-relaxed font-light italic">
+                            <p className="text-2xl text-white leading-relaxed font-medium italic">
                                 "We aren't here to give out participation certificates. We are here to build technology that works. If you're ready to get your hands dirty with real code and real circuits, you belong here."
                             </p>
                         </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                             </div>
                             <div className="text-center md:text-right w-64 md:w-80 px-2">
                                 <h4 className="text-2xl font-bold text-cyan-400">Narayan Jangid</h4>
-                                <p className="text-sm text-gray-400 tracking-widest uppercase mt-2 font-semibold">Founder & CEO, ROBOAI HUB</p>
+                                <p className="text-sm text-white tracking-widest uppercase mt-2 font-semibold">Founder & CEO, ROBOAI HUB</p>
                             </div>
                         </div>
                     </div>

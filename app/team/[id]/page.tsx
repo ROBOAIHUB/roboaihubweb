@@ -66,7 +66,7 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
                         ) : (
                             <div className="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center relative overflow-hidden">
                                 <span className="text-6xl font-mono text-white/5 font-bold absolute z-0 scale-150">PROFILE</span>
-                                <User size={80} className="text-white/20 relative z-10" />
+                                <User size={80} className="text-white relative z-10" />
                             </div>
                         )}
 
@@ -76,7 +76,7 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
 
                 {/* Right Column: Info */}
                 <div>
-                    <Link href="/team" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors group">
+                    <Link href="/team" className="inline-flex items-center text-sm text-white hover:text-white mb-8 transition-colors group">
                         <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" />
                         <span className="font-mono tracking-wider">BACK</span>
                     </Link>
@@ -100,7 +100,7 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
 
                     <div className="relative mb-10">
                         <div className="absolute top-0 left-0 bottom-0 w-1 bg-gradient-to-b from-neon-emerald to-transparent" />
-                        <p className="text-lg text-gray-300 leading-relaxed pl-6 font-light">
+                        <p className="text-lg text-white leading-relaxed pl-6 font-light">
                             {member.bio || "No biography available for this operative."}
                         </p>
                     </div>
@@ -109,8 +109,8 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
                         <div className="flex gap-4">
                             {member.linkedin ? (
                                 <Link href={member.linkedin} target="_blank" className="group flex items-center gap-3 px-5 py-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neon-cyan/50 transition-all duration-300">
-                                    <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-neon-cyan transition-colors" />
-                                    <span className="text-sm text-gray-300 group-hover:text-white font-mono">LINKEDIN</span>
+                                    <Linkedin className="w-5 h-5 text-white group-hover:text-neon-cyan transition-colors" />
+                                    <span className="text-sm text-white group-hover:text-white font-mono">LINKEDIN</span>
                                 </Link>
                             ) : null}
 

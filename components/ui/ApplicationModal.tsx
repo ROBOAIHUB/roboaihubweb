@@ -62,7 +62,7 @@ export function ApplicationModal({ jobId, jobTitle, isOpen, onClose }: Applicati
                     >
                         <button
                             onClick={onClose}
-                            className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                            className="absolute top-4 right-4 text-white hover:text-white transition-colors"
                         >
                             <X size={20} />
                         </button>
@@ -78,12 +78,12 @@ export function ApplicationModal({ jobId, jobTitle, isOpen, onClose }: Applicati
                                     <CheckCircle size={32} />
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-2">Application Submitted!</h3>
-                                <p className="text-gray-400">We will review your resume and get back to you soon.</p>
+                                <p className="text-white">We will review your resume and get back to you soon.</p>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
-                                    <label className="block text-sm text-gray-400 mb-1">Full Name</label>
+                                    <label className="block text-sm text-white mb-1">Full Name</label>
                                     <input
                                         name="name"
                                         type="text"
@@ -94,7 +94,7 @@ export function ApplicationModal({ jobId, jobTitle, isOpen, onClose }: Applicati
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm text-gray-400 mb-1">Email Address</label>
+                                    <label className="block text-sm text-white mb-1">Email Address</label>
                                     <input
                                         name="email"
                                         type="email"
@@ -105,7 +105,7 @@ export function ApplicationModal({ jobId, jobTitle, isOpen, onClose }: Applicati
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm text-gray-400 mb-1">Phone Number</label>
+                                    <label className="block text-sm text-white mb-1">Phone Number</label>
                                     <input
                                         name="phone"
                                         type="tel"
@@ -116,7 +116,7 @@ export function ApplicationModal({ jobId, jobTitle, isOpen, onClose }: Applicati
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm text-gray-400 mb-1">Resume (PDF/Word)</label>
+                                    <label className="block text-sm text-white mb-1">Resume (PDF/Word)</label>
                                     <div className="relative">
                                         <input
                                             name="resume"
@@ -127,11 +127,11 @@ export function ApplicationModal({ jobId, jobTitle, isOpen, onClose }: Applicati
                                             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                                         />
                                         <div className={`w-full bg-white/5 border-2 border-dashed ${fileName ? 'border-neon-cyan/50 bg-neon-cyan/5' : 'border-white/10'} rounded-lg p-4 flex items-center justify-center gap-2 text-sm transition-colors`}>
-                                            <Upload size={16} className={fileName ? 'text-neon-cyan' : 'text-gray-400'} />
+                                            <Upload size={16} className={fileName ? 'text-neon-cyan' : 'text-white'} />
                                             {fileName ? (
                                                 <span className="text-neon-cyan font-bold truncate max-w-[200px]">{fileName}</span>
                                             ) : (
-                                                <span className="text-gray-400">Click to upload resume</span>
+                                                <span className="text-white">Click to upload resume</span>
                                             )}
                                         </div>
                                     </div>

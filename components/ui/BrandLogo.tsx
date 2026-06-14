@@ -5,9 +5,10 @@ interface BrandLogoProps {
     textSize?: string;
     withGlow?: boolean;
     showHub?: boolean;
+    allWhite?: boolean;
 }
 
-export function BrandLogo({ className, textSize = "text-xl", withGlow = true, showHub = true }: BrandLogoProps) {
+export function BrandLogo({ className, textSize = "text-xl", withGlow = true, showHub = true, allWhite = false }: BrandLogoProps) {
     return (
         <span className={cn("font-bold font-mono tracking-tighter flex items-center select-none",
             textSize,
@@ -15,7 +16,7 @@ export function BrandLogo({ className, textSize = "text-xl", withGlow = true, sh
             className
         )}>
             <span className="text-white">ROBO</span>
-            <span className="text-cyan-400">AI</span>
+            <span className={allWhite ? "text-white" : "text-cyan-400"}>AI</span>
             {showHub && <span className="text-white ml-2">HUB</span>}
         </span>
     );

@@ -105,13 +105,13 @@ export function Chatbot() {
                                     </h3>
                                     <div className="flex items-center gap-1">
                                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                        <span className="text-[10px] text-zinc-400">Online</span>
+                                        <span className="text-[10px] text-white">Online</span>
                                     </div>
                                 </div>
                             </div>
                             <button
                                 onClick={() => setIsOpen(false)}
-                                className="text-zinc-400 hover:text-white transition-colors p-1"
+                                className="text-white hover:text-white transition-colors p-1"
                             >
                                 <Minimize2 size={18} />
                             </button>
@@ -127,7 +127,7 @@ export function Chatbot() {
                                     <div
                                         className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${msg.sender === 'user'
                                             ? 'bg-cyan-500/20 text-white border border-cyan-500/30 rounded-tr-sm'
-                                            : 'bg-zinc-800/80 text-zinc-200 border border-white/5 rounded-tl-sm'
+                                            : 'bg-zinc-800/80 text-white border border-white/5 rounded-tl-sm'
                                             }`}
                                     >
                                         {msg.text}
@@ -155,7 +155,7 @@ export function Chatbot() {
                                     value={inputText}
                                     onChange={(e) => setInputText(e.target.value)}
                                     placeholder="Ask me anything..."
-                                    className="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/30 transition-all placeholder:text-zinc-600"
+                                    className="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/30 transition-all placeholder:text-white"
                                 />
                                 <button
                                     type="submit"

@@ -4,10 +4,10 @@ import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
     // Static fallbacks for static site export
-    const address = "Near saras dairy, Heavy Industrial Area Phase II, Basni, Jodhpur, Rajasthan 342011";
+    const address = "ROBOAI HUB, near S.K Industries, New Power House Rd, Patrakar Colony, Shastri Nagar, Jodhpur, Rajasthan 342003";
     const email = "contactus@robonari.co.in";
     const phone = "+91-98280 14877";
-    const mapUrl = "https://maps.google.com/maps?q=7242%2B3P%20Jodhpur%2C%20Rajasthan&t=&z=15&ie=UTF8&iwloc=&output=embed";
+    const mapUrl = "https://maps.google.com/maps?q=ROBOAI+HUB,+Jodhpur,+Rajasthan&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
 
     return (
@@ -28,7 +28,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-1">Location:</h3>
-                                <p className="text-gray-400 font-mono text-sm leading-relaxed">
+                                <p className="text-white font-mono text-sm leading-relaxed">
                                     {address}
                                 </p>
                             </div>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-1">Email:</h3>
-                                <p className="text-gray-400 font-mono text-sm">
+                                <p className="text-white font-mono text-sm">
                                     {email}
                                 </p>
                             </div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-1">Call:</h3>
-                                <p className="text-gray-400 font-mono text-sm">
+                                <p className="text-white font-mono text-sm">
                                     {phone}
                                 </p>
                             </div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-1">WhatsApp:</h3>
-                                <p className="text-gray-400 font-mono text-sm">
+                                <p className="text-white font-mono text-sm">
                                     <a href={`https://wa.me/${phone.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
                                         Message us directly
                                     </a>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                                 className="grayscale hover:grayscale-0 transition-all duration-500 opacity-80 hover:opacity-100"
                             />
                         ) : (
-                            <div className="flex flex-col items-center text-zinc-500 gap-2">
+                            <div className="flex flex-col items-center text-white gap-2">
                                 <MapPin size={32} />
                                 <span className="text-xs font-mono uppercase tracking-widest">Map Configuration Pending</span>
                             </div>

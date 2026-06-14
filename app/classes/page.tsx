@@ -42,13 +42,13 @@ export default function ClassesPage() {
 
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
-                    <Link href="/" className="inline-flex items-center text-sm text-gray-500 hover:text-white mb-8 transition-colors">
+                    <Link href="/" className="inline-flex items-center text-sm text-white hover:text-white mb-8 transition-colors">
                         <ArrowLeft size={16} className="mr-2" /> Back to Hub
                     </Link>
                     <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-600 mb-6">
                         Academy Training
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-xl text-white max-w-2xl mx-auto">
                         Master the machines. Join our elite training programs designed for the next generation of engineers.
                     </p>
                 </div>
@@ -61,14 +61,14 @@ export default function ClassesPage() {
                             </div>
 
                             <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                            <div className="flex gap-3 text-xs font-mono mb-6 text-gray-400">
+                            <div className="flex gap-3 text-xs font-mono mb-6 text-white">
                                 <span className="bg-white/5 px-2 py-1 rounded">{item.level}</span>
                                 <span className="bg-white/5 px-2 py-1 rounded">{item.duration}</span>
                             </div>
 
                             <div className="space-y-3 mb-8 flex-grow">
                                 {item.features.map((feat, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 text-sm text-gray-300">
+                                    <div key={idx} className="flex items-center gap-3 text-sm text-white">
                                         <div className="w-5 h-5 rounded-full bg-neon-cyan/20 flex items-center justify-center text-neon-cyan">
                                             <Check size={12} />
                                         </div>

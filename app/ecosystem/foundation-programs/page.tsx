@@ -20,7 +20,7 @@ export default function FoundationProgramsPage() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <Link href="/ecosystem" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-8 transition-colors group">
+                <Link href="/ecosystem" className="inline-flex items-center text-sm text-white hover:text-white mb-8 transition-colors group">
                     <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Ecosystem
                 </Link>
 
@@ -32,7 +32,7 @@ export default function FoundationProgramsPage() {
                     <h2 className="text-2xl lg:text-3xl font-medium text-cyan-400 mb-6 drop-shadow-[0_0_10px_rgba(0,243,255,0.5)]">
                         "Build Skills. Build Projects. Build Your Career."
                     </h2>
-                    <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-lg text-white leading-relaxed max-w-2xl mx-auto">
                         India’s most practical Robotics & AI mentorship program designed to make you industry-ready.
                     </p>
                 </MotionContainer>
@@ -76,7 +76,7 @@ export default function FoundationProgramsPage() {
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-neon-cyan/30 transition-colors">
                                         <item.icon className="text-cyan-400 w-6 h-6 shrink-0" />
-                                        <span className="text-gray-200 font-medium">{item.text}</span>
+                                        <span className="text-white font-medium">{item.text}</span>
                                     </div>
                                 ))}
                             </div>
@@ -112,7 +112,7 @@ export default function FoundationProgramsPage() {
                                     "Real Robot Building",
                                     "Embedded Programming"
                                 ].map((topic, idx) => (
-                                    <li key={idx} className="flex items-center gap-3 text-lg text-gray-300 group-hover:text-white transition-colors">
+                                    <li key={idx} className="flex items-center gap-3 text-lg text-white group-hover:text-white transition-colors">
                                         <span className="w-2 h-2 rounded-full bg-neon-cyan shadow-[0_0_8px_#00f3ff]"></span>
                                         {topic}
                                     </li>
@@ -141,7 +141,7 @@ export default function FoundationProgramsPage() {
                                     "AI Model Deployment",
                                     "Real-world AI Projects"
                                 ].map((topic, idx) => (
-                                    <li key={idx} className="flex items-center gap-3 text-lg text-gray-300 group-hover:text-white transition-colors">
+                                    <li key={idx} className="flex items-center gap-3 text-lg text-white group-hover:text-white transition-colors">
                                         <span className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></span>
                                         {topic}
                                     </li>
@@ -169,7 +169,7 @@ export default function FoundationProgramsPage() {
                                     "Offline + Hybrid Option",
                                     "Certification Included"
                                 ].map((detail, idx) => (
-                                    <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm md:text-base font-medium">
+                                    <div key={idx} className="flex items-center gap-2 text-white text-sm md:text-base font-medium">
                                         <CheckCircle className="w-4 h-4 text-neon-cyan" />
                                         {detail}
                                     </div>
@@ -196,7 +196,7 @@ export default function FoundationProgramsPage() {
                         <h2 className="text-4xl lg:text-6xl font-black mb-4 text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
                             100% Job Assistance
                         </h2>
-                        <p className="text-xl lg:text-2xl text-gray-300 font-medium mb-12">
+                        <p className="text-xl lg:text-2xl text-white font-medium mb-12">
                             We don’t just train you. We help you get hired.
                         </p>
 

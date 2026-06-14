@@ -34,7 +34,7 @@ export default function TeamPage() {
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 flex items-center justify-between">
                     <div>
-                        <Link href="/" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-4 transition-colors">
+                        <Link href="/" className="inline-flex items-center text-sm text-white hover:text-white mb-4 transition-colors">
                             <ArrowLeft size={16} className="mr-2" /> Back to Hub
                         </Link>
                         <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
@@ -46,8 +46,8 @@ export default function TeamPage() {
 
                 {teamMembers.length === 0 ? (
                     <div className="text-center py-20 bg-white/5 rounded-xl border border-white/10">
-                        <p className="text-xl text-gray-400">No team members found.</p>
-                        <p className="text-sm text-gray-500 mt-2">Check database connection or run seed script.</p>
+                        <p className="text-xl text-white">No team members found.</p>
+                        <p className="text-sm text-white mt-2">Check database connection or run seed script.</p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -62,7 +62,7 @@ export default function TeamPage() {
                                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                             />
                                         ) : (
-                                            <div className="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-gray-600">
+                                            <div className="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white">
                                                 <span className="text-4xl font-mono opacity-20">IMG_0{i + 1}</span>
                                             </div>
                                         )}
@@ -81,13 +81,13 @@ export default function TeamPage() {
                                         )}
                                     </div>
 
-                                    <p className="text-gray-400 text-sm flex-grow mb-6 leading-relaxed">
+                                    <p className="text-white text-sm flex-grow mb-6 leading-relaxed">
                                         {member.bio}
                                     </p>
 
                                     <div className="flex items-center gap-4 pt-4 border-t border-white/5">
                                         {/* Prevent Link default behavior on social icons if needed, but here simple link is fine, they are decorative mostly in this context unless specified otherwise */}
-                                        <div className="p-1"><Linkedin size={18} className="text-gray-500 hover:text-white transition-colors" /></div>
+                                        <div className="p-1"><Linkedin size={18} className="text-white hover:text-white transition-colors" /></div>
 
                                     </div>
                                 </FloatingCard>

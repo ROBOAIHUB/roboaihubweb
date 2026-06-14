@@ -51,7 +51,7 @@ export function Navbar() {
                                         href={item.href}
                                         className={cn(
                                             "relative text-sm font-medium transition-colors hover:text-cyan-400 uppercase tracking-widest py-1 flex items-center gap-1",
-                                            isActive ? "text-cyan-400" : "text-zinc-400"
+                                            isActive ? "text-cyan-400" : "text-white"
                                         )}
                                     >
                                         {item.name}
@@ -87,7 +87,7 @@ export function Navbar() {
                                 </div>
                                 <span className={cn(
                                     "text-sm font-medium uppercase tracking-widest transition-colors",
-                                    pathname === "/career" ? "text-cyan-400" : "text-zinc-400 group-hover/career:text-cyan-400"
+                                    pathname === "/career" ? "text-cyan-400" : "text-white group-hover/career:text-cyan-400"
                                 )}>
                                     Careers
                                 </span>
@@ -138,7 +138,7 @@ export function Navbar() {
                                     key={item.name}
                                     href={item.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-xl font-medium text-zinc-400 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+                                    className="text-xl font-medium text-white hover:text-cyan-400 transition-colors uppercase tracking-widest"
                                 >
                                     {item.name}
                                 </Link>

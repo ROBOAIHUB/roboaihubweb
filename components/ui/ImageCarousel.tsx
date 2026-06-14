@@ -79,14 +79,14 @@ export function ImageCarousel({
                 <>
                     <button
                         onClick={handlePrev}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-black/50 transition-all opacity-0 group-hover:opacity-100"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-black/50 transition-all opacity-0 group-hover:opacity-100"
                         aria-label="Previous image"
                     >
                         <ChevronLeft size={24} />
                     </button>
                     <button
                         onClick={handleNext}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-black/50 transition-all opacity-0 group-hover:opacity-100"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-black/50 transition-all opacity-0 group-hover:opacity-100"
                         aria-label="Next image"
                     >
                         <ChevronRight size={24} />

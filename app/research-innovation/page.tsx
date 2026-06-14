@@ -14,7 +14,7 @@ export default function ResearchInnovationPage() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-                <Link href="/" className="inline-flex items-center text-sm text-gray-400 hover:text-white mb-12 transition-colors group">
+                <Link href="/" className="inline-flex items-center text-sm text-white hover:text-white mb-12 transition-colors group">
                     <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Home
                 </Link>
 
@@ -35,10 +35,10 @@ export default function ResearchInnovationPage() {
                 <div className="max-w-4xl mx-auto mb-24 relative">
                     <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-cyan-600/20 rounded-[2rem] blur-xl opacity-50"></div>
                     <div className="relative bg-[#0A0A0F]/90 backdrop-blur-xl border border-white/10 rounded-[2rem] p-10 text-center shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                        <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed font-light mb-6">
+                        <p className="text-xl lg:text-2xl text-white leading-relaxed font-light mb-6">
                             Our Research & Innovation division focuses on applied Robotics & AI research, <span className="font-bold text-white">rapid prototyping</span>, and product development.
                         </p>
-                        <p className="text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-lg text-white leading-relaxed max-w-2xl mx-auto">
                             We transform concepts into working systems through engineering precision and practical experimentation.
                         </p>
                     </div>
@@ -82,7 +82,7 @@ export default function ResearchInnovationPage() {
                                 <div className="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:bg-white/10 transition-colors">
                                     <area.icon className={`${area.color} w-8 h-8`} />
                                 </div>
-                                <h4 className="text-xl font-bold text-white group-hover:text-gray-200 transition-colors">{area.title}</h4>
+                                <h4 className="text-xl font-bold text-white group-hover:text-white transition-colors">{area.title}</h4>
                             </div>
                         ))}
                     </div>

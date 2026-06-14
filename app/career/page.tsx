@@ -29,7 +29,7 @@ export default function CareerPage() {
                     <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
                         BUILD THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-blue-500">FUTURE</span>
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-xl text-white max-w-2xl mx-auto mb-10 leading-relaxed">
                         We are looking for visionaries, engineers, and creators who are ready to push the boundaries of Robotics and AI.
                     </p>
 
@@ -47,7 +47,7 @@ export default function CareerPage() {
                         <FloatingCard key={idx} className="p-8 border-white/10 hover:border-neon-cyan/30 transition-colors">
                             <item.icon className="text-neon-cyan mb-4" size={32} />
                             <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                            <p className="text-gray-400">{item.desc}</p>
+                            <p className="text-white">{item.desc}</p>
                         </FloatingCard>
                     ))}
                 </div>
@@ -59,7 +59,7 @@ export default function CareerPage() {
                 <div className="rounded-3xl p-12 relative overflow-hidden bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-white/10 text-center">
                     <div className="relative z-10">
                         <h2 className="text-3xl font-bold mb-4">Don&apos;t see your role?</h2>
-                        <p className="text-gray-400 max-w-xl mx-auto mb-8">
+                        <p className="text-white max-w-xl mx-auto mb-8">
                             We are always looking for exceptional talent. specific role. Send us your resume and tell us how you can make a difference at <span className="font-bold text-white">ROBO<span className="text-cyan-400">AI</span> HUB</span>.
                         </p>
                         <Link href="mailto:hr@robonari.co.in">

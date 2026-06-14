@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                     <h1 className="text-4xl lg:text-5xl font-bold font-mono text-white tracking-widest uppercase">LAB</h1>
                     <div className="h-1 w-1/3 mx-auto bg-cyan-400/50 mt-2 rounded-full"></div>
                 </div>
-                <p className="text-gray-400 max-w-2xl mx-auto mt-4 text-lg">
+                <p className="text-white max-w-2xl mx-auto mt-4 text-lg">
                     We don't just talk about technology. We build it. Here is some of our real-world work.
                 </p>
             </div>
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
                                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                                <p className="text-white text-sm leading-relaxed mb-6 flex-1">
                                     {project.desc}
                                 </p>
                             </div>
