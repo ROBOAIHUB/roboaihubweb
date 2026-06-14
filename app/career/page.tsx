@@ -23,9 +23,7 @@ export default function CareerPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-neon-cyan text-sm font-mono tracking-widest mb-6 backdrop-blur-md">
-                        JOIN THE ELITE
-                    </span>
+
                     <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
                         BUILD THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-blue-500">FUTURE</span>
                     </h1>
