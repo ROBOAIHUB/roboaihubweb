@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://roboaihub.com'),
   title: {
     template: '%s | ROBOAI HUB',
-    default: 'ROBOAI HUB - Elite AI & Robotics Automation',
+    default: 'ROBOAI HUB - AI & Robotics Automation',
   },
   description: 'ROBOAI HUB bridges the gap between academic theory and real-world industrial application. We design, build, and deploy real-world Robotics & AI systems.',
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://roboaihub.com',
-    title: 'ROBOAI HUB - Elite AI & Robotics Automation',
+    title: 'ROBOAI HUB - AI & Robotics Automation',
     description: 'We design, build, and deploy real-world Robotics & AI systems from classrooms to factories.',
     siteName: 'ROBOAI HUB',
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ROBOAI HUB - Elite AI & Robotics Automation',
+    title: 'ROBOAI HUB - AI & Robotics Automation',
     description: 'We design, build, and deploy real-world Robotics & AI systems.',
     images: ['/images/og-image.png'],
     creator: '@roboaihub',

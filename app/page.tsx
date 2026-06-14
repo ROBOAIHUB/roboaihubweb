@@ -6,7 +6,7 @@ import { DecodingText } from '@/components/ui/DecodingText';
 
 export const metadata: Metadata = {
   title: 'Home | ROBOAI HUB',
-  description: 'ROBOAI HUB provides Elite AI & Robotics Automation in Jodhpur. From classrooms to factories, we design, build, and deploy real-world Robotics & AI systems.',
+  description: 'ROBOAI HUB provides AI & Robotics Automation in Jodhpur. From classrooms to factories, we design, build, and deploy real-world Robotics & AI systems.',
 };
 export default function Home() {
   return (
