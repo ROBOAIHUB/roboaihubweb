@@ -1,6 +1,12 @@
+import { Metadata } from 'next';
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Mail, MapPin, Smartphone, Send, MessageCircle, Calendar } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: 'Contact Us | ROBOAI HUB',
+  description: 'Get in touch with ROBOAI HUB in Jodhpur for inquiries about AI Automation consulting, Robotics Training, Lab Setup, and more.',
+};
 
 export default function ContactPage() {
     // Static fallbacks for static site export

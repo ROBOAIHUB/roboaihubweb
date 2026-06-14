@@ -1,7 +1,13 @@
+import { Metadata } from 'next';
 import { Target, Lightbulb, Trophy, Users } from 'lucide-react';
 import { MotionContainer } from '@/components/ui/MotionContainer';
 import { FloatingCard } from '@/components/ui/FloatingCard';
 import { ImageCarousel } from '@/components/ui/ImageCarousel';
+
+export const metadata: Metadata = {
+  title: 'About Us | ROBOAI HUB',
+  description: 'Learn about ROBOAI HUB, founded by Narayan Jangid. We bridge the gap between academic theory and real-world industrial application through EdTech and Automation.',
+};
 
 export default function AboutPage() {
     return (

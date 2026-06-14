@@ -1,7 +1,13 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, BookOpen, Blocks, Settings, Lightbulb, GraduationCap, Bot, Cpu } from 'lucide-react';
 import { NeonButton } from '@/components/ui/NeonButton';
 import { DecodingText } from '@/components/ui/DecodingText';
+
+export const metadata: Metadata = {
+  title: 'Home | ROBOAI HUB',
+  description: 'ROBOAI HUB provides Elite AI & Robotics Automation in Jodhpur. From classrooms to factories, we design, build, and deploy real-world Robotics & AI systems.',
+};
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden bg-transparent text-white">

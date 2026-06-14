@@ -12,8 +12,47 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 const shareTech = Share_Tech_Mono({ weight: "400", subsets: ["latin"], variable: "--font-share-tech" });
 
 export const metadata: Metadata = {
-  title: "ROBOAI HUB",
-  description: "Elite AI & Robotics Automation",
+  metadataBase: new URL('https://roboaihub.com'),
+  title: {
+    template: '%s | ROBOAI HUB',
+    default: 'ROBOAI HUB - Elite AI & Robotics Automation',
+  },
+  description: 'ROBOAI HUB bridges the gap between academic theory and real-world industrial application. We design, build, and deploy real-world Robotics & AI systems.',
+  keywords: [
+    'Robotics Training India',
+    'AI Automation in Jodhpur',
+    'Industrial Automation Solutions',
+    'EdTech Robotics Kits',
+    'Custom AI Development',
+    'Robotics & AI Lab Setup',
+    'Robotics Education',
+    'Machine Learning'
+  ],
+  authors: [{ name: 'ROBOAI HUB' }],
+  creator: 'ROBOAI HUB',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://roboaihub.com',
+    title: 'ROBOAI HUB - Elite AI & Robotics Automation',
+    description: 'We design, build, and deploy real-world Robotics & AI systems from classrooms to factories.',
+    siteName: 'ROBOAI HUB',
+    images: [
+      {
+        url: '/images/logo-final.png',
+        width: 1200,
+        height: 630,
+        alt: 'ROBOAI HUB - Robotics & AI',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ROBOAI HUB - Elite AI & Robotics Automation',
+    description: 'We design, build, and deploy real-world Robotics & AI systems.',
+    images: ['/images/logo-final.png'],
+    creator: '@roboaihub',
+  },
 };
 
 export default function RootLayout({
