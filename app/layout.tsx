@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     'Custom AI Development',
     'Robotics & AI Lab Setup',
     'Robotics Education',
-    'Machine Learning'
+    'Machine Learning',
+    'Ai in jodhpur',
+    'Robotics in jodhpur',
+    'Jodhpur',
+    'Ai and robotics in jodhpur'
   ],
   authors: [{ name: 'ROBOAI HUB' }],
   creator: 'ROBOAI HUB',
