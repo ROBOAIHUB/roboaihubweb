@@ -138,7 +138,7 @@ const Contact = () => {
         {/* 2. PANEL 1: WHATSAPP PANEL (Bounds: x: 282, y: 342, w: 243, h: 174)       */}
         {/* ========================================================================= */}
         <div 
-          className="absolute z-20 flex flex-col items-center justify-center text-center contact-overlay-panel"
+          className="absolute z-20 flex flex-col items-center justify-center text-center contact-overlay-panel contact-phone-panel"
           style={{
             left: '17.625%',
             top: '38.0%',
@@ -188,7 +188,7 @@ const Contact = () => {
         {/* 3. PANEL 2: BIRD EMAIL PANEL (Bounds: x: 1277, y: 185, w: 291, h: 91)     */}
         {/* ========================================================================= */}
         <div 
-          className="absolute z-20 flex items-center justify-center contact-overlay-panel"
+          className="absolute z-20 flex items-center justify-center contact-overlay-panel contact-email-panel"
           style={{
             left: '79.8125%',
             top: '20.555%',
@@ -221,7 +221,7 @@ const Contact = () => {
         {/* 4. PANEL 3: LOCATION / ADDRESS (Bounds: x: 1090, y: 538, w: 393, h: 113)  */}
         {/* ========================================================================= */}
         <div 
-          className="absolute z-20 flex items-center contact-overlay-panel"
+          className="absolute z-20 flex items-center contact-overlay-panel contact-address-panel"
           style={{
             left: '68.125%',
             top: '59.777%',
@@ -256,7 +256,7 @@ const Contact = () => {
         {/* 5. PANEL 4: FOLLOW US / SOCIAL (Bounds: x: 700, y: 696, w: 817, h: 90)    */}
         {/* ========================================================================= */}
         <div 
-          className="absolute z-20 flex items-center contact-overlay-panel"
+          className="absolute z-20 flex items-center contact-overlay-panel contact-follow-panel"
           style={{
             left: '43.75%',
             top: '77.333%',
@@ -299,7 +299,7 @@ const Contact = () => {
         {/* 6. PANEL 5: WEBSITE / DOMAIN (Bounds: x: 678, y: 847, w: 244, h: 42)      */}
         {/* ========================================================================= */}
         <div 
-          className="absolute z-20 flex items-center justify-center contact-overlay-panel"
+          className="absolute z-20 flex items-center justify-center contact-overlay-panel contact-web-panel"
           style={{
             left: '42.375%',
             top: '94.111%',

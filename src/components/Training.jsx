@@ -24,7 +24,7 @@ const Training = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover md:object-fill pointer-events-none select-none"
+          className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
           style={{
             filter: 'brightness(1.08) contrast(1.04) saturate(1.06)',
           }}
@@ -61,7 +61,7 @@ const Training = () => {
         {/* Layer 4: Bottom-Left Robotics Caption Group (Interactive 2nd Page Hover)*/}
         {/* ======================================================================= */}
         <div 
-          className="absolute left-[16.88%] top-[84.22%] z-20 flex items-center gap-3 pointer-events-auto group cursor-pointer"
+          className="absolute left-[16.88%] top-[84.22%] z-20 flex items-center gap-3 pointer-events-auto group cursor-pointer training-caption-group-left"
           aria-label="Robotics Training: Build. Program. Innovate."
         >
           {/* Circular Robotic Arm Icon Badge with 2nd-page Hover */}
@@ -70,10 +70,10 @@ const Training = () => {
           </div>
 
           <div className="flex flex-col relative">
-            <h3 className="font-michroma font-bold text-[1.12vw] xl:text-[15px] text-white tracking-wider uppercase leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)] transition-colors duration-300 group-hover:text-[#00d4ff] group-hover:drop-shadow-[0_0_8px_#00d4ff]">
+            <h3 className="font-michroma font-bold text-[1.12vw] xl:text-[15px] text-white tracking-wider uppercase leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)] transition-colors duration-300 group-hover:text-[#00d4ff] group-hover:drop-shadow-[0_0_8px_#00d4ff] training-caption-title">
               ROBOTICS TRAINING
             </h3>
-            <span className="font-jura text-[0.85vw] xl:text-[12px] text-white/85 tracking-wide leading-tight mt-0.5 drop-shadow-md transition-colors duration-300 group-hover:text-white">
+            <span className="font-jura text-[0.85vw] xl:text-[12px] text-white/85 tracking-wide leading-tight mt-0.5 drop-shadow-md transition-colors duration-300 group-hover:text-white training-caption-sub">
               Build. Program. Innovate.
             </span>
 
@@ -86,7 +86,7 @@ const Training = () => {
         {/* Layer 5: Bottom-Right AI Training Caption Group (Interactive 2nd Page)  */}
         {/* ======================================================================= */}
         <div 
-          className="absolute left-[70.94%] top-[85.55%] z-20 flex items-center gap-3 pointer-events-auto group cursor-pointer"
+          className="absolute left-[70.94%] top-[85.55%] z-20 flex items-center gap-3 pointer-events-auto group cursor-pointer training-caption-group-right"
           aria-label="AI Training: Learn. Model. Transform."
         >
           {/* Circular Brain Icon Badge with 2nd-page Hover */}
@@ -95,10 +95,10 @@ const Training = () => {
           </div>
 
           <div className="flex flex-col relative">
-            <h3 className="font-michroma font-bold text-[1.12vw] xl:text-[15px] text-white tracking-wider uppercase leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)] transition-colors duration-300 group-hover:text-[#00d4ff] group-hover:drop-shadow-[0_0_8px_#00d4ff]">
+            <h3 className="font-michroma font-bold text-[1.12vw] xl:text-[15px] text-white tracking-wider uppercase leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)] transition-colors duration-300 group-hover:text-[#00d4ff] group-hover:drop-shadow-[0_0_8px_#00d4ff] training-caption-title">
               AI TRAINING
             </h3>
-            <span className="font-jura text-[0.85vw] xl:text-[12px] text-white/85 tracking-wide leading-tight mt-0.5 drop-shadow-md transition-colors duration-300 group-hover:text-white">
+            <span className="font-jura text-[0.85vw] xl:text-[12px] text-white/85 tracking-wide leading-tight mt-0.5 drop-shadow-md transition-colors duration-300 group-hover:text-white training-caption-sub">
               Learn. Model. Transform.
             </span>
 

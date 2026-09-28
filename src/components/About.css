@@ -357,7 +357,7 @@
   }
 
   .about-scene-canvas video {
-    object-fit: cover !important;
+    object-fit: fill !important;
   }
 
   /* Auto-arrange quote to open sky below header so it never collides with timeline */
@@ -374,16 +374,21 @@
     line-height: 1.25 !important;
   }
 
-  /* Auto-arrange milestone card inside oval ring with readable width */
+  /* Auto-arrange milestone card with solid dark sci-fi background to prevent video text bleed-through */
   .about-milestone-panel {
     left: 50% !important;
     top: 60% !important;
     transform: translate(-50%, -50%) !important;
-    width: clamp(180px, 52vw, 240px) !important;
+    width: clamp(190px, 54vw, 250px) !important;
     height: auto !important;
     min-height: 200px !important;
-    padding: 8px 10px !important;
-    border-radius: 14px;
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+    background: rgba(0, 14, 36, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1.5px solid rgba(0, 212, 255, 0.8) !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 212, 255, 0.35) !important;
   }
 
   .about-panel-date {

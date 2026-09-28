@@ -191,10 +191,10 @@ const AITrainingCarousel = ({ onSelectCourse, isModalOpen }) => {
             onFocus={() => setIsPaused(true)}
             onBlur={() => setIsPaused(false)}
             aria-label={`${course.displayTitle} training module. Click to view full curriculum.`}
-            className={`absolute flex items-center justify-center pointer-events-auto transition-all duration-1000 ease-in-out cursor-pointer select-none focus-visible:outline-none ${
+            className={`absolute flex items-center justify-center pointer-events-auto transition-all duration-1000 ease-in-out cursor-pointer select-none focus-visible:outline-none ai-carousel-card ${
               isFront 
-                ? 'group rounded-2xl border-[1.8px] border-[#00d4ff] bg-[#001438]/45 backdrop-blur-[2px] shadow-[0_0_35px_rgba(0,212,255,0.75),inset_0_0_20px_rgba(0,212,255,0.15)] hover:border-white hover:shadow-[0_0_50px_rgba(0,212,255,0.95)]' 
-                : 'rounded-xl border border-[#00d4ff]/40 bg-[#00102e]/30 backdrop-blur-[1px] shadow-[0_0_12px_rgba(0,212,255,0.2)] hover:border-[#00d4ff] hover:bg-[#001438]/60 hover:opacity-100'
+                ? 'ai-carousel-front group rounded-2xl border-[1.8px] border-[#00d4ff] bg-[#001438]/45 backdrop-blur-[2px] shadow-[0_0_35px_rgba(0,212,255,0.75),inset_0_0_20px_rgba(0,212,255,0.15)] hover:border-white hover:shadow-[0_0_50px_rgba(0,212,255,0.95)]' 
+                : 'ai-carousel-rear rounded-xl border border-[#00d4ff]/40 bg-[#00102e]/30 backdrop-blur-[1px] shadow-[0_0_12px_rgba(0,212,255,0.2)] hover:border-[#00d4ff] hover:bg-[#001438]/60 hover:opacity-100'
             }`}
             style={{
               left: slot.left,

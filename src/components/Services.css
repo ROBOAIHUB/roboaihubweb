@@ -349,44 +349,23 @@
   }
 
   .services-scene-canvas video {
-    object-fit: cover !important;
+    object-fit: fill !important;
   }
 
-  /* Auto-arrange 4 floating panels with readable width on mobile */
-  .services-panel-card-anchor {
-    width: clamp(135px, 38vw, 190px) !important;
-    height: auto !important;
-    min-height: 110px !important;
-  }
-
-  .services-panel-card-anchor.panel-1-robotics {
-    left: 26% !important;
-    top: 24% !important;
-  }
-
-  .services-panel-card-anchor.panel-2-automation {
-    left: 68% !important;
-    top: 36% !important;
-  }
-
-  .services-panel-card-anchor.panel-3-mentorship {
-    left: 28% !important;
-    top: 56% !important;
-  }
-
-  .services-panel-card-anchor.panel-4-weekend {
-    left: 70% !important;
-    top: 68% !important;
-  }
-
+  /* Scale icons to fit naturally within video laser boxes */
   .services-panel-icon-img {
-    width: clamp(24px, 6vw, 36px) !important;
-    height: clamp(24px, 6vw, 36px) !important;
+    max-width: 78% !important;
+    max-height: 75% !important;
   }
 
+  /* Compact text to prevent overflow in mobile video boxes */
   .services-label-text {
-    font-size: clamp(10px, 2.4vw, 13px) !important;
+    font-size: clamp(7.5px, 1.9vw, 11px) !important;
     white-space: normal !important;
     line-height: 1.15 !important;
+  }
+
+  .services-panel-underline .line {
+    width: clamp(16px, 3.2vw, 28px) !important;
   }
 }

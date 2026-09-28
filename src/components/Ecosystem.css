@@ -226,36 +226,47 @@
   }
 
   .eco-canvas-container video {
-    object-fit: cover !important;
+    object-fit: fill !important;
   }
 
   /* Left Building Signboard: Don't truncate Education */
   .eco-signboard-education {
     width: auto !important;
-    min-width: 85px !important;
-    max-width: 34vw !important;
+    min-width: 70px !important;
+    max-width: 32vw !important;
     overflow: visible !important;
   }
 
   .eco-signboard-education-text {
-    font-size: clamp(8px, 2.2vw, 12.5px) !important;
+    font-size: clamp(7.5px, 2.0vw, 11px) !important;
   }
 
   /* Right Building Signboard: Don't truncate Industrial */
   .eco-signboard-industrial {
     width: auto !important;
-    min-width: 90px !important;
-    max-width: 34vw !important;
+    min-width: 80px !important;
+    max-width: 32vw !important;
     overflow: visible !important;
-    transform: translate(-15%, 0) !important;
+    transform: translate(-10%, 0) !important;
   }
 
   .eco-signboard-industrial-text {
-    font-size: clamp(8px, 2.2vw, 12.5px) !important;
+    font-size: clamp(7.5px, 2.0vw, 11px) !important;
   }
 
   .eco-header-rd-text {
-    font-size: clamp(8px, 2.2vw, 12.5px) !important;
+    font-size: clamp(7.5px, 2.0vw, 11px) !important;
+  }
+
+  /* 9 Interactive Service Buttons on mobile */
+  .eco-canvas-container button > div:first-child {
+    min-width: 24px !important;
+    min-height: 24px !important;
+  }
+
+  .eco-canvas-container button span {
+    font-size: clamp(7.5px, 1.9vw, 10.5px) !important;
+    line-height: 1.15 !important;
   }
 }
 
