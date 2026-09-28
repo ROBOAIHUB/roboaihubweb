@@ -345,13 +345,21 @@ const Ecosystem = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85vw] h-[250px] bg-gradient-to-b from-[#00d4ff]/12 via-transparent to-transparent pointer-events-none z-[1]" />
 
         {/* Layer 2: Top-Left Header Block (ROBOAI HUB text removed) */}
-        <div className="absolute left-[3.5%] top-[8.5%] sm:top-[7.5%] md:top-[6.5%] z-20 max-w-sm pointer-events-auto">
+        <div className="absolute left-[3.5%] top-[8.5%] sm:top-[7.5%] md:top-[6.5%] z-20 max-w-sm pointer-events-auto eco-header-block">
           <h1 className="text-[20px] sm:text-[24px] md:text-[2.9vw] xl:text-[36px] font-michroma font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
             Ecosystem
           </h1>
-          <p className="mt-1 text-[11px] sm:text-[12px] md:text-[0.9vw] xl:text-[12px] font-jura text-white/90 leading-snug tracking-wide drop-shadow-md">
-            Connecting Education, Innovation<br />
-            and Automation into one future-ready ecosystem.
+          <p className="mt-1 text-[11px] sm:text-[12px] md:text-[0.9vw] xl:text-[12px] font-jura text-white/90 leading-snug tracking-wide drop-shadow-md eco-header-desc">
+            <span className="hidden md:inline">
+              Connecting Education, Innovation<br />
+              and Automation into one future-ready ecosystem.
+            </span>
+            <span className="inline md:hidden">
+              Connecting Education,<br />
+              Innovation and<br />
+              Automation into one<br />
+              future-ready ecosystem.
+            </span>
           </p>
         </div>
 
@@ -361,10 +369,10 @@ const Ecosystem = () => {
           title="ROBOAI HUB — Better Future"
         >
           <div className="flex flex-col items-center justify-center text-center transition-all duration-250 select-none">
-            <span className="font-michroma font-bold text-[1.35vw] xl:text-[17px] text-white tracking-[0.18em] leading-[1.05] transition-all duration-250 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(0,212,255,1)] group-hover:text-[#00d4ff]">
+            <span className="font-michroma font-bold text-[1.35vw] xl:text-[17px] text-white tracking-[0.18em] leading-[1.05] transition-all duration-250 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(0,212,255,1)] group-hover:text-[#00d4ff] eco-better-future-text">
               BETTER
             </span>
-            <span className="font-michroma font-bold text-[1.35vw] xl:text-[17px] text-white tracking-[0.18em] leading-[1.05] transition-all duration-250 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(0,212,255,1)] group-hover:text-[#00d4ff]">
+            <span className="font-michroma font-bold text-[1.35vw] xl:text-[17px] text-white tracking-[0.18em] leading-[1.05] transition-all duration-250 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(0,212,255,1)] group-hover:text-[#00d4ff] eco-better-future-text">
               FUTURE
             </span>
           </div>

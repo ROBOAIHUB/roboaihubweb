@@ -268,6 +268,28 @@
     font-size: clamp(7.5px, 1.9vw, 10.5px) !important;
     line-height: 1.15 !important;
   }
+
+  /* Header Block: align down and keep strictly on left side according to background effect */
+  .eco-header-block {
+    max-width: 38vw !important;
+    left: 4% !important;
+    top: 9% !important;
+    text-align: left !important;
+  }
+
+  .eco-header-desc {
+    font-size: clamp(9px, 2.3vw, 11px) !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    max-width: 100% !important;
+  }
+
+  /* Central "BETTER FUTURE": Big size inside the glowing portal */
+  .eco-better-future-text {
+    font-size: clamp(14px, 3.8vw, 18px) !important;
+    letter-spacing: 0.16em !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.95), 0 0 20px rgba(0, 212, 255, 0.6), 0 1px 4px rgba(0, 0, 0, 0.95) !important;
+  }
 }
 
 
