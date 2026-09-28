@@ -3,33 +3,22 @@ import { GraduationCap, Lightbulb, Bot, Mouse } from 'lucide-react';
 import Logo from './Logo';
 import Navbar from './Navbar';
 
-const RingMenuItem = ({ icon: Icon, label, targetId }) => {
-  const handleClick = () => {
-    if (targetId) {
-      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  return (
-    <div 
-      onClick={handleClick}
-      className="flex flex-col items-start gap-1 group cursor-pointer relative z-20 mb-5 sm:mb-7 md:mb-10 last:mb-0 select-none"
-    >
-      <div className="flex items-center gap-2.5 sm:gap-3 md:gap-4 px-2.5 py-1 md:p-0 rounded-full md:rounded-none bg-[#000a1f]/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none border border-cyan-400/25 md:border-transparent transition-all duration-300 group-hover:border-brand-cyan group-hover:bg-[#00d4ff]/15">
-        {/* Circle Icon */}
-        <div className="flex items-center justify-center w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] md:w-[3vw] md:h-[3vw] min-w-[30px] min-h-[30px] rounded-full border border-white/60 bg-transparent backdrop-blur-sm group-hover:border-brand-cyan group-hover:shadow-[0_0_15px_rgba(0,212,255,0.8)] transition-all duration-300">
-          <Icon className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[1.5vw] md:h-[1.5vw] text-white group-hover:text-brand-cyan transition-colors duration-300" strokeWidth={1.75} />
-        </div>
-        {/* Text with high contrast shadow against sun glare */}
-        <span className="text-[13px] sm:text-[14px] md:text-[1.2vw] font-jura font-semibold md:font-normal text-white md:text-white/90 tracking-widest group-hover:text-white transition-colors drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
-          {label}
-        </span>
+const RingMenuItem = ({ icon: Icon, label }) => (
+  <div className="flex flex-col items-start gap-1 group cursor-pointer relative z-20 mb-6 sm:mb-8 md:mb-10 last:mb-0 select-none">
+    <div className="flex items-center gap-3 sm:gap-4">
+      {/* Circle Icon */}
+      <div className="flex items-center justify-center w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] md:w-[3vw] md:h-[3vw] min-w-[32px] min-h-[32px] rounded-full border border-white/60 bg-transparent backdrop-blur-sm group-hover:border-brand-cyan group-hover:shadow-[0_0_15px_rgba(0,212,255,0.8)] transition-all duration-300">
+        <Icon className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px] md:w-[1.5vw] md:h-[1.5vw] text-white group-hover:text-brand-cyan transition-colors duration-300" strokeWidth={1.75} />
       </div>
-      {/* Faded line extending right, starting from under the text */}
-      <div className="h-[1.5px] w-[34vw] sm:w-[24vw] md:w-[12vw] bg-gradient-to-r from-white/60 to-transparent ml-8 sm:ml-10 md:ml-[4vw] group-hover:from-brand-cyan transition-all duration-300"></div>
+      {/* Thin Text */}
+      <span className="text-[13px] sm:text-[15px] md:text-[1.2vw] font-jura text-white/90 tracking-widest group-hover:text-white transition-colors drop-shadow-md">
+        {label}
+      </span>
     </div>
-  );
-};
+    {/* Faded line extending right, starting from under the text */}
+    <div className="h-[1.5px] w-[36vw] sm:w-[25vw] md:w-[12vw] bg-gradient-to-r from-white/60 to-transparent ml-8 sm:ml-10 md:ml-[4vw] group-hover:from-brand-cyan transition-all duration-300"></div>
+  </div>
+);
 
 // High-tech CSS/SVG Glowing Rings HUD
 const GlowingRings = () => (
@@ -147,9 +136,9 @@ const Hero = () => {
       
       {/* Menu Items (Centered inside the rings) */}
       <div className="absolute top-[66%] sm:top-[65%] md:top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-auto md:right-[12%] md:translate-x-0 z-30 flex flex-col items-start pl-2 sm:pl-0">
-        <RingMenuItem icon={GraduationCap} label="Education" targetId="education" />
-        <RingMenuItem icon={Lightbulb} label="Innovation" targetId="ecosystem" />
-        <RingMenuItem icon={Bot} label="Automation" targetId="services" />
+        <RingMenuItem icon={GraduationCap} label="Education" />
+        <RingMenuItem icon={Lightbulb} label="Innovation" />
+        <RingMenuItem icon={Bot} label="Automation" />
       </div>
 
       {/* --- BOTTOM SCROLL MOUSE --- */}

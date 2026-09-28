@@ -210,83 +210,15 @@ const Services = () => {
 
   return (
     <div 
-      className="w-full h-full relative overflow-hidden bg-[#000a1f] select-none flex items-center justify-center services-scene-wrapper"
+      className="w-full h-screen relative overflow-hidden bg-[#000a1f] select-none flex items-center justify-center services-scene-wrapper"
       aria-label="ROBOAI HUB Services"
     >
-      {/* ========================================================================= */}
-      {/* MOBILE RESPONSIVE VIEW (< md)                                             */}
-      {/* ========================================================================= */}
-      <div className="md:hidden flex flex-col justify-between w-full h-full relative z-10 px-4 pt-20 pb-8 overflow-y-auto no-scrollbar">
-        {/* Background Atmospheric Video */}
-        <video
-          src="/RoboAI_Services_Fixed_Empty_Panels.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-25 select-none"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000a1f]/85 via-transparent to-[#000a1f]/95 pointer-events-none" />
-
-        {/* Mobile Header Block */}
-        <div className="relative z-20">
-          <h1 className="text-2xl font-michroma font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
-            Services
-          </h1>
-          <p className="mt-1 text-xs font-jura text-white/90 leading-snug tracking-wide">
-            Turnkey Robotics, Automation, and Guided Engineering Solutions.
-          </p>
-        </div>
-
-        {/* Mobile 4 Holographic Service Cards */}
-        <div className="relative z-20 my-auto py-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          {SERVICES_DATA.map((item, idx) => (
-            <div
-              key={item.id}
-              onClick={(e) => handleOpenModal(item, e)}
-              className="flex items-center justify-between p-3.5 rounded-xl border border-cyan-400/40 bg-[#001030]/80 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] active:scale-[0.98] transition-all cursor-pointer group hover:border-[#00d4ff]"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl border border-cyan-300/60 bg-[#00d4ff]/15 flex items-center justify-center shrink-0 p-1.5 group-hover:shadow-[0_0_15px_rgba(0,212,255,0.8)] transition-all">
-                  <img 
-                    src={item.iconSrc} 
-                    alt={item.iconAlt} 
-                    className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(0,212,255,0.7)]"
-                  />
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[10px] font-michroma text-[#00d4ff] tracking-wider uppercase font-semibold">
-                    0{idx + 1} • {item.eyebrow?.split('·')[1]?.trim() || 'SOLUTION'}
-                  </span>
-                  <span className="text-sm font-michroma font-bold text-white leading-tight">
-                    {item.title}
-                  </span>
-                  <span className="text-[11px] font-jura text-white/80 line-clamp-1 mt-0.5">
-                    {item.subtitle || item.overview}
-                  </span>
-                </div>
-              </div>
-              <span className="text-xs text-cyan-400 font-michroma shrink-0 ml-2 group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile Footer Cue */}
-        <div className="relative z-20 text-center">
-          <span className="text-[10px] font-jura text-white/60 tracking-wider">
-            Tap any service to view modules, curriculum & details
-          </span>
-        </div>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* DESKTOP 16:9 PROPORTIONAL CANVAS (>= md)                                  */}
-      {/* ========================================================================= */}
-      <div className="hidden md:flex services-scene-canvas">
+      {/* Master 16:9 Design Canvas (Unified 1600 × 900 Coordinate System) */}
+      <div className="services-scene-canvas">
         
-        {/* Layer 1: Background Animated Video */}
+        {/* ========================================================================= */}
+        {/* 1. ANIMATED BACKGROUND VIDEO (RoboAI_Services_Fixed_Empty_Panels.mp4)     */}
+        {/* ========================================================================= */}
         <video
           ref={videoRef}
           src="/RoboAI_Services_Fixed_Empty_Panels.mp4"
