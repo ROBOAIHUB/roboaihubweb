@@ -278,7 +278,7 @@ const About = () => {
         {/* 1. UPPER-LEFT HEADING (MATCHING CONTACT US & ECOSYSTEM)                   */}
         {/* ========================================================================= */}
         <div 
-          className="absolute z-20 pointer-events-auto"
+          className="absolute z-20 pointer-events-auto about-header-container"
           style={{
             left: '3.44%',
             top: '14.0%',
@@ -314,14 +314,28 @@ const About = () => {
             <span className="about-quote-dot" />
           </div>
 
-          {/* Aesthetic 3-Line Structured Statement */}
+          {/* Aesthetic Structured Statement */}
           <div className="about-quote-content">
             <p className="font-jura about-quote-text">
-              <span className="about-quote-line">We are building an ecosystem where</span>
-              <span className="about-quote-line about-quote-highlight">
-                <span className="about-keyword">Education</span>, <span className="about-keyword">Innovation</span> and <span className="about-keyword">Automation</span>
+              <span className="hidden md:block">
+                <span className="about-quote-line">We are building an ecosystem where</span>
+                <span className="about-quote-line about-quote-highlight">
+                  <span className="about-keyword">Education</span>, <span className="about-keyword">Innovation</span> and <span className="about-keyword">Automation</span>
+                </span>
+                <span className="about-quote-line">work together to shape a better future.</span>
               </span>
-              <span className="about-quote-line">work together to shape a better future.</span>
+              <span className="block md:hidden">
+                <span className="about-quote-line">We are building an</span>
+                <span className="about-quote-line">ecosystem where</span>
+                <span className="about-quote-line about-quote-highlight">
+                  <span className="about-keyword">Education</span>, <span className="about-keyword">Innovation</span>
+                </span>
+                <span className="about-quote-line about-quote-highlight">
+                  and <span className="about-keyword">Automation</span> work
+                </span>
+                <span className="about-quote-line">together to shape</span>
+                <span className="about-quote-line">a better future.</span>
+              </span>
             </p>
           </div>
         </div>
