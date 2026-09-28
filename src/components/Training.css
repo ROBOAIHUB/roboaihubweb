@@ -1,0 +1,105 @@
+/* src/components/Training.css */
+
+/* Scanlines for robotic display */
+.scanline-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 212, 255, 0.12) 50%,
+    rgba(0, 212, 255, 0.12)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Electrical Path Pulses */
+@keyframes pulse-flow-forward {
+  0% {
+    stroke-dashoffset: 1400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulse-flow-reverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1400;
+  }
+}
+
+.eco-pulse-fast-1 {
+  stroke-dasharray: 100 600;
+  animation: pulse-flow-forward 2.6s linear infinite;
+}
+
+.eco-pulse-fast-2 {
+  stroke-dasharray: 70 500;
+  animation: pulse-flow-forward 3.4s linear infinite;
+  animation-delay: -1.2s;
+}
+
+.eco-pulse-fast-3 {
+  stroke-dasharray: 60 480;
+  animation: pulse-flow-forward 3.0s linear infinite;
+  animation-delay: -0.6s;
+}
+
+.eco-pulse-fast-4 {
+  stroke-dasharray: 50 420;
+  animation: pulse-flow-forward 3.8s linear infinite;
+  animation-delay: -1.8s;
+}
+
+.eco-pulse-reverse {
+  stroke-dasharray: 45 650;
+  animation: pulse-flow-reverse 4.8s linear infinite;
+  animation-delay: -1.5s;
+}
+
+/* Summit R&D node pulsing */
+@keyframes summit-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 0.9;
+  }
+}
+
+.eco-summit-node {
+  transform-origin: 500px 160px;
+  animation: summit-pulse 2.6s ease-in-out infinite;
+}
+
+/* Glassmorphic course modal */
+.glass-modal {
+  background: linear-gradient(135deg, rgba(0, 18, 48, 0.95) 0%, rgba(0, 8, 26, 0.98) 100%);
+  border: 1.5px solid rgba(0, 212, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.85), 0 0 40px rgba(0, 212, 255, 0.4);
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-animate-enter {
+  animation: modal-fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

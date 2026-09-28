@@ -1,0 +1,92 @@
+.navbar {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 100%;
+  height: 5%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  position: absolute;
+  left: 2.5%; /* Match the left edge of the baked-in pill */
+  width: 95%; /* Match the width of the baked-in pill */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  left: 2%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-core {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+}
+
+.logo span {
+  font-family: 'Michroma', sans-serif;
+  font-size: 1.1cqw; /* Scale font with screen width */
+  letter-spacing: 5px;
+  color: white;
+}
+
+.nav-links {
+  position: absolute;
+  left: 23%; /* Start of pill text area */
+  width: 50%; /* End of pill text area */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9cqw;
+  font-weight: 400;
+  padding: 0.6cqw 1.2cqw;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-family: 'Jura', sans-serif;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a.active {
+  color: white;
+  background: transparent;
+}
+
+@media (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+  .logo span {
+    font-size: 1.5rem;
+  }
+}

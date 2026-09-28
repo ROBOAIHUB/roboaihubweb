@@ -1,0 +1,197 @@
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  container-type: inline-size;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%; /* Stretches to fit screen exactly so elements don't misalign */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Optional overlay to make text pop slightly */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center right, transparent 0%, rgba(0, 5, 20, 0.2) 100%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.hero-text-section {
+  position: absolute;
+  top: 36%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2cqw;
+}
+
+.main-title {
+  font-family: 'Bruno Ace SC', 'Michroma', sans-serif;
+  font-size: 6cqw; /* Scale font exactly with screen width */
+  font-weight: 400;
+  color: white;
+  letter-spacing: 1.5cqw;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(100, 200, 255, 0.2);
+  white-space: nowrap;
+}
+
+.main-title .spacer {
+  display: inline-block;
+  width: 2cqw;
+}
+
+.subtitle {
+  font-family: 'Jura', sans-serif;
+  font-size: 1cqw; /* Scale with width */
+  letter-spacing: 0.8cqw;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.subtitle .lowercase {
+  text-transform: lowercase;
+  letter-spacing: 0.2cqw;
+  padding: 0 0.5cqw;
+}
+
+/* Glowing Circle Section */
+.hero-interactive-section {
+  position: absolute;
+  top: 25%;
+  left: 63.5%;
+  width: 30%;
+  height: 50%;
+}
+
+.circle-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(-5px);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle {
+  width: 3cqw;
+  height: 3cqw;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Size icon explicitly relative to circle */
+.icon-circle svg {
+  width: 50%;
+  height: 50%;
+}
+
+.item-text {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.1cqw;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: 300;
+  width: auto;
+  white-space: nowrap;
+}
+
+.line-ext {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, transparent 100%);
+  margin-left: 0.5cqw;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  opacity: 0.8;
+}
+
+.mouse-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mouse-dot {
+  position: absolute;
+  top: 6px;
+  width: 2px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  animation: scroll-dot 2s infinite;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+  margin-top: -5px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+  60% { transform: translateY(-3px); }
+}
+
+@keyframes scroll-dot {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(6px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}

@@ -1,0 +1,434 @@
+/* ==========================================================================
+   ROBOAI HUB GALLERY - BALANCED PORTRAIT 3:4 CAROUSEL
+   Fully Transparent Glassmorphic Surfaces, 4-Side Soft Glow,
+   Edge Hover Arrows, Subtle 5px Directional Nudge, Clean Photos
+   ========================================================================== */
+
+:root {
+  --gallery-card-w: clamp(230px, 19.5vw, 315px);
+  --gallery-card-h: calc(var(--gallery-card-w) * 1.42);
+  --gallery-cyan: #00d4ff;
+  --gallery-cyan-glow: rgba(0, 212, 255, 0.45);
+  --gallery-ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 1. Main Gallery Section Container (Normal Document Flow) */
+.gallery-section-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #000a1f;
+  box-sizing: border-box;
+  padding: clamp(75px, 9.5vh, 98px) clamp(20px, 4vw, 56px) clamp(10px, 1.5vh, 20px);
+}
+
+/* Background Atmosphere - Matched to Ecosystem & Services brightness */
+.gallery-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/clean_gallery_bg.jpg'), url('/gallery_bg.jpg');
+  background-size: cover;
+  background-position: center 85%;
+  background-repeat: no-repeat;
+  filter: brightness(1.15) contrast(1.05) saturate(1.1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. Top-Left Header (Michroma Typography & Glowing Line) */
+.gallery-header-block {
+  position: relative;
+  z-index: 10;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: clamp(2px, 0.5vh, 8px);
+}
+
+.gallery-heading-title {
+  font-family: 'Michroma', sans-serif;
+  font-size: clamp(24px, 2.4vw, 38px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.45), 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin: 0 0 6px 0;
+}
+
+.gallery-heading-rule {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: clamp(130px, 12vw, 190px);
+  height: 6px;
+}
+
+.gallery-heading-rule-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px #ffffff, 0 0 10px #00d4ff, 0 0 16px #00d4ff;
+  flex-shrink: 0;
+}
+
+.gallery-heading-rule-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, #00d4ff 0%, rgba(0, 212, 255, 0.5) 50%, #00d4ff 100%);
+  box-shadow: 0 0 8px #00d4ff, 0 0 16px rgba(0, 212, 255, 0.7);
+}
+
+/* 3. Category Navigation Pill Bar - Translucent Electric-Blue Holographic Glass */
+.gallery-nav-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: clamp(6px, 1vh, 14px);
+}
+
+.gallery-category-pill {
+  display: flex;
+  align-items: center;
+  max-width: 96vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: linear-gradient(135deg, rgba(0, 145, 255, 0.42) 0%, rgba(55, 190, 255, 0.24) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(155, 245, 255, 0.85);
+  border-radius: 9999px;
+  padding: 5px 12px;
+  box-shadow: 0 0 18px rgba(0, 220, 255, 0.30), inset 0 0 14px rgba(180, 245, 255, 0.18);
+}
+
+.gallery-category-pill::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-cat-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: 'Jura', sans-serif;
+  font-size: clamp(12.5px, 0.95vw, 15.5px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 250ms ease;
+  outline: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-cat-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(180, 245, 255, 0.6);
+}
+
+.gallery-cat-tab-btn.is-active {
+  color: #ffffff;
+  background: rgba(0, 180, 255, 0.45);
+  border-color: rgba(200, 250, 255, 0.95);
+  box-shadow: 0 0 16px rgba(0, 220, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 10px rgba(0, 220, 255, 0.9);
+}
+
+.gallery-cat-divider {
+  width: 1px;
+  height: 15px;
+  background: rgba(180, 245, 255, 0.4);
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+/* 4. Carousel Viewport & 3D Stage (Overflow Hidden to Prevent Bottom Slide Bar) */
+.gallery-carousel-viewport {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  flex: 1;
+  min-height: calc(var(--gallery-card-h) + 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+/* Edge Floating Arrow Triggers (Subtle Fade on Hover) */
+.gallery-edge-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  width: clamp(40px, 3vw, 50px);
+  height: clamp(40px, 3vw, 50px);
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 145, 255, 0.42) 0%, rgba(55, 190, 255, 0.24) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(155, 245, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0 0 16px rgba(0, 220, 255, 0.30), inset 0 0 10px rgba(180, 245, 255, 0.18);
+  transition: all 250ms ease;
+  outline: none;
+}
+
+.gallery-edge-arrow-btn:hover {
+  opacity: 1;
+  color: #ffffff;
+  border-color: rgba(220, 255, 255, 1);
+  background: linear-gradient(135deg, rgba(0, 165, 255, 0.58) 0%, rgba(75, 215, 255, 0.38) 100%);
+  box-shadow: 0 0 24px rgba(0, 220, 255, 0.6), inset 0 0 14px rgba(220, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.gallery-edge-arrow-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.gallery-edge-arrow-btn.is-left {
+  left: clamp(10px, 2vw, 32px);
+}
+
+.gallery-edge-arrow-btn.is-right {
+  right: clamp(10px, 2vw, 32px);
+}
+
+.gallery-cards-track {
+  position: relative;
+  width: var(--gallery-card-w);
+  height: var(--gallery-card-h);
+  transform-style: preserve-3d;
+}
+
+/* Outer Movement Wrapper (Transforms & Transitions Only) */
+.gallery-card-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--gallery-card-w);
+  height: var(--gallery-card-h);
+  will-change: transform, opacity;
+  transition: transform 800ms var(--gallery-ease), opacity 800ms var(--gallery-ease);
+  cursor: pointer;
+}
+
+/* Inner Surface Wrapper (Translucent Electric-Blue Holographic Glass Surface) */
+.gallery-card-surface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: clamp(14px, 1.1vw, 18px);
+  background: linear-gradient(135deg, rgba(0, 145, 255, 0.42) 0%, rgba(55, 190, 255, 0.24) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(155, 245, 255, 0.85);
+  box-shadow: 0 0 18px rgba(0, 220, 255, 0.30), inset 0 0 14px rgba(180, 245, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(10px, 0.9vw, 14px);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 280ms ease, box-shadow 280ms ease, transform 280ms ease, background 280ms ease;
+}
+
+/* Center Active Card Accent */
+.gallery-card-wrapper.is-center .gallery-card-surface {
+  border: 1.5px solid rgba(200, 250, 255, 0.95);
+  background: linear-gradient(135deg, rgba(0, 160, 255, 0.52) 0%, rgba(65, 205, 255, 0.32) 100%);
+  box-shadow: 0 0 28px rgba(0, 220, 255, 0.55), 0 0 10px rgba(0, 220, 255, 0.35), inset 0 0 18px rgba(200, 250, 255, 0.28);
+}
+
+/* Soft 4-Side Glow on Hover (Matching Holographic Glass Glow) */
+.gallery-card-surface:hover {
+  border-color: rgba(220, 255, 255, 1);
+  background: linear-gradient(135deg, rgba(0, 165, 255, 0.58) 0%, rgba(75, 215, 255, 0.38) 100%);
+  box-shadow: 0 0 28px rgba(0, 220, 255, 0.65), 0 0 12px rgba(0, 220, 255, 0.45), inset 0 0 16px rgba(220, 255, 255, 0.3);
+}
+
+/* Directional 4–6px Nudge on Hover for Neighboring Slides (Separated from Outer Movement) */
+.gallery-card-wrapper.is-left-neighbor .gallery-card-surface:hover {
+  transform: translateX(-5px);
+}
+
+.gallery-card-wrapper.is-right-neighbor .gallery-card-surface:hover {
+  transform: translateX(5px);
+}
+
+/* Card Header (Category Tag & Icon) */
+.gallery-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 5;
+}
+
+.gallery-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  background: rgba(0, 110, 230, 0.45);
+  border: 1px solid rgba(180, 245, 255, 0.75);
+  color: #ffffff;
+  font-family: 'Jura', sans-serif;
+  font-size: clamp(9.5px, 0.72vw, 11.5px);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 0 8px rgba(180, 245, 255, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-card-tag-icon {
+  width: 12px;
+  height: 12px;
+  color: #ffffff;
+}
+
+/* Card Body (3:4 Photograph Frame - Clean, Transparent Borders Behind Photo) */
+.gallery-card-body {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  margin: clamp(6px, 0.7vh, 10px) 0;
+  border-radius: clamp(8px, 0.7vw, 11px);
+  background: transparent;
+  border: 1px solid rgba(155, 245, 255, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 10px rgba(0, 180, 255, 0.15);
+}
+
+/* Photograph inside Frame - Fully Opaque & Natural Colors */
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+  border-radius: inherit;
+}
+
+.gallery-card-surface:hover .gallery-card-img {
+  transform: scale(1.04);
+}
+
+/* Card Footer (Clean Date in Michroma Font) */
+.gallery-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 5;
+}
+
+.gallery-card-date {
+  font-family: 'Michroma', sans-serif;
+  font-size: clamp(10px, 0.78vw, 12.5px);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+/* 5. Bottom Controls (Glowing Pagination Dots in Normal Flow) */
+.gallery-controls-bar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 1.5vw, 20px);
+  width: 100%;
+  margin-top: clamp(4px, 0.8vh, 10px);
+}
+
+.gallery-ctrl-dots-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gallery-ctrl-dot-btn {
+  height: 6px;
+  width: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 300ms ease;
+  outline: none;
+}
+
+.gallery-ctrl-dot-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-ctrl-dot-btn.is-active {
+  width: 24px;
+  background: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff, 0 0 18px rgba(0, 212, 255, 0.6);
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card-wrapper {
+    transition: transform 100ms ease, opacity 100ms ease !important;
+  }
+  .gallery-card-surface {
+    transition: none !important;
+  }
+}
+
+/* Mobile & Tablet Fine-tuning */
+@media (max-width: 640px) {
+  :root {
+    --gallery-card-w: clamp(190px, 58vw, 240px);
+  }
+  .gallery-section-wrapper {
+    padding-top: 82px;
+    padding-bottom: 12px;
+  }
+  .gallery-cat-tab-btn {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+  .gallery-edge-arrow-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,232 @@
+/* src/components/Ecosystem.css */
+
+/* Brightened ecosystem video preserving deep contrast and rich blue saturation */
+.eco-video-element {
+  filter: brightness(1.18) contrast(1.06) saturate(1.12);
+}
+
+/* Transparent Hit Area Button covering each icon-and-label group */
+.eco-hotspot-hitarea {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 25;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.eco-hotspot-hitarea:focus-visible {
+  outline: none;
+}
+
+/* Thin circular outline around each icon (matching Home page Education reference) */
+.eco-icon-ring {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  pointer-events: none;
+  z-index: 20;
+  transition: border-color 280ms ease, box-shadow 280ms ease, background-color 280ms ease;
+}
+
+/* Hover & Focus state for circular icon (exact Education reference styling) */
+.eco-hotspot-group:hover .eco-icon-ring,
+.eco-hotspot-hitarea:focus-visible ~ .eco-icon-ring,
+.eco-icon-ring.is-active {
+  border-color: #00d4ff;
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.85);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+/* Animated thin cyan underline beneath the label (animates from left to right) */
+.eco-label-underline {
+  position: absolute;
+  transform: translateX(-50%) scaleX(0);
+  height: 1.5px;
+  background: linear-gradient(90deg, #00d4ff 0%, rgba(0, 212, 255, 0.6) 70%, transparent 100%);
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 20;
+  transform-origin: left center;
+  opacity: 0;
+  transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1), opacity 280ms ease;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+/* Hover & Focus state for underline */
+.eco-hotspot-group:hover .eco-label-underline,
+.eco-hotspot-hitarea:focus-visible ~ .eco-label-underline,
+.eco-label-underline.is-active {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+/* Subtle Click / Tap Ripple */
+.eco-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.65) 0%, rgba(0, 212, 255, 0) 70%);
+  transform: scale(0);
+  animation: eco-ripple-anim 0.4s cubic-bezier(0.1, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes eco-ripple-anim {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+/* Accessible Specification Modal */
+.glass-modal {
+  background: linear-gradient(135deg, rgba(0, 18, 48, 0.95) 0%, rgba(0, 8, 26, 0.98) 100%);
+  border: 1.5px solid rgba(0, 212, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.85), 0 0 40px rgba(0, 212, 255, 0.4);
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-animate-enter {
+  animation: modal-fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Container Query on 16:9 Canvas */
+.eco-canvas-container {
+  container-type: inline-size;
+}
+
+/* Left Building Signboard: Education & Training */
+.eco-signboard-education {
+  position: absolute;
+  left: 16.21%;
+  top: 67.71%;
+  width: 9.38%;
+  height: 5.73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 20;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.eco-signboard-education-text {
+  font-family: 'Michroma', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(7.5px, 0.82cqw, 15px);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 212, 255, 0.6);
+  margin: 0;
+  padding: 0;
+}
+
+/* Right Building Signboard: Industrial Automation Service */
+.eco-signboard-industrial {
+  position: absolute;
+  left: 73.93%;
+  top: 69.79%;
+  width: 11.03%;
+  height: 5.56%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 20;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.eco-signboard-industrial-text {
+  font-family: 'Michroma', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(8.5px, 0.82cqw, 15px);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 212, 255, 0.6);
+  margin: 0;
+  padding: 0;
+}
+
+/* Middle Building Header: R&D & Innovation Centre */
+.eco-header-rd {
+  position: absolute;
+  left: 50.00%;
+  top: 59.20%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  pointer-events: none;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.eco-header-rd-text {
+  font-family: 'Michroma', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(7.5px, 0.82cqw, 15px);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 10px rgba(0, 212, 255, 0.6);
+  margin: 0;
+  padding: 0;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .eco-icon-ring,
+  .eco-label-underline,
+  .eco-ripple,
+  .modal-animate-enter {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+

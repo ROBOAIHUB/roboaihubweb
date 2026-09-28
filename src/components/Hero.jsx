@@ -1,0 +1,155 @@
+import React from 'react';
+import { GraduationCap, Lightbulb, Bot, Mouse } from 'lucide-react';
+import Logo from './Logo';
+import Navbar from './Navbar';
+
+const RingMenuItem = ({ icon: Icon, label }) => (
+  <div className="flex flex-col items-start gap-1 group cursor-pointer relative z-20 mb-10 last:mb-0 select-none">
+    <div className="flex items-center gap-4">
+      {/* Circle Icon */}
+      <div className="flex items-center justify-center w-[3vw] h-[3vw] min-w-[36px] min-h-[36px] rounded-full border border-white/60 bg-transparent backdrop-blur-sm group-hover:border-brand-cyan group-hover:shadow-[0_0_15px_rgba(0,212,255,0.8)] transition-all duration-300">
+        <Icon className="w-[1.5vw] h-[1.5vw] min-w-[18px] min-h-[18px] text-white group-hover:text-brand-cyan transition-colors duration-300" strokeWidth={1.75} />
+      </div>
+      {/* Thin Text */}
+      <span className="text-[1.2vw] font-jura text-white/90 tracking-widest group-hover:text-white transition-colors drop-shadow-md">
+        {label}
+      </span>
+    </div>
+    {/* Faded line extending right, starting from under the text */}
+    <div className="h-[1.5px] w-[12vw] bg-gradient-to-r from-white/60 to-transparent ml-[4vw] group-hover:from-brand-cyan transition-all duration-300"></div>
+  </div>
+);
+
+// High-tech CSS/SVG Glowing Rings HUD
+const GlowingRings = () => (
+  <div className="absolute top-1/2 -translate-y-1/2 right-[2%] w-[38vw] h-[38vw] max-w-[800px] max-h-[800px] flex items-center justify-center pointer-events-none z-10">
+    
+    {/* Outer faint background glow */}
+    <div className="absolute w-full h-full rounded-full bg-brand-cyan/15 blur-[100px]"></div>
+
+    {/* Radar Scanner Sweep Effect */}
+    <div 
+      className="absolute w-[85%] h-[85%] rounded-full animate-[spin_4s_linear_infinite]"
+      style={{
+        background: 'conic-gradient(from 0deg, transparent 70%, rgba(0,212,255,0.5) 100%)',
+        maskImage: 'radial-gradient(transparent 50%, black 100%)',
+        WebkitMaskImage: 'radial-gradient(transparent 50%, black 100%)'
+      }}
+    ></div>
+
+    {/* Static Targeting Crosshairs */}
+    <div className="absolute w-full h-[1px] bg-white/15"></div>
+    <div className="absolute w-[1px] h-full bg-white/15"></div>
+    
+    {/* Center Reticle */}
+    <div className="absolute w-[10%] h-[10%] border border-white/30 rounded-full"></div>
+
+    {/* Massive intense lens flare on the left edge */}
+    <div className="absolute left-[-10%] top-1/2 -translate-y-1/2 w-[12vw] h-[25vw] bg-white rounded-[100%] blur-[60px] opacity-70"></div>
+    <div className="absolute left-[0%] top-1/2 -translate-y-1/2 w-[5vw] h-[15vw] bg-brand-cyan rounded-[100%] blur-[40px] opacity-90"></div>
+
+    {/* Perfect SVG Rings for Flawless Rotation */}
+    <svg className="absolute w-full h-full" viewBox="0 0 200 200">
+      <defs>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="glow-heavy" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Static HUD Bracket Markers */}
+      <path d="M 3 95 L 3 105 M 197 95 L 197 105 M 95 3 L 105 3 M 95 197 L 105 197" fill="none" stroke="#00d4ff" strokeWidth="1.5" opacity="0.6" />
+
+      {/* Ring 1 (Outer): 4 big segments (Circumference ~597) */}
+      <circle cx="100" cy="100" r="95" fill="none" stroke="#00d4ff" strokeWidth="1" strokeDasharray="130 19.25" filter="url(#glow)" className="origin-center animate-[spin_40s_linear_infinite] opacity-85" />
+
+      {/* Precision Measurement Ticks (Ultra-thin rotating scale) */}
+      <circle cx="100" cy="100" r="91" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1" strokeDasharray="1 3" className="origin-center animate-[spin_120s_linear_infinite]" />
+
+      {/* Ring 2 (Middle): Small line, Big line (Circumference ~534) */}
+      <circle cx="100" cy="100" r="85" fill="none" stroke="#ffffff" strokeWidth="2" strokeDasharray="20 20 118 20" strokeLinecap="round" filter="url(#glow-heavy)" className="origin-center animate-[spin_25s_linear_infinite_reverse] opacity-95" />
+
+      {/* Tech Nodes (Spinning inner HUD elements) */}
+      <g className="origin-center animate-[spin_20s_linear_infinite]">
+        <circle cx="100" cy="22" r="2.5" fill="#00d4ff" filter="url(#glow)" />
+        <path d="M 100 22 L 100 28" stroke="#00d4ff" strokeWidth="1" />
+        <circle cx="167" cy="139" r="1.5" fill="#fff" filter="url(#glow)" />
+        <circle cx="33" cy="139" r="1.5" fill="#fff" filter="url(#glow)" />
+      </g>
+
+      {/* Ring 3 (Inner): Dot Dot moving (Circumference ~471) */}
+      <circle cx="100" cy="100" r="75" fill="none" stroke="#ffffff" strokeWidth="2" strokeDasharray="2 12" strokeLinecap="round" filter="url(#glow)" className="origin-center animate-[spin_15s_linear_infinite] opacity-95" />
+
+      {/* Subtle core double static ring to anchor the design */}
+      <circle cx="100" cy="100" r="68" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+      <circle cx="100" cy="100" r="66.5" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
+
+      {/* Glowing Accents */}
+      <g className="origin-center animate-[spin_35s_linear_infinite]">
+        <circle cx="100" cy="5" r="1.5" fill="#fff" filter="url(#glow)" />
+        <circle cx="185" cy="100" r="2" fill="#00d4ff" filter="url(#glow-heavy)" />
+      </g>
+    </svg>
+  </div>
+);
+
+const Hero = () => {
+  return (
+    <div className="w-full h-full relative z-0 overflow-hidden bg-[#000a1f]">
+      
+      {/* VIBRANT HIGH-VISIBILITY BACKGROUND */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10"
+        style={{
+          backgroundImage: 'url(/clean_hero_bg.png)',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: 'brightness(1.16) contrast(1.06) saturate(1.08)',
+        }}
+      ></div>
+
+      {/* Ambient Top Lighting Gradient matching About, Contact, Services & Training */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85vw] h-[280px] bg-gradient-to-b from-[#00d4ff]/18 via-transparent to-transparent pointer-events-none z-[1]" />
+
+      {/* --- LEFT SIDE: MASSIVE LOGO & TITLE --- */}
+      <div className="absolute top-[38%] -translate-y-1/2 left-[8%] z-20">
+        <Logo hideSubtitle={false} className="w-[45vw] max-w-[800px] text-white" />
+      </div>
+
+      {/* --- RIGHT SIDE: GLOWING RINGS & MENU --- */}
+      <GlowingRings />
+      
+      {/* Menu Items (Centered inside the right-side rings) */}
+      <div className="absolute top-1/2 -translate-y-1/2 right-[12%] z-30 flex flex-col items-start">
+        <RingMenuItem icon={GraduationCap} label="Education" />
+        <RingMenuItem icon={Lightbulb} label="Innovation" />
+        <RingMenuItem icon={Bot} label="Automation" />
+      </div>
+
+      {/* --- BOTTOM SCROLL MOUSE --- */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+        <div className="w-[1.2vw] h-[2vw] min-w-[20px] min-h-[35px] border-[1.5px] border-white/90 rounded-full flex justify-center pt-2 shadow-[0_0_10px_rgba(0,212,255,0.4)]">
+          <div className="w-1.5 h-1.5 bg-[#00d4ff] rounded-full animate-bounce shadow-[0_0_8px_#00d4ff]"></div>
+        </div>
+        <Mouse size={16} className="text-white opacity-0" />
+        <svg width="20" height="10" viewBox="0 0 24 12" fill="none" stroke="white" strokeWidth="1.5" className="mt-1 drop-shadow-md">
+          <path d="M6 3 L12 9 L18 3" />
+        </svg>
+      </div>
+
+    </div>
+  );
+};
+
+export default Hero;
