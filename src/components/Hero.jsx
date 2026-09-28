@@ -16,22 +16,26 @@ const RingMenuItem = ({ icon: Icon, label, targetId }) => {
       className="flex flex-col items-start gap-1 group cursor-pointer relative z-20 mb-6 sm:mb-8 md:mb-10 last:mb-0 select-none"
     >
       <div className="flex items-center gap-3 sm:gap-4">
-        {/* Circle Icon */}
-        <div className="flex items-center justify-center w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] md:w-[3vw] md:h-[3vw] min-w-[32px] min-h-[32px] rounded-full border border-[#00d4ff] bg-[#000a1f]/60 backdrop-blur-sm shadow-[0_0_12px_rgba(0,212,255,0.6)] group-hover:border-white group-hover:shadow-[0_0_20px_rgba(0,212,255,0.95)] group-hover:bg-[#00d4ff]/20 transition-all duration-300">
-          <Icon className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px] md:w-[1.5vw] md:h-[1.5vw] text-[#00d4ff] group-hover:text-white transition-colors duration-300" strokeWidth={2.2} />
+        {/* Circle Icon - Solid dark backing to avoid GPU composite blur */}
+        <div className="flex items-center justify-center w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] md:w-[3vw] md:h-[3vw] min-w-[32px] min-h-[32px] rounded-full border border-[#00d4ff] bg-[#000a1f]/85 shadow-[0_0_8px_rgba(0,212,255,0.4)] group-hover:border-white group-hover:shadow-[0_0_16px_rgba(0,212,255,0.9)] transition-colors duration-200">
+          <Icon className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px] md:w-[1.5vw] md:h-[1.5vw] text-[#00d4ff] group-hover:text-white transition-colors duration-200" strokeWidth={2.2} />
         </div>
-        {/* Bold High-Contrast Text that Overlays on White */}
+        {/* Bold High-Contrast Razor-Sharp Text (Crisp 1px shadow, zero diffuse blur) */}
         <span 
-          className="text-[14px] sm:text-[16px] md:text-[1.3vw] font-jura font-bold text-[#00d4ff] tracking-widest transition-all duration-300 group-hover:text-white"
+          className="text-[15px] sm:text-[16px] md:text-[1.3vw] font-jura font-bold text-[#00d4ff] tracking-wider transition-colors duration-200 group-hover:text-white"
           style={{
-            textShadow: '0 2px 8px rgba(0, 10, 31, 0.95), 0 0 12px rgba(0, 212, 255, 0.75), 0 0 2px #000a1f',
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.95), 0 0 1px rgba(0, 0, 0, 0.95)',
+            WebkitFontSmoothing: 'antialiased',
+            MozOsxFontSmoothing: 'grayscale',
+            textRendering: 'optimizeLegibility',
+            transform: 'translateZ(0)',
           }}
         >
           {label}
         </span>
       </div>
       {/* Faded line extending right, starting from under the text */}
-      <div className="h-[1.5px] w-[36vw] sm:w-[25vw] md:w-[12vw] bg-gradient-to-r from-[#00d4ff] via-[#00d4ff]/60 to-transparent ml-8 sm:ml-10 md:ml-[4vw] shadow-[0_0_8px_#00d4ff] group-hover:from-white transition-all duration-300"></div>
+      <div className="h-[1.5px] w-[36vw] sm:w-[25vw] md:w-[12vw] bg-gradient-to-r from-[#00d4ff] via-[#00d4ff]/60 to-transparent ml-8 sm:ml-10 md:ml-[4vw] shadow-[0_0_4px_rgba(0,212,255,0.5)] group-hover:from-white transition-colors duration-200"></div>
     </div>
   );
 };
