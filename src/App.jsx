@@ -16,7 +16,7 @@ function App() {
       <Navbar />
 
       {/* SECTION 1: HERO */}
-      <div id="home" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="home" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <Hero />
       </div>
 
@@ -24,7 +24,7 @@ function App() {
       <SectionDivider />
 
       {/* SECTION 2: ECOSYSTEM */}
-      <div id="ecosystem" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="ecosystem" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <Ecosystem />
       </div>
 
@@ -32,7 +32,7 @@ function App() {
       <SectionDivider />
 
       {/* SECTION 3: TRAINING PROGRAMS (EDUCATION) */}
-      <div id="education" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="education" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <Training />
       </div>
 
@@ -40,7 +40,7 @@ function App() {
       <SectionDivider />
 
       {/* SECTION 4: SERVICES */}
-      <div id="services" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="services" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <Services />
       </div>
 
@@ -48,7 +48,7 @@ function App() {
       <SectionDivider />
 
       {/* SECTION 5: GALLERY */}
-      <div id="gallery" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="gallery" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <Gallery />
       </div>
 
@@ -56,7 +56,7 @@ function App() {
       <SectionDivider />
 
       {/* SECTION 6: ABOUT */}
-      <div id="about" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="about" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <About />
       </div>
 
@@ -64,7 +64,7 @@ function App() {
       <SectionDivider />
 
       {/* SECTION 7: CONTACT */}
-      <div id="contact" className="w-full max-w-full h-screen relative overflow-hidden">
+      <div id="contact" className="w-full max-w-full min-h-screen md:h-screen relative overflow-hidden flex flex-col justify-center">
         <Contact />
       </div>
 

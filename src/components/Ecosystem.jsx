@@ -258,8 +258,34 @@ const Ecosystem = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [hoveredId, setHoveredId] = useState(null);
   const [ripples, setRipples] = useState({});
+  const [mobilePillar, setMobilePillar] = useState('education');
   const lastActiveButtonRef = useRef(null);
   const triggerRefs = useRef({});
+
+  // Mobile Pillars Definition
+  const MOBILE_PILLARS = [
+    { id: 'education', label: 'Education', icon: FlaskConical },
+    { id: 'rd', label: 'Innovation', icon: Brain },
+    { id: 'automation', label: 'Automation', icon: Bot },
+  ];
+
+  const PILLAR_ITEMS = {
+    education: [
+      { id: 'lab-setup', icon: FlaskConical, title: 'Lab Setup', badge: 'TALENT INCUBATOR', desc: 'Turnkey Institutional STEM & Robotics Laboratories' },
+      { id: 'mentorship', icon: Users, title: 'Mentorship', badge: 'DIRECT GUIDANCE', desc: 'Direct 1-on-1 Industry Practitioner Guidance' },
+      { id: 'weekend-classes', icon: Calendar, title: 'Weekend Classes', badge: 'FLEXIBLE LEARNING', desc: 'Accelerated Deep-Tech Weekend Cohorts' },
+    ],
+    rd: [
+      { id: 'robotics-solutions', icon: Box, title: 'Robotics Solutions', badge: 'HARDWARE & EMBEDDED', desc: 'Custom Autonomous Mobile & Manipulator Systems' },
+      { id: 'ai-solutions', icon: Brain, title: 'AI Solutions', badge: 'PRODUCTION MODELS', desc: 'Production Neural Networks, Vision & Edge Models' },
+      { id: 'product-design', icon: PenTool, title: 'Product Design', badge: 'PROTOTYPING & CAD', desc: 'Hardware Prototyping, CAD & Rapid Validation' },
+    ],
+    automation: [
+      { id: 'machine-automation', icon: Bot, title: 'Machine Automation', badge: 'INDUSTRIAL ROBOTICS', desc: 'PLC, SCADA & Mechatronic Assembly Lines' },
+      { id: 'vision-systems', icon: Eye, title: 'Vision Systems', badge: 'OPTICAL INSPECTION', desc: 'Automated Optical Inspection & High-Speed Tracking' },
+      { id: 'iot-monitoring', icon: Wifi, title: 'IoT Monitoring', badge: 'TELEMETRY & CLOUD', desc: 'Industrial Telemetry, Sensors & Cloud Teleoperation' },
+    ],
+  };
 
   // Handle ripple on click/tap and open modal
   const handleServiceClick = (e, service) => {
@@ -267,7 +293,7 @@ const Ecosystem = () => {
     const button = e.currentTarget;
     lastActiveButtonRef.current = button;
     
-    const rect = button.getBoundingClientRect();
+    const rect = button?.getBoundingClientRect?.() || { left: 0, top: 0, width: 100, height: 100 };
     const x = e.clientX ? e.clientX - rect.left : rect.width / 2;
     const y = e.clientY ? e.clientY - rect.top : rect.height / 2;
     const rippleSize = Math.max(rect.width, rect.height) * 1.5;
@@ -324,9 +350,99 @@ const Ecosystem = () => {
       aria-label="ROBOAI HUB Ecosystem"
     >
       {/* ========================================================================= */}
-      {/* SHARED 16:9 PROPORTIONAL CANVAS FOR PERFECT ALIGNMENT ON ALL SCREENS */}
+      {/* MOBILE RESPONSIVE VIEW (Portrait Phone Screens < md)                     */}
       {/* ========================================================================= */}
-      <div className="relative w-full h-full aspect-video flex items-center justify-center overflow-hidden eco-canvas-container">
+      <div className="md:hidden flex flex-col justify-between w-full h-full relative z-10 px-4 pt-20 pb-8 overflow-y-auto no-scrollbar">
+        {/* Background Atmospheric Video for Mobile */}
+        <video
+          src="/RoboAI_Ecosystem_No_Labels.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-30 select-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000a1f]/85 via-transparent to-[#000a1f]/95 pointer-events-none" />
+
+        {/* Mobile Header Block */}
+        <div className="relative z-20">
+          <h1 className="text-2xl font-michroma font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+            Ecosystem
+          </h1>
+          <p className="mt-1 text-xs font-jura text-white/90 leading-snug tracking-wide">
+            Connecting Education, Innovation and Automation into one future-ready ecosystem.
+          </p>
+        </div>
+
+        {/* Mobile 3-Pillar Selector Tabs */}
+        <div className="relative z-20 my-auto py-3">
+          <div className="flex items-center gap-1.5 p-1 rounded-full bg-[#001030]/85 border border-cyan-400/35 backdrop-blur-md mb-3 shadow-[0_0_15px_rgba(0,212,255,0.15)]">
+            {MOBILE_PILLARS.map((pillar) => {
+              const Icon = pillar.icon;
+              const isActive = mobilePillar === pillar.id;
+              return (
+                <button
+                  key={pillar.id}
+                  type="button"
+                  onClick={() => setMobilePillar(pillar.id)}
+                  className={`flex-1 py-2 rounded-full font-jura font-semibold text-xs transition-all duration-300 flex items-center justify-center gap-1.5 ${
+                    isActive 
+                      ? 'bg-gradient-to-r from-[#00d4ff] to-blue-600 text-white shadow-[0_0_15px_rgba(0,212,255,0.6)] font-bold' 
+                      : 'text-white/70 hover:text-white'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{pillar.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Cards for Active Pillar */}
+          <div className="flex flex-col gap-2.5">
+            {PILLAR_ITEMS[mobilePillar]?.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.id}
+                  onClick={(e) => handleServiceClick(e, item)}
+                  className="flex items-center justify-between p-3.5 rounded-xl border border-cyan-400/40 bg-[#001030]/80 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] active:scale-[0.98] transition-all cursor-pointer group hover:border-[#00d4ff]"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full border border-cyan-300/60 bg-[#00d4ff]/15 flex items-center justify-center shrink-0 group-hover:shadow-[0_0_12px_rgba(0,212,255,0.8)] transition-all">
+                      <Icon className="w-5 h-5 text-white group-hover:text-[#00d4ff] transition-colors" />
+                    </div>
+                    <div className="flex flex-col text-left">
+                      <span className="text-[10px] font-michroma text-[#00d4ff] tracking-wider uppercase">
+                        {item.badge}
+                      </span>
+                      <span className="text-sm font-michroma font-bold text-white leading-tight">
+                        {item.title}
+                      </span>
+                      <span className="text-[11px] font-jura text-white/80 line-clamp-1 mt-0.5">
+                        {item.desc}
+                      </span>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-cyan-400 shrink-0 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Mobile Footer Cue */}
+        <div className="relative z-20 text-center">
+          <span className="text-[10px] font-jura text-white/60 tracking-wider">
+            Tap any service above to view specifications & details
+          </span>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* SHARED 16:9 PROPORTIONAL CANVAS FOR PERFECT DESKTOP VIEW                  */}
+      {/* ========================================================================= */}
+      <div className="hidden md:flex relative w-full h-full aspect-video items-center justify-center overflow-hidden eco-canvas-container">
         
         {/* Layer 1: Background Animated Video (Clean No-Labels Video) */}
         <video

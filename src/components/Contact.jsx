@@ -82,11 +82,159 @@ const SOCIAL_LINKS = [
 const Contact = () => {
   return (
     <div 
-      className="w-full h-screen relative overflow-hidden bg-[#000a1f] select-none flex items-center justify-center contact-scene-wrapper"
+      className="w-full h-full relative overflow-hidden bg-[#000a1f] select-none flex items-center justify-center contact-scene-wrapper"
       aria-label="ROBOAI HUB Contact"
     >
-      {/* Master 16:9 Design Canvas (1600 × 900 design coordinates) */}
-      <div className="contact-scene-canvas">
+      {/* ========================================================================= */}
+      {/* MOBILE RESPONSIVE VIEW (< md)                                             */}
+      {/* ========================================================================= */}
+      <div className="md:hidden flex flex-col justify-between w-full h-full relative z-10 px-4 pt-20 pb-8 overflow-y-auto no-scrollbar">
+        {/* Background Atmospheric Video */}
+        <video
+          src="/RoboAI_Contact_Fixed_Boxes.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-25 select-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000a1f]/85 via-transparent to-[#000a1f]/95 pointer-events-none" />
+
+        {/* Mobile Header Block */}
+        <div className="relative z-20">
+          <h1 className="text-2xl font-michroma font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+            Contact Us
+          </h1>
+          <div className="relative my-1.5 flex items-center w-36 h-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_#00d4ff]" />
+            <div className="flex-1 h-[1.5px] bg-[#00d4ff] shadow-[0_0_8px_#00d4ff]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_#00d4ff]" />
+          </div>
+          <p className="mt-1 text-[11px] font-jura font-semibold text-cyan-300 tracking-wider uppercase">
+            Building the Future with Robotics and AI
+          </p>
+        </div>
+
+        {/* Mobile Contact Cards Grid */}
+        <div className="relative z-20 my-auto py-2 flex flex-col gap-2.5">
+          {/* Card 1: Contact Numbers */}
+          <div className="rounded-xl border border-cyan-400/40 bg-[#001030]/85 p-3.5 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+            <span className="text-[10px] font-michroma text-[#00d4ff] tracking-wider uppercase font-semibold block mb-2">
+              CONTACT NUMBER
+            </span>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://wa.me/919828014877"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 hover:border-emerald-400 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                  <WhatsAppIcon className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-[10px] font-jura text-emerald-300">WhatsApp Message</span>
+                  <span className="text-xs font-jura font-bold text-white tracking-wider">+91 98280 14877</span>
+                </div>
+              </a>
+              <a
+                href="tel:8690831893"
+                className="flex items-center gap-3 p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 hover:border-cyan-400 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-[#00d4ff] shrink-0">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-[10px] font-jura text-cyan-300">Direct Phone Call</span>
+                  <span className="text-xs font-jura font-bold text-white tracking-wider">+91 86908 31893</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Card 2: Email & Website Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <a
+              href="mailto:contactus@roboaihub.com"
+              className="flex items-center gap-2.5 p-3 rounded-xl border border-cyan-400/40 bg-[#001030]/85 backdrop-blur-md hover:border-[#00d4ff] transition-all"
+            >
+              <div className="w-8 h-8 rounded-full border border-cyan-400/40 bg-[#00d4ff]/15 flex items-center justify-center text-[#00d4ff] shrink-0">
+                <Mail className="w-4 h-4" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-[10px] font-jura text-cyan-300">Email Us</span>
+                <span className="text-xs font-jura font-bold text-white">contactus@roboaihub.com</span>
+              </div>
+            </a>
+            <a
+              href="https://www.roboaihub.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 p-3 rounded-xl border border-cyan-400/40 bg-[#001030]/85 backdrop-blur-md hover:border-[#00d4ff] transition-all"
+            >
+              <div className="w-8 h-8 rounded-full border border-cyan-400/40 bg-[#00d4ff]/15 flex items-center justify-center text-[#00d4ff] shrink-0">
+                <Globe className="w-4 h-4" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-[10px] font-jura text-cyan-300">Official Portal</span>
+                <span className="text-xs font-jura font-bold text-white">www.roboaihub.com</span>
+              </div>
+            </a>
+          </div>
+
+          {/* Card 3: Location / Address */}
+          <a
+            href="https://maps.google.com/?q=ROBOAI+HUB,+near+S.K+Industries,+New+Power+House+Rd,+Patrakar+Colony,+Shastri+Nagar,+Jodhpur,+Rajasthan+342003"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-2.5 p-3 rounded-xl border border-cyan-400/40 bg-[#001030]/85 backdrop-blur-md hover:border-[#00d4ff] transition-all"
+          >
+            <div className="w-8 h-8 rounded-full border border-cyan-400/40 bg-[#00d4ff]/15 flex items-center justify-center text-[#00d4ff] shrink-0 mt-0.5">
+              <MapPin className="w-4 h-4" />
+            </div>
+            <div className="flex flex-col text-left font-jura text-xs text-white/90 leading-snug">
+              <span className="text-[10px] text-cyan-300 font-semibold mb-0.5">Physical Hub Location</span>
+              <span>Near S.K Industries, New Power House Rd, Patrakar Colony, Shastri Nagar, Jodhpur, Rajasthan 342003</span>
+            </div>
+          </a>
+
+          {/* Card 4: Social Icons */}
+          <div className="flex items-center justify-between p-3 rounded-xl border border-cyan-400/40 bg-[#001030]/85 backdrop-blur-md">
+            <span className="text-[10px] font-michroma text-white tracking-wider uppercase font-semibold">
+              FOLLOW US
+            </span>
+            <div className="flex items-center gap-4">
+              {SOCIAL_LINKS.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.id}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow RoboAI Hub on ${item.label}`}
+                    className="w-7 h-7 flex items-center justify-center text-white/80 hover:text-cyan-400 hover:scale-110 transition-all"
+                  >
+                    <Icon />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Footer Cue */}
+        <div className="relative z-20 text-center">
+          <span className="text-[10px] font-jura text-white/60 tracking-wider">
+            ROBOAI HUB • Connecting Industry, Education & Innovation
+          </span>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* DESKTOP 16:9 PROPORTIONAL CANVAS (>= md)                                  */}
+      {/* ========================================================================= */}
+      <div className="hidden md:flex contact-scene-canvas">
         
         {/* Stationary Background Video with pre-rendered glass panels */}
         <video
