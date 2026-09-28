@@ -200,6 +200,7 @@ const AITrainingCarousel = ({ onSelectCourse, isModalOpen }) => {
               left: slot.left,
               top: slot.top,
               width: slot.width,
+              minWidth: isFront ? 'clamp(140px, 36vw, 340px)' : 'clamp(85px, 20vw, 180px)',
               height: slot.height,
               transform: 'translate(-50%, -50%)',
               opacity: slot.opacity,

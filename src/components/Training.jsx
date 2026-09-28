@@ -17,18 +17,15 @@ const Training = () => {
       {/* ========================================================================= */}
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         
-        {/* Layer 1: Background Animated Video (100% * 100%) */}
+        {/* Layer 1: Background Animated Video */}
         <video
           src="/RoboAI_Training_Real_Photos_Only.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+          className="absolute inset-0 w-full h-full object-cover md:object-fill pointer-events-none select-none"
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'fill',
             filter: 'brightness(1.08) contrast(1.04) saturate(1.06)',
           }}
         />

@@ -217,14 +217,45 @@
   padding: 0;
 }
 
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .eco-icon-ring,
-  .eco-label-underline,
-  .eco-ripple,
-  .modal-animate-enter {
-    transition: none !important;
-    animation: none !important;
+/* Mobile & Tablet Fine-tuning */
+@media (max-width: 768px) {
+  .eco-canvas-container {
+    aspect-ratio: auto !important;
+    height: 100vh !important;
+    width: 100% !important;
+  }
+
+  .eco-canvas-container video {
+    object-fit: cover !important;
+  }
+
+  /* Left Building Signboard: Don't truncate Education */
+  .eco-signboard-education {
+    width: auto !important;
+    min-width: 85px !important;
+    max-width: 34vw !important;
+    overflow: visible !important;
+  }
+
+  .eco-signboard-education-text {
+    font-size: clamp(8px, 2.2vw, 12.5px) !important;
+  }
+
+  /* Right Building Signboard: Don't truncate Industrial */
+  .eco-signboard-industrial {
+    width: auto !important;
+    min-width: 90px !important;
+    max-width: 34vw !important;
+    overflow: visible !important;
+    transform: translate(-15%, 0) !important;
+  }
+
+  .eco-signboard-industrial-text {
+    font-size: clamp(8px, 2.2vw, 12.5px) !important;
+  }
+
+  .eco-header-rd-text {
+    font-size: clamp(8px, 2.2vw, 12.5px) !important;
   }
 }
 

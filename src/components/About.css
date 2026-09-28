@@ -349,12 +349,68 @@
 }
 
 /* Mobile & Tablet Fine-tuning */
-@media (max-width: 640px) {
-  .about-milestone-panel {
-    border-radius: 14px;
-    padding: 6px 8px;
+@media (max-width: 768px) {
+  .about-scene-canvas {
+    aspect-ratio: auto !important;
+    width: 100% !important;
+    height: 100vh !important;
   }
+
+  .about-scene-canvas video {
+    object-fit: cover !important;
+  }
+
+  /* Auto-arrange quote to open sky below header so it never collides with timeline */
+  .about-quote-container {
+    left: 4% !important;
+    top: 22% !important;
+    transform: none !important;
+    max-width: 92vw !important;
+    width: 92vw !important;
+  }
+
+  .about-quote-text {
+    font-size: clamp(10px, 2.5vw, 12.5px) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Auto-arrange milestone card inside oval ring with readable width */
+  .about-milestone-panel {
+    left: 50% !important;
+    top: 60% !important;
+    transform: translate(-50%, -50%) !important;
+    width: clamp(180px, 52vw, 240px) !important;
+    height: auto !important;
+    min-height: 200px !important;
+    padding: 8px 10px !important;
+    border-radius: 14px;
+  }
+
+  .about-panel-date {
+    font-size: 10px !important;
+  }
+
+  .about-panel-title {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+  }
+
+  .about-panel-desc {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    -webkit-line-clamp: 2 !important;
+  }
+
   .about-edge-arrow-btn {
-    display: none;
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .about-edge-arrow-btn.is-left {
+    left: -14px !important;
+  }
+
+  .about-edge-arrow-btn.is-right {
+    right: -14px !important;
   }
 }
