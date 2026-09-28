@@ -345,11 +345,11 @@ const Ecosystem = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85vw] h-[250px] bg-gradient-to-b from-[#00d4ff]/12 via-transparent to-transparent pointer-events-none z-[1]" />
 
         {/* Layer 2: Top-Left Header Block (ROBOAI HUB text removed) */}
-        <div className="absolute left-[2.8%] top-[6.5%] z-20 max-w-sm pointer-events-auto">
-          <h1 className="text-[2.9vw] xl:text-[36px] font-michroma font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+        <div className="absolute left-[3.5%] top-[8.5%] sm:top-[7.5%] md:top-[6.5%] z-20 max-w-sm pointer-events-auto">
+          <h1 className="text-[20px] sm:text-[24px] md:text-[2.9vw] xl:text-[36px] font-michroma font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
             Ecosystem
           </h1>
-          <p className="mt-1 text-[0.9vw] xl:text-[12px] font-jura text-white/90 leading-snug tracking-wide drop-shadow-md">
+          <p className="mt-1 text-[11px] sm:text-[12px] md:text-[0.9vw] xl:text-[12px] font-jura text-white/90 leading-snug tracking-wide drop-shadow-md">
             Connecting Education, Innovation<br />
             and Automation into one future-ready ecosystem.
           </p>

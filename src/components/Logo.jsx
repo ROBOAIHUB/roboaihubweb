@@ -16,13 +16,13 @@ const Logo = ({ className = "", hideSubtitle = false, textSize = "w-[45vw] max-w
 
       {/* Subtitle text matching the reference image with enhanced typography */}
       {!hideSubtitle && (
-        <div className="flex flex-col items-center w-full mt-5">
-          <div className="text-[0.95vw] xl:text-[14px] font-jura font-semibold text-white tracking-[0.55em] uppercase whitespace-nowrap drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] ml-2">
-            BUILDING THE FUTURE <span className="font-jura font-normal lowercase normal-case tracking-[0.25em] text-[0.85vw] xl:text-[12.5px] text-white/95 mx-1">with</span> ROBOTICS AND AI
+        <div className="flex flex-col items-center w-full mt-3 sm:mt-5">
+          <div className="text-[10px] sm:text-[12px] md:text-[0.95vw] xl:text-[14px] font-jura font-semibold text-white tracking-[0.22em] sm:tracking-[0.38em] md:tracking-[0.55em] uppercase whitespace-nowrap drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center">
+            BUILDING THE FUTURE <span className="font-jura font-normal lowercase normal-case tracking-[0.14em] sm:tracking-[0.25em] text-[9px] sm:text-[11px] md:text-[0.85vw] xl:text-[12.5px] text-white/95 mx-0.5 sm:mx-1">with</span> ROBOTICS AND AI
           </div>
           
           {/* Luminous Glowing Flare Horizon Line under subtitle */}
-          <div className="mt-5 relative w-[55%] h-[1.5px] flex items-center justify-center">
+          <div className="mt-3 sm:mt-5 relative w-[80%] sm:w-[65%] md:w-[55%] h-[1.5px] flex items-center justify-center">
             {/* Core bright line */}
             <div className="absolute w-full h-[1.5px] bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></div>
             {/* Cyan glow flare */}

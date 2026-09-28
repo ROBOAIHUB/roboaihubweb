@@ -4,28 +4,28 @@ import Logo from './Logo';
 import Navbar from './Navbar';
 
 const RingMenuItem = ({ icon: Icon, label }) => (
-  <div className="flex flex-col items-start gap-1 group cursor-pointer relative z-20 mb-10 last:mb-0 select-none">
-    <div className="flex items-center gap-4">
+  <div className="flex flex-col items-start gap-1 group cursor-pointer relative z-20 mb-6 sm:mb-8 md:mb-10 last:mb-0 select-none">
+    <div className="flex items-center gap-3 sm:gap-4">
       {/* Circle Icon */}
-      <div className="flex items-center justify-center w-[3vw] h-[3vw] min-w-[36px] min-h-[36px] rounded-full border border-white/60 bg-transparent backdrop-blur-sm group-hover:border-brand-cyan group-hover:shadow-[0_0_15px_rgba(0,212,255,0.8)] transition-all duration-300">
-        <Icon className="w-[1.5vw] h-[1.5vw] min-w-[18px] min-h-[18px] text-white group-hover:text-brand-cyan transition-colors duration-300" strokeWidth={1.75} />
+      <div className="flex items-center justify-center w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] md:w-[3vw] md:h-[3vw] min-w-[32px] min-h-[32px] rounded-full border border-white/60 bg-transparent backdrop-blur-sm group-hover:border-brand-cyan group-hover:shadow-[0_0_15px_rgba(0,212,255,0.8)] transition-all duration-300">
+        <Icon className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px] md:w-[1.5vw] md:h-[1.5vw] text-white group-hover:text-brand-cyan transition-colors duration-300" strokeWidth={1.75} />
       </div>
       {/* Thin Text */}
-      <span className="text-[1.2vw] font-jura text-white/90 tracking-widest group-hover:text-white transition-colors drop-shadow-md">
+      <span className="text-[13px] sm:text-[15px] md:text-[1.2vw] font-jura text-white/90 tracking-widest group-hover:text-white transition-colors drop-shadow-md">
         {label}
       </span>
     </div>
     {/* Faded line extending right, starting from under the text */}
-    <div className="h-[1.5px] w-[12vw] bg-gradient-to-r from-white/60 to-transparent ml-[4vw] group-hover:from-brand-cyan transition-all duration-300"></div>
+    <div className="h-[1.5px] w-[36vw] sm:w-[25vw] md:w-[12vw] bg-gradient-to-r from-white/60 to-transparent ml-8 sm:ml-10 md:ml-[4vw] group-hover:from-brand-cyan transition-all duration-300"></div>
   </div>
 );
 
 // High-tech CSS/SVG Glowing Rings HUD
 const GlowingRings = () => (
-  <div className="absolute top-1/2 -translate-y-1/2 right-[2%] w-[38vw] h-[38vw] max-w-[800px] max-h-[800px] flex items-center justify-center pointer-events-none z-10">
+  <div className="absolute top-[66%] sm:top-[65%] md:top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-auto md:right-[2%] md:translate-x-0 w-[76vw] h-[76vw] sm:w-[58vw] sm:h-[58vw] md:w-[38vw] md:h-[38vw] max-w-[800px] max-h-[800px] flex items-center justify-center pointer-events-none z-10">
     
     {/* Outer faint background glow */}
-    <div className="absolute w-full h-full rounded-full bg-brand-cyan/15 blur-[100px]"></div>
+    <div className="absolute w-full h-full rounded-full bg-brand-cyan/15 blur-[60px] md:blur-[100px]"></div>
 
     {/* Radar Scanner Sweep Effect */}
     <div 
@@ -44,9 +44,9 @@ const GlowingRings = () => (
     {/* Center Reticle */}
     <div className="absolute w-[10%] h-[10%] border border-white/30 rounded-full"></div>
 
-    {/* Massive intense lens flare on the left edge */}
-    <div className="absolute left-[-10%] top-1/2 -translate-y-1/2 w-[12vw] h-[25vw] bg-white rounded-[100%] blur-[60px] opacity-70"></div>
-    <div className="absolute left-[0%] top-1/2 -translate-y-1/2 w-[5vw] h-[15vw] bg-brand-cyan rounded-[100%] blur-[40px] opacity-90"></div>
+    {/* Massive intense lens flare on the left edge (Desktop only) */}
+    <div className="absolute left-[-10%] top-1/2 -translate-y-1/2 w-[12vw] h-[25vw] bg-white rounded-[100%] blur-[60px] opacity-70 hidden md:block"></div>
+    <div className="absolute left-[0%] top-1/2 -translate-y-1/2 w-[5vw] h-[15vw] bg-brand-cyan rounded-[100%] blur-[40px] opacity-90 hidden md:block"></div>
 
     {/* Perfect SVG Rings for Flawless Rotation */}
     <svg className="absolute w-full h-full" viewBox="0 0 200 200">
@@ -122,27 +122,31 @@ const Hero = () => {
       {/* Ambient Top Lighting Gradient matching About, Contact, Services & Training */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85vw] h-[280px] bg-gradient-to-b from-[#00d4ff]/18 via-transparent to-transparent pointer-events-none z-[1]" />
 
-      {/* --- LEFT SIDE: MASSIVE LOGO & TITLE --- */}
-      <div className="absolute top-[38%] -translate-y-1/2 left-[8%] z-20">
-        <Logo hideSubtitle={false} className="w-[45vw] max-w-[800px] text-white" />
+      {/* --- TOP / LEFT: MASSIVE LOGO & TITLE --- */}
+      <div className="absolute top-[26%] sm:top-[28%] md:top-[38%] -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-[8%] md:translate-x-0 z-20 w-[92%] md:w-auto flex justify-center md:block">
+        <Logo 
+          hideSubtitle={false} 
+          textSize="w-[84vw] sm:w-[65vw] md:w-[45vw] max-w-[800px]" 
+          className="text-white" 
+        />
       </div>
 
-      {/* --- RIGHT SIDE: GLOWING RINGS & MENU --- */}
+      {/* --- BOTTOM / RIGHT: GLOWING RINGS & MENU --- */}
       <GlowingRings />
       
-      {/* Menu Items (Centered inside the right-side rings) */}
-      <div className="absolute top-1/2 -translate-y-1/2 right-[12%] z-30 flex flex-col items-start">
+      {/* Menu Items (Centered inside the rings) */}
+      <div className="absolute top-[66%] sm:top-[65%] md:top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 md:left-auto md:right-[12%] md:translate-x-0 z-30 flex flex-col items-start pl-2 sm:pl-0">
         <RingMenuItem icon={GraduationCap} label="Education" />
         <RingMenuItem icon={Lightbulb} label="Innovation" />
         <RingMenuItem icon={Bot} label="Automation" />
       </div>
 
       {/* --- BOTTOM SCROLL MOUSE --- */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
-        <div className="w-[1.2vw] h-[2vw] min-w-[20px] min-h-[35px] border-[1.5px] border-white/90 rounded-full flex justify-center pt-2 shadow-[0_0_10px_rgba(0,212,255,0.4)]">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-20 opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+        <div className="w-[1.2vw] h-[2vw] min-w-[20px] min-h-[32px] sm:min-h-[35px] border-[1.5px] border-white/90 rounded-full flex justify-center pt-1.5 sm:pt-2 shadow-[0_0_10px_rgba(0,212,255,0.4)]">
           <div className="w-1.5 h-1.5 bg-[#00d4ff] rounded-full animate-bounce shadow-[0_0_8px_#00d4ff]"></div>
         </div>
-        <Mouse size={16} className="text-white opacity-0" />
+        <Mouse size={16} className="text-white opacity-0 hidden sm:block" />
         <svg width="20" height="10" viewBox="0 0 24 12" fill="none" stroke="white" strokeWidth="1.5" className="mt-1 drop-shadow-md">
           <path d="M6 3 L12 9 L18 3" />
         </svg>

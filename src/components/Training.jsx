@@ -36,14 +36,14 @@ const Training = () => {
         {/* ======================================================================= */}
         {/* Layer 2: Top-Left Headings Group (ROBOAI HUB & 100% Banner Removed)     */}
         {/* ======================================================================= */}
-        <div className="absolute left-[3.63%] top-[8.5%] z-20 pointer-events-auto max-w-[42%]">
+        <div className="absolute left-[3.63%] top-[8.5%] sm:top-[8.0%] md:top-[8.5%] z-20 pointer-events-auto max-w-[85%] md:max-w-[42%]">
           {/* Main Heading: Training Programs */}
-          <h1 className="font-sans font-bold text-[3.15vw] xl:text-[42px] leading-tight text-white tracking-wide drop-shadow-[0_2px_15px_rgba(0,212,255,0.4)]">
+          <h1 className="font-sans font-bold text-[20px] sm:text-[26px] md:text-[3.15vw] xl:text-[42px] leading-tight text-white tracking-wide drop-shadow-[0_2px_15px_rgba(0,212,255,0.4)]">
             Training Programs
           </h1>
           
           {/* Description Text */}
-          <p className="mt-1.5 font-jura text-[0.98vw] xl:text-[13.5px] text-white/90 leading-snug tracking-wide drop-shadow-md">
+          <p className="mt-1.5 font-jura text-[11px] sm:text-[12.5px] md:text-[0.98vw] xl:text-[13.5px] text-white/90 leading-snug tracking-wide drop-shadow-md">
             Practical pathways for Robotics and AI skill development.
           </p>
         </div>
