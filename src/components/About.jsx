@@ -328,13 +328,16 @@ const About = () => {
                 <span className="about-quote-line">We are building an</span>
                 <span className="about-quote-line">ecosystem where</span>
                 <span className="about-quote-line about-quote-highlight">
-                  <span className="about-keyword">Education</span>, <span className="about-keyword">Innovation</span>
+                  <span className="about-keyword">Education</span>,
                 </span>
                 <span className="about-quote-line about-quote-highlight">
-                  and <span className="about-keyword">Automation</span> work
+                  <span className="about-keyword">Innovation</span> and
                 </span>
-                <span className="about-quote-line">together to shape</span>
-                <span className="about-quote-line">a better future.</span>
+                <span className="about-quote-line about-quote-highlight">
+                  <span className="about-keyword">Automation</span>
+                </span>
+                <span className="about-quote-line">work together to</span>
+                <span className="about-quote-line">shape a better future.</span>
               </span>
             </p>
           </div>
