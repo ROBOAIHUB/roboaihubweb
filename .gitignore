@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 /lib/generated/prisma
+
+*.zip
+build_output*.txt
+final_build_log.log
