@@ -25,7 +25,7 @@ export function GlitchText({ text, className }: GlitchTextProps) {
                 />
 
                 {/* Background Noise/Grid */}
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 bg-cover z-0" />
+                <div className="absolute inset-0 opacity-20 bg-cover z-0 bg-[linear-gradient(to_right,#22d3ee_1px,transparent_1px),linear-gradient(to_bottom,#22d3ee_1px,transparent_1px)] bg-[size:1rem_1rem]" />
             </div>
 
             {/* Red Glitch Layer (Offset & Sliced Box) */}
