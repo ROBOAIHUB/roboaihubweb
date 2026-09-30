@@ -11,6 +11,7 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 
 const navItems = [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Ecosystem", href: "/ecosystem" },
     { name: "Programs", href: "/ecosystem/foundation-programs" },
     { name: "Industry", href: "/ecosystem/industry-automation" },
@@ -39,8 +40,8 @@ export function Navbar() {
                         <BrandLogo />
                     </Link>
 
-                    {/* Desktop Na,v */}
-                    <div className="hidden md:flex items-center gap-8">
+                    {/* Desktop Nav */}
+                    <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
                         {navItems.map((item) => {
                             const isActive = pathname === item.href ||
                                 (item.href !== '/' && pathname?.startsWith(item.href + '/'));
