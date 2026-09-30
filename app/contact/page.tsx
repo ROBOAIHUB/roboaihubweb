@@ -5,8 +5,8 @@ import ContactForm from "@/components/ContactForm";
 export default function ContactPage() {
     // Static fallbacks for static site export
     const address = "Jodhpur, Rajasthan, India";
-    const email = "contact@roboaihub.com";
-    const phone = "+91 00000 00000";
+    const email = "contactus@robonari.co.in";
+    const phone = "+91 9828014877";
     const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114456.90480980456!2d72.93761845112111!3d26.29656254701235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06cb69%3A0x890fa41e411cbb0b!2sJodhpur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1704604515!5m2!1sen!2sin";
 
 
@@ -42,7 +42,9 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-1">Email:</h3>
                                 <p className="text-gray-400 font-mono text-sm">
-                                    {email}
+                                    <a href={`mailto:${email}`} className="hover:text-neon-cyan transition-colors">
+                                        {email}
+                                    </a>
                                 </p>
                             </div>
                         </div>
@@ -55,7 +57,9 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-1">Call:</h3>
                                 <p className="text-gray-400 font-mono text-sm">
-                                    {phone}
+                                    <a href={`tel:${phone}`} className="hover:text-neon-cyan transition-colors">
+                                        {phone}
+                                    </a>
                                 </p>
                             </div>
                         </div>
